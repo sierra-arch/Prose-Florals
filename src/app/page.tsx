@@ -48,7 +48,7 @@ export default function Home() {
         </div>
 
         {/* Dark overlay */}
-        <div className="absolute inset-0 bg-black/25" />
+        <div className="absolute inset-0 bg-black/15" />
 
         {/* PF monogram — centered at the split */}
         <div className="absolute top-[38%] left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
@@ -60,27 +60,28 @@ export default function Home() {
         </div>
 
         {/* Hero text — bottom */}
-        <div className="absolute bottom-0 left-0 right-0 z-10 text-center px-6 pb-14">
-          <h1 className="text-white leading-[0.9] mb-5" style={{ fontSize: "clamp(52px, 9vw, 120px)" }}>
-            <span className="font-serif italic font-light">for </span>
-            <span className="font-display tracking-[0.04em]">MOMENTS</span>
+        <div className="absolute bottom-0 left-0 right-0 z-10 px-6 md:px-10 pb-10">
+          <h1 className="text-white leading-[0.85]" style={{ fontSize: "clamp(72px, 13vw, 180px)" }}>
+            <span className="font-script font-normal" style={{ fontSize: "0.72em", lineHeight: 1 }}>for </span>
+            <span className="font-display tracking-[0.02em]">MOMENTS</span>
             <br />
-            <span className="font-display tracking-[0.04em]">WORTH CELEBRATING</span>
+            <span className="font-display tracking-[0.02em]">WORTH CELEBRATING</span>
           </h1>
-          <p className="font-serif text-white/75 text-base md:text-lg mb-7 max-w-lg mx-auto">
-            Boston Area wedding florist for the modern romantic.<br />
-            For florals as timeless as your story.
-          </p>
-          <Link
-            href="/portfolio"
-            className="font-serif italic text-white text-base border-b border-white/50 pb-0.5 hover:border-white transition-colors"
-          >
-            Explore the Work
-          </Link>
+          <div className="mt-6 mb-8">
+            <p className="font-serif text-white/75 text-base md:text-lg leading-relaxed">
+              Boston Area wedding florist for the modern romantic.<br />
+              For florals as timeless as your story.
+            </p>
+          </div>
+          <div className="text-center">
+            <Link
+              href="/portfolio"
+              className="font-serif italic text-white text-base border-b border-white/50 pb-0.5 hover:border-white transition-colors"
+            >
+              Explore the Work
+            </Link>
+          </div>
         </div>
-
-        {/* Down arrow */}
-        <div className="absolute bottom-8 right-8 z-10 text-white/50 text-xl">↓</div>
       </section>
 
       {/* ── Flowers with Intention (auto-rotating) ── */}
