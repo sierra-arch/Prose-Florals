@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const OG = "/portfolio/portfolio-2/og-portfolio/";
+const OG = "https://res.cloudinary.com/dyymmcbam/image/upload/prose-florals/portfolio/portfolio-2/og-portfolio/";
 const INQUIRY = "https://proseflorals.hbportal.co/public/6525822feddaf700db0fc732/1-Enter_your_details";
 
 const cards = [

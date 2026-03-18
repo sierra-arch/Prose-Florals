@@ -3,9 +3,10 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 
-const OG = "/portfolio/portfolio-2/og-portfolio/";
-const EC = "/portfolio/portfolio-2/emily-chris-2024/Emily Chris - Cape Code Wedding Dennis Inn - Kelly Stevens Photography-";
-const FS = "/portfolio/portfolio-2/flower-solos/";
+const CL = "https://res.cloudinary.com/dyymmcbam/image/upload/prose-florals/portfolio/portfolio-2/";
+const OG = `${CL}og-portfolio/`;
+const EC = `${CL}emily-chris-2024/Emily Chris - Cape Code Wedding Dennis Inn - Kelly Stevens Photography-`;
+const FS = `${CL}flower-solos/`;
 
 // Paired galleries: large = couple shot, small = detail from same session
 const galleries = [

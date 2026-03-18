@@ -5,7 +5,7 @@ import ServicesSection from "@/components/ServicesSection";
 
 const INQUIRY = "https://proseflorals.hbportal.co/public/6525822feddaf700db0fc732/1-Enter_your_details";
 const GUIDE = "https://proseflorals.hbportal.co/public/697ca9d706dda90027660811";
-const OG = "/portfolio/portfolio-2/og-portfolio/";
+const OG = "https://res.cloudinary.com/dyymmcbam/image/upload/prose-florals/portfolio/portfolio-2/og-portfolio/";
 
 // Horizontal sliding portfolio gallery
 const slidingGallery = [
