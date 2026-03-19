@@ -16,7 +16,7 @@ const sliderImages = [
 
 export default function Home() {
   return (
-    <main className="bg-[#F9F9F5]">
+    <main className="bg-[#F9F9F5] pt-[68px]">
 
       {/* ── Press Bar ── */}
       <div className="border-b border-[#E2D9CE]">
