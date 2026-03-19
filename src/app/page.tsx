@@ -7,11 +7,11 @@ const OG = "https://res.cloudinary.com/dyymmcbam/image/upload/prose-florals/port
 
 const sliderImages = [
   { src: `${OG}Smiling-Bride-floral-bouquet-Boston-Prose-Florals.jpg`, alt: "Smiling bride with bouquet" },
-  { src: "/portfolio/portfolio-2/megan-nico-2023/Bono_Newlyweds-84_websize.jpg", alt: "Celebrating newlyweds" },
+  { src: `${OG}Bride-and-groom-bouquet-sunset-Boston-Florist-Prose-Florals.jpg`, alt: "Couple at sunset" },
   { src: `${OG}Bride-bouquet-lush-botanical-musuem-ballroom-Boston-Florist-Prose-Florals.JPG`, alt: "Lush bridal bouquet" },
   { src: `${OG}Circular-arch-wedding-ceremony-bride-and-groom-Boston-Prose-Florals.JPG`, alt: "Wedding ceremony arch" },
   { src: `${OG}Cascading-elegant-bridal-bouquet-bride-Boston-Florist-Prose-Florals.JPG`, alt: "Cascading bouquet" },
-  { src: "/portfolio/portfolio-2/megan-nico-2023/Bono_Newlyweds-32_websize.jpg", alt: "Newlyweds portrait" },
+  { src: `${OG}Bride-and-groom-botanical-forest-Boston-Florist-Prose-Florals.JPG`, alt: "Couple in botanical forest" },
 ];
 
 export default function Home() {
@@ -42,16 +42,16 @@ export default function Home() {
           >
             <div className="relative overflow-hidden" style={{ height: "80%" }}>
               <Image
-                src="/portfolio/portfolio-2/megan-nico-2023/Bono_Newlyweds-100_websize.jpg"
+                src={`${OG}Bride-groom-bouquet-lush-botanical-musuem-ballroom-Boston-Florist-Prose-Florals.JPG`}
                 alt="Couple at wedding venue"
                 fill
-                className="object-cover object-center"
+                className="object-cover object-top"
                 priority
               />
             </div>
             <div className="relative overflow-hidden" style={{ height: "100%" }}>
               <Image
-                src="/portfolio/portfolio-2/taylor/2024_09_28_TheGoods-265.jpg"
+                src={`${OG}Smiling-Bride-floral-bouquet-Boston-Prose-Florals.jpg`}
                 alt="Bride laughing on her wedding day"
                 fill
                 className="object-cover object-top"
@@ -60,8 +60,8 @@ export default function Home() {
             </div>
             <div className="relative overflow-hidden" style={{ height: "87%" }}>
               <Image
-                src="/portfolio/portfolio-2/zoe/ZC-221.jpg"
-                alt="Floral installation at reception"
+                src={`${OG}Florist-bouquet-flowers-Boston-Florist-Prose-Florals.JPG`}
+                alt="Floral arrangement"
                 fill
                 className="object-cover object-center"
               />
@@ -96,7 +96,7 @@ export default function Home() {
         {/* Card 1: Curated Florals */}
         <div className="relative overflow-hidden" style={{ height: "560px" }}>
           <Image
-            src="/portfolio/portfolio-2/megan-nico-2023/Bono_Newlyweds-84_websize.jpg"
+            src={`${OG}Bride-and-groom-bouquet-sunset-Boston-Florist-Prose-Florals.jpg`}
             alt="Celebrating couple"
             fill
             className="object-cover"
@@ -122,7 +122,7 @@ export default function Home() {
         {/* Card 2: Connect */}
         <div className="relative overflow-hidden" style={{ height: "560px" }}>
           <Image
-            src="/portfolio/portfolio-2/taylor/2024_09_28_TheGoods-275.jpg"
+            src={`${OG}Whimsical-moody-forest-Bride-Bridal-Bouquet-Boston-Prose-Florals.JPG`}
             alt="Bride portrait"
             fill
             className="object-cover"
@@ -150,7 +150,7 @@ export default function Home() {
         {/* Card 3: Photo only */}
         <div className="relative overflow-hidden" style={{ height: "560px" }}>
           <Image
-            src="/portfolio/portfolio-2/taylor/2024_09_28_TheGoods-250.jpg"
+            src={`${OG}Bride-and-groom-botanical-forest-Boston-Florist-Prose-Florals.JPG`}
             alt="Wedding couple"
             fill
             className="object-cover object-top"
