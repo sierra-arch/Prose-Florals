@@ -36,9 +36,9 @@ export default function Navbar() {
           scrolled ? "bg-[#F9F9F5]/95 backdrop-blur-sm border-b border-[#E7E2D8]" : "bg-transparent"
         }`}
       >
-        <div className="max-w-[1400px] mx-auto px-6 md:px-10 h-[68px] flex items-center justify-between">
+        <div className="max-w-[1600px] mx-auto px-6 md:px-14 h-[92px] flex items-center justify-between">
           {/* Left links */}
-          <nav className="hidden lg:flex items-center gap-9 flex-1">
+          <nav className="hidden lg:flex items-center gap-11 flex-1">
             {leftLinks.map((link) => (
               <Link
                 key={link.href}
@@ -60,7 +60,7 @@ export default function Navbar() {
           </Link>
 
           {/* Right links */}
-          <nav className="hidden lg:flex items-center gap-9 flex-1 justify-end">
+          <nav className="hidden lg:flex items-center gap-11 flex-1 justify-end">
             {rightLinks.map((link) => (
               <Link
                 key={link.href}

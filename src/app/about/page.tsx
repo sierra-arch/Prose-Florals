@@ -14,25 +14,29 @@ export default function AboutPage() {
   return (
     <main className="bg-[#F9F9F5]">
       {/* ─── Intro ─── */}
-      <section className="pt-[168px] pb-16 px-6 text-center">
-        <p className="label text-[#302B29]/60 mb-6">We believe great stories transcend mediums</p>
-        <h1 className="text-[#302B29] leading-[1.04]" style={{ fontSize: "clamp(40px, 6vw, 86px)" }}>
-          <span className="font-times-italic italic font-light">About</span>{" "}
-          <span className="display">PROSE FLORALS</span>
-        </h1>
+      <section className="title-zone container-pf">
+        <p className="label text-[#302B29]/50 mb-8">We believe great stories transcend mediums</p>
+        <h1 className="title-hero text-[#302B29]">ABOUT PROSE FLORALS</h1>
       </section>
 
-      {/* ─── Photo collage ─── */}
-      <section className="px-6 pb-16">
-        <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-3">
-          {[IMG.bouquetWhite, IMG.coupleEmbrace, IMG.bouquetLush, IMG.bridePortrait].map((src, i) => (
-            <Reveal key={i} className="relative aspect-[3/4]" delay={i * 90}>
-              <Image src={src} alt="Prose Florals wedding work" fill sizes="25vw" className="object-cover" />
-            </Reveal>
-          ))}
+      {/* ─── Staggered editorial photo collage ─── */}
+      <section className="container-wide pb-4 md:pb-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-5 md:gap-8 items-start">
+          <Reveal className="relative aspect-[3/4] md:mt-16">
+            <Image src={IMG.brideParty} alt="Prose Florals wedding work" fill sizes="33vw" className="object-cover" />
+          </Reveal>
+          <Reveal className="relative aspect-[4/5] md:-mt-4" delay={120}>
+            <Image src={IMG.coupleEmbrace} alt="Prose Florals florist embracing bride" fill sizes="33vw" className="object-cover" />
+          </Reveal>
+          <Reveal className="relative aspect-[3/4] md:mt-24" delay={240}>
+            <Image src={IMG.bridePortrait} alt="Prose Florals bride portrait" fill sizes="33vw" className="object-cover" />
+          </Reveal>
         </div>
-        <div className="max-w-2xl mx-auto text-center mt-14">
-          <p className="font-times text-[19px] text-[#302B29]/70 leading-relaxed">
+      </section>
+
+      <section className="section-y container-pf">
+        <div className="max-w-2xl mx-auto text-center">
+          <p className="font-times text-[21px] md:text-[24px] text-[#302B29]/75 leading-[1.9]">
             Known for our modern-romantic style, relaxed approach, and iconic silhouettes, our Boston-based studio sits at the cross-section of artfully curated flair and the kind of expertly-designed floral pieces you&apos;ll be proud to have in your wedding albums forever.
           </p>
         </div>
@@ -40,7 +44,7 @@ export default function AboutPage() {
 
       {/* ─── OUR STYLE (mauve) ─── */}
       <section className="grid grid-cols-1 md:grid-cols-2">
-        <div className="bg-[#C9B7AE] flex flex-col justify-center px-8 md:px-16 py-20 md:py-28 order-2 md:order-1">
+        <div className="bg-[#C9B7AE] flex flex-col justify-center px-8 md:px-20 py-24 md:py-36 order-2 md:order-1">
           <h2 className="text-[#F9F9F5] leading-[0.95] mb-7">
             <span className="font-times-italic italic block" style={{ fontSize: "clamp(44px, 5vw, 78px)" }}>OUR</span>
             <span className="display block" style={{ fontSize: "clamp(40px, 4.5vw, 70px)" }}>STYLE</span>
@@ -56,7 +60,7 @@ export default function AboutPage() {
 
       {/* ─── OUR STORY (white + photo) ─── */}
       <section className="grid grid-cols-1 md:grid-cols-2">
-        <div className="bg-[#F9F9F5] flex flex-col justify-center px-8 md:px-16 py-20 md:py-28">
+        <div className="bg-[#F9F9F5] flex flex-col justify-center px-8 md:px-20 py-24 md:py-36">
           <h2 className="text-[#302B29] leading-[0.95] mb-7">
             <span className="font-times-italic italic block" style={{ fontSize: "clamp(44px, 5vw, 78px)" }}>OUR</span>
             <span className="display block" style={{ fontSize: "clamp(40px, 4.5vw, 70px)" }}>STORY</span>
@@ -75,7 +79,7 @@ export default function AboutPage() {
         <div className="relative aspect-[4/5] md:aspect-auto md:min-h-[520px] order-1">
           <Image src={IMG.meadowInstall} alt="A lush floral installation by Prose Florals" fill sizes="50vw" className="object-cover" />
         </div>
-        <div className="bg-[#302B29] flex flex-col justify-center px-8 md:px-16 py-20 md:py-28 order-2">
+        <div className="bg-[#302B29] flex flex-col justify-center px-8 md:px-20 py-24 md:py-36 order-2">
           <h2 className="text-[#F9F9F5] leading-[0.95] mb-7">
             <span className="font-times-italic italic block" style={{ fontSize: "clamp(44px, 5vw, 78px)" }}>OUR</span>
             <span className="display block" style={{ fontSize: "clamp(40px, 4.5vw, 70px)" }}>METHOD</span>
@@ -87,8 +91,8 @@ export default function AboutPage() {
       </section>
 
       {/* ─── Sierra bio ─── */}
-      <section className="py-24 px-6">
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-start">
+      <section className="section-y-lg container-pf">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-14 md:gap-20 items-start">
           <Reveal>
             <p className="label text-[#302B29] mb-6">Sierra&apos;s Wedding Flower History</p>
             <div className="space-y-4 font-times text-[18px] text-[#302B29]/70 leading-relaxed">
@@ -119,8 +123,8 @@ export default function AboutPage() {
       </section>
 
       {/* ─── Kattie bio ─── */}
-      <section className="pb-24 px-6">
-        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-start">
+      <section className="section-y container-pf">
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-14 md:gap-20 items-start">
           <Reveal className="order-2 md:order-1 grid grid-cols-2 gap-3">
             <div className="relative aspect-[3/4]">
               <Image src={IMG.coupleEmbrace} alt="" fill sizes="25vw" className="object-cover" />
@@ -145,7 +149,7 @@ export default function AboutPage() {
       </section>
 
       {/* ─── Inspiration list ─── */}
-      <section className="py-16 px-6 border-y border-[#E7E2D8]">
+      <section className="section-y px-6 border-y border-[#E7E2D8]">
         <div className="max-w-4xl mx-auto text-center">
           <p className="label text-[#302B29]/50 mb-5">The Inspiration</p>
           <p className="font-times-italic italic text-[#302B29] leading-relaxed" style={{ fontSize: "clamp(20px, 2.6vw, 30px)" }}>
@@ -155,7 +159,7 @@ export default function AboutPage() {
       </section>
 
       {/* ─── Quote ─── */}
-      <section className="py-24 px-6">
+      <section className="section-y-lg container-pf">
         <div className="max-w-3xl mx-auto text-center">
           <p className="font-times text-[#302B29] leading-relaxed" style={{ fontSize: "clamp(22px, 3vw, 34px)" }}>
             &ldquo;Prose Florals is a superb florist, who took deep and thoughtful care to understand our vision <em className="font-times-italic">even when we couldn&apos;t articulate it ourselves!</em> We were blown away by the quality of the bouquets and arrangements and received so many compliments. They were truly exquisite!&rdquo;

@@ -19,7 +19,7 @@ export default function ContactPage() {
         </div>
 
         {/* Right: inquiry content */}
-        <div className="flex flex-col justify-center px-8 md:px-16 py-24 md:py-0">
+        <div className="flex flex-col justify-center px-8 md:px-20 lg:px-24 py-28 md:py-32">
           <p className="label text-[#302B29]/60 mb-6">Say Hello</p>
           <h1 className="text-[#302B29] leading-[1.03] mb-8" style={{ fontSize: "clamp(40px, 5vw, 78px)" }}>
             <span className="display">LET&apos;S CREATE</span>

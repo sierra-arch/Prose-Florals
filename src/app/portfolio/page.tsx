@@ -23,20 +23,17 @@ export default function PortfolioPage() {
   return (
     <main className="bg-[#F9F9F5]">
       {/* Intro */}
-      <section className="pt-[168px] pb-14 px-6 text-center">
-        <p className="label text-[#302B29]/60 mb-6">Curated Florals</p>
-        <h1 className="text-[#302B29] leading-[1.04]" style={{ fontSize: "clamp(42px, 6vw, 90px)" }}>
-          <span className="font-times-italic italic font-light">the </span>
-          <span className="display">PORTFOLIO</span>
-        </h1>
-        <p className="font-times text-[19px] text-[#302B29]/70 leading-relaxed max-w-xl mx-auto mt-7">
+      <section className="title-zone container-pf">
+        <p className="label text-[#302B29]/50 mb-8">Curated Florals</p>
+        <h1 className="title-hero text-[#302B29]">THE PORTFOLIO</h1>
+        <p className="font-times text-[20px] md:text-[22px] text-[#302B29]/70 leading-[1.85] max-w-xl mx-auto mt-10">
           Explore a collection of thoughtfully designed celebrations — from garden ceremonies to gallery receptions. Every piece is intentionally selected to highlight our couples&apos; love story.
         </p>
       </section>
 
       {/* Masonry gallery */}
-      <section className="px-3 md:px-6 pb-24">
-        <div className="grid grid-cols-2 md:grid-cols-3 auto-rows-[220px] md:auto-rows-[300px] gap-3">
+      <section className="container-wide section-y">
+        <div className="grid grid-cols-2 md:grid-cols-3 auto-rows-[240px] md:auto-rows-[340px] gap-5 md:gap-7">
           {PORTFOLIO.map((src, i) => (
             <Reveal
               key={i}

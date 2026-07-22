@@ -60,17 +60,17 @@ export default function ExperiencePage() {
       />
 
       {/* Tailored process intro */}
-      <section className="py-24 px-6 text-center">
-        <p className="label text-[#302B29]/60 mb-6">The Experience</p>
-        <h2 className="text-[#302B29] leading-[1.05]" style={{ fontSize: "clamp(32px, 4.5vw, 64px)" }}>
+      <section className="section-y-lg container-pf text-center">
+        <p className="label text-[#302B29]/50 mb-7">The Experience</p>
+        <h2 className="text-[#302B29] leading-[1.08]" style={{ fontSize: "clamp(34px, 5vw, 70px)" }}>
           <span className="display">A TAILORED PROCESS</span>
-          <span className="block font-times-italic italic font-light">iconic results</span>
+          <span className="block font-times-italic italic font-light mt-2">iconic results</span>
         </h2>
       </section>
 
       {/* 01 / 02 / 03 */}
-      <section className="px-6 pb-24">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-12">
+      <section className="container-pf pb-24 md:pb-32">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-14 md:gap-16">
           {method.map((m, i) => (
             <Reveal key={m.n} delay={i * 120}>
               <p className="font-magnolia text-[#C9B7AE] leading-none mb-4" style={{ fontSize: "clamp(56px, 6vw, 92px)" }}>{m.n}</p>
@@ -82,7 +82,7 @@ export default function ExperiencePage() {
       </section>
 
       {/* Testimonial */}
-      <section className="py-20 px-6 bg-[#F0EAE0]">
+      <section className="section-y px-6 bg-[#F0EAE0]">
         <div className="max-w-3xl mx-auto text-center">
           <p className="font-times text-[#302B29] leading-relaxed" style={{ fontSize: "clamp(20px, 2.8vw, 32px)" }}>
             &ldquo;From our first meeting all the way up to our wedding day I was <em className="font-times-italic">so happy</em> I chose them as my florist. I would give Prose Florals 10 stars if I could!&rdquo;
@@ -98,7 +98,7 @@ export default function ExperiencePage() {
             <Image src={j.img} alt={j.t} fill sizes="50vw" className="object-cover" />
           </div>
           <div
-            className={`flex flex-col justify-center px-8 md:px-16 py-20 ${i % 2 === 1 ? "md:order-1" : ""}`}
+            className={`flex flex-col justify-center px-8 md:px-20 py-24 md:py-32 ${i % 2 === 1 ? "md:order-1" : ""}`}
             style={{ backgroundColor: j.tint }}
           >
             <p className="label mb-4" style={{ color: i === 3 ? "#C9B7AE" : "rgba(249,249,245,0.85)" }}>{j.step}</p>
@@ -111,7 +111,7 @@ export default function ExperiencePage() {
       ))}
 
       {/* Wide testimonial band */}
-      <section className="relative py-28 px-6 overflow-hidden">
+      <section className="relative py-40 px-6 overflow-hidden">
         <Image src={IMG.reception} alt="" fill sizes="100vw" className="object-cover" />
         <div className="absolute inset-0 bg-[#302B29]/62" />
         <div className="relative max-w-3xl mx-auto text-center">
@@ -123,15 +123,15 @@ export default function ExperiencePage() {
       </section>
 
       {/* Policies */}
-      <section className="py-24 px-6">
+      <section className="section-y-lg container-pf">
         <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-14">
+          <div className="text-center mb-16 md:mb-20">
             <p className="label text-[#302B29]/60 mb-4">Good to Know</p>
             <h2 className="text-[#302B29]" style={{ fontSize: "clamp(30px, 4vw, 54px)" }}>
               <span className="display">THE</span> <span className="font-times-italic italic">details</span>
             </h2>
           </div>
-          <div className="grid md:grid-cols-2 gap-12">
+          <div className="grid md:grid-cols-2 gap-14 md:gap-20">
             <Reveal>
               <h3 className="label text-[#302B29] mb-4">Our Rental Library</h3>
               <p className="font-times text-[17px] text-[#302B29]/70 leading-relaxed">

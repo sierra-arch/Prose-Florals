@@ -96,6 +96,63 @@ body {
   font-weight: 400;
 }
 
+/* ─── Layout: airy, elevated spacing to match proseflorals.com ─── */
+
+/* Global content container: comfortable max-width + generous side gutters.
+   The live site keeps content well inset from the screen edges. */
+.container-pf {
+  width: 100%;
+  max-width: 1240px;
+  margin-inline: auto;
+  padding-inline: 2rem;      /* 32px on mobile */
+}
+@media (min-width: 768px) {
+  .container-pf {
+    padding-inline: 4.5rem;  /* 72px on desktop — real breathing room */
+  }
+}
+@media (min-width: 1280px) {
+  .container-pf {
+    padding-inline: 6rem;    /* 96px on large screens */
+  }
+}
+
+/* A wider container for full-bleed-ish photo collages that still keeps gutters */
+.container-wide {
+  width: 100%;
+  max-width: 1600px;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+@media (min-width: 768px) {
+  .container-wide { padding-inline: 3rem; }
+}
+
+/* Airy page-title zone: sits below the nav with tall whitespace above & below,
+   centered, oversized — mirrors the current About/Reviews/Portfolio intros. */
+.title-zone {
+  text-align: center;
+  padding-top: clamp(7rem, 14vh, 12rem);
+  padding-bottom: clamp(3.5rem, 7vh, 6rem);
+}
+.title-hero {
+  font-family: var(--font-magnolia);
+  font-weight: 400;
+  line-height: 1.06;
+  letter-spacing: 0.03em;
+  font-size: clamp(52px, 9vw, 132px);
+}
+
+/* Generous, consistent vertical section rhythm */
+.section-y {
+  padding-top: clamp(4.5rem, 9vh, 9rem);
+  padding-bottom: clamp(4.5rem, 9vh, 9rem);
+}
+.section-y-lg {
+  padding-top: clamp(6rem, 12vh, 12rem);
+  padding-bottom: clamp(6rem, 12vh, 12rem);
+}
+
 /* Delicate italic accent (Times Now) */
 .accent-italic {
   font-family: var(--font-times-italic);

@@ -29,8 +29,8 @@ export default function Home() {
       </section>
 
       {/* ─── FLOWERS with INTENTION ─── */}
-      <section className="py-24 px-6 md:px-16">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-14 items-center">
+      <section className="section-y-lg container-pf">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-16 md:gap-20 items-center">
           {/* Left: overlapping photos */}
           <Reveal className="md:w-[48%] relative w-full" as="div">
             <div className="relative aspect-[4/5] w-[80%]">
@@ -84,7 +84,7 @@ export default function Home() {
           ))}
         </div>
 
-        <div className="max-w-6xl mx-auto px-6 md:px-16 py-16 flex flex-col md:flex-row gap-12 items-end">
+        <div className="max-w-6xl mx-auto container-pf section-y flex flex-col md:flex-row gap-12 md:gap-16 items-end">
           <div className="md:w-1/2">
             <h2 className="text-[#302B29] leading-[1]" style={{ fontSize: "clamp(42px, 6vw, 84px)" }}>
               <span className="font-times-italic italic font-light block">ways to work</span>
@@ -112,7 +112,7 @@ export default function Home() {
         <div className="relative aspect-[4/5] md:aspect-auto md:min-h-[560px]">
           <Image src={IMG.bridePortrait} alt="Sierra Bettis, founder of Prose Florals" fill sizes="50vw" className="object-cover" />
         </div>
-        <div className="bg-[#373F24] flex flex-col justify-center px-8 md:px-16 py-16 relative">
+        <div className="bg-[#373F24] flex flex-col justify-center px-8 md:px-20 py-24 md:py-32 relative">
           <div className="absolute top-8 right-8 w-14 h-14 opacity-30">
             <Image src={IMG.monogramWhite} alt="" fill className="object-contain" />
           </div>
@@ -130,8 +130,8 @@ export default function Home() {
       </section>
 
       {/* ─── WE MAKE PLAYFUL ARRANGEMENTS ─── */}
-      <section className="py-28 px-6">
-        <Reveal className="text-center max-w-4xl mx-auto mb-16">
+      <section className="section-y-lg container-pf">
+        <Reveal className="text-center max-w-4xl mx-auto mb-20 md:mb-24">
           <p className="label text-[#302B29]/60 mb-6">Our Approach</p>
           <h2 className="text-[#302B29] leading-[1.05]" style={{ fontSize: "clamp(34px, 5vw, 66px)" }}>
             <span className="display">WE MAKE PLAYFUL</span>
@@ -150,7 +150,7 @@ export default function Home() {
         </Reveal>
 
         {/* Collaged photos */}
-        <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-3 items-center">
+        <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 items-center">
           <Reveal className="relative aspect-[3/4] md:mt-16">
             <Image src={IMG.coupleForest} alt="Couple in a moody forest setting" fill sizes="33vw" className="object-cover" />
           </Reveal>
@@ -164,7 +164,7 @@ export default function Home() {
       </section>
 
       {/* ─── Testimonial ─── */}
-      <section className="py-20 px-6 bg-[#F9F9F5]">
+      <section className="section-y px-6 bg-[#F9F9F5]">
         <div className="max-w-3xl mx-auto text-center">
           <p className="font-times text-[#302B29] leading-relaxed" style={{ fontSize: "clamp(22px, 3vw, 34px)" }}>
             &ldquo;From start to finish I had the most wonderful experience with Prose Florals. They were <em className="font-times-italic">exactly</em> what we had envisioned, maybe <em className="font-times-italic">even</em> better!&rdquo;
@@ -210,7 +210,7 @@ export default function Home() {
       </section>
 
       {/* ─── Inquire CTA ─── */}
-      <section className="py-24 px-6 text-center bg-[#302B29]">
+      <section className="section-y-lg px-6 text-center bg-[#302B29]">
         <p className="label text-[#C9B7AE] mb-5">Begin Your Journey</p>
         <h2 className="font-times-italic italic text-white font-light mb-4" style={{ fontSize: "clamp(30px, 4vw, 56px)" }}>
           Ready to Celebrate?
