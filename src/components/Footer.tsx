@@ -21,7 +21,9 @@ const links = [
   { label: "Download Investment Guide", href: GUIDE, ext: true },
   { label: "Photographer Highlights", href: "/portfolio" },
   { label: "Write us a Review!", href: "/reviews" },
+  { label: "DIY Client Login", href: INQUIRY, ext: true },
   { label: "Reserve Your Date", href: INQUIRY, ext: true },
+  { label: "Legal", href: "/contact" },
 ];
 
 const stripImgs = PORTFOLIO.slice(15, 21);
@@ -110,6 +112,7 @@ export default function Footer() {
             <p className="font-sans-pf text-[13px] text-[#302B29]/70 leading-relaxed mb-5">
               To create dynamic floral designs that highlight our happy couple&apos;s style and story.
             </p>
+            <p className="font-times-italic italic text-[#302B29]/70 text-[15px] leading-none mb-1">xo,</p>
             <p className="font-galanthia text-[#302B29] text-[42px] leading-none -ml-1">
               Prose Florals
             </p>

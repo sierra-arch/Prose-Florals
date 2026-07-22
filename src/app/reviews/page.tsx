@@ -1,53 +1,94 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import BeginCTA from "@/components/BeginCTA";
 import { REVIEWS } from "@/lib/reviews";
 import { IMG } from "@/lib/images";
+import { GALLERY_COVERS } from "@/lib/galleries";
 
 export const metadata: Metadata = {
-  title: "Reviews | Prose Florals — Boston Wedding Florist",
+  title: "Love Notes | Prose Florals — Boston Wedding Florist",
   description:
-    "Kind words from the couples of Prose Florals. Read reviews from weddings across the Boston area and beyond.",
+    "Kind words from the lovely past clients of Prose Florals. Read reviews from weddings across the Boston area and beyond.",
 };
 
 export default function ReviewsPage() {
+  // Split so we can drop a portfolio feature mid-page, like the real site.
+  const firstHalf = REVIEWS.slice(0, 11);
+  const secondHalf = REVIEWS.slice(11);
+
   return (
     <main className="bg-[#F9F9F5]">
-      {/* Intro */}
-      <section className="title-zone container-pf">
-        <p className="label text-[#302B29]/50 mb-8">Kind Words</p>
-        <h1 className="title-hero text-[#302B29]">THE REVIEWS</h1>
-        <p className="font-times text-[20px] md:text-[22px] text-[#302B29]/70 leading-[1.85] max-w-xl mx-auto mt-10">
-          There is no greater honor than being trusted with a couple&apos;s big day. Here&apos;s what they had to say.
-        </p>
+      {/* LOVE NOTES intro */}
+      <section className="title-zone container-pf text-center">
+        <h1 className="font-magnolia text-[#302B29] leading-[0.9]" style={{ fontSize: "clamp(64px, 15vw, 200px)" }}>
+          LOVE NOTES
+        </h1>
+        <p className="label text-[#302B29]/70 mt-8">From Our Lovely Past Clients</p>
       </section>
 
-      {/* Feature quote */}
-      <section className="relative py-40 px-6 overflow-hidden">
-        <Image src={IMG.coupleKiss} alt="" fill sizes="100vw" className="object-cover" />
-        <div className="absolute inset-0 bg-[#302B29]/60" />
-        <div className="relative max-w-3xl mx-auto text-center">
-          <p className="font-times text-[#F9F9F5] leading-relaxed" style={{ fontSize: "clamp(24px, 3.2vw, 40px)" }}>
-            &ldquo;Working with Prose Florals was nothing short of a <em className="font-times-italic">dream!</em> Their floral artistry is downright stunning — each arrangement felt like a work of magic.&rdquo;
-          </p>
-          <p className="font-times-italic italic text-[#F9F9F5]/80 text-lg mt-6">— Dominique Holliday, Loring Greenough House</p>
+      {/* Large circular feature photo */}
+      <section className="container-pf pb-4">
+        <div className="relative w-full max-w-4xl mx-auto aspect-[16/9] overflow-hidden">
+          <Image src={IMG.bouquetWhite} alt="Prose Florals bouquet" fill sizes="90vw" className="object-cover" />
         </div>
       </section>
 
-      {/* Masonry of reviews */}
-      <section className="container-pf section-y-lg">
-        <div className="max-w-6xl mx-auto columns-1 md:columns-2 lg:columns-3 gap-8 [column-fill:_balance]">
-          {REVIEWS.map((r, i) => (
-            <Reveal key={i} delay={(i % 3) * 90} className="break-inside-avoid mb-8 bg-[#F0EAE0] p-10">
-              <div className="flex gap-1 mb-4 text-[#B99C6E]">
-                {"★★★★★".split("").map((s, k) => (
-                  <span key={k} className="text-sm">{s}</span>
-                ))}
-              </div>
-              <p className="font-times text-[17px] text-[#302B29]/80 leading-relaxed mb-5">&ldquo;{r.quote}&rdquo;</p>
-              <p className="label text-[#302B29] text-[11px]">{r.author}</p>
-              {r.venue && <p className="font-times-italic italic text-[#302B29]/55 text-sm mt-1">{r.venue}</p>}
+      {/* Reviews — centered serif, generous spacing */}
+      <section className="container-pf section-y">
+        <div className="max-w-3xl mx-auto space-y-16 md:space-y-24 text-center">
+          {firstHalf.map((r, i) => (
+            <Reveal key={i}>
+              <p className="font-times text-[#302B29]/90 leading-[1.55]" style={{ fontSize: "clamp(19px, 2.1vw, 26px)" }}>
+                &ldquo;{r.quote}&rdquo;
+              </p>
+              <p className="font-times text-[#302B29]/70 mt-5 text-[18px]">
+                &mdash; {r.author}
+                {r.venue && (
+                  <>
+                    , <span className="underline underline-offset-4 decoration-[#302B29]/30">{r.venue}</span>
+                  </>
+                )}
+              </p>
+            </Reveal>
+          ))}
+        </div>
+      </section>
+
+      {/* Mid-page portfolio feature */}
+      <section className="container-pf pb-8">
+        <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-center gap-8 md:gap-14">
+          <div className="relative w-full md:w-[46%] aspect-[3/4] overflow-hidden">
+            <Image src={GALLERY_COVERS["maggie-billy"]} alt="Prose Florals wedding" fill sizes="46vw" className="object-cover" />
+          </div>
+          <div className="text-center">
+            <div className="relative w-full md:w-[280px] aspect-[3/4] overflow-hidden mx-auto mb-7">
+              <Image src={GALLERY_COVERS["taylor-ethan"]} alt="Prose Florals wedding" fill sizes="280px" className="object-cover" />
+            </div>
+            <Link href="/portfolio" className="label text-[#302B29] hover:text-[#373F24] transition-colors">
+              View Full Portfolio
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Remaining reviews */}
+      <section className="container-pf section-y">
+        <div className="max-w-3xl mx-auto space-y-16 md:space-y-24 text-center">
+          {secondHalf.map((r, i) => (
+            <Reveal key={i}>
+              <p className="font-times text-[#302B29]/90 leading-[1.55]" style={{ fontSize: "clamp(19px, 2.1vw, 26px)" }}>
+                &ldquo;{r.quote}&rdquo;
+              </p>
+              <p className="font-times text-[#302B29]/70 mt-5 text-[18px]">
+                &mdash; {r.author}
+                {r.venue && (
+                  <>
+                    , <span className="underline underline-offset-4 decoration-[#302B29]/30">{r.venue}</span>
+                  </>
+                )}
+              </p>
             </Reveal>
           ))}
         </div>
