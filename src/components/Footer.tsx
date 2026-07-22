@@ -31,22 +31,30 @@ const stripImgs = PORTFOLIO.slice(15, 21);
 export default function Footer() {
   return (
     <footer className="bg-[#F4F1E8]">
-      {/* Top: 4 columns */}
-      <div className="max-w-[1400px] mx-auto px-6 md:px-14 pt-20 pb-12 relative">
+      {/* Top: brand line + 4 columns, centered with generous margins */}
+      <div className="container-pf pt-20 md:pt-28 pb-14 relative">
         {/* Back-to-top arrow */}
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="hidden md:block absolute top-8 right-14 text-[#33302A] hover:text-[#3B4127] transition-colors"
+          className="hidden md:block absolute top-10 right-0 text-[#33302A]/70 hover:text-[#3B4127] transition-colors"
           aria-label="Back to top"
         >
-          <svg width="26" height="60" viewBox="0 0 26 60" fill="none">
+          <svg width="22" height="52" viewBox="0 0 26 60" fill="none">
             <path d="M13 60V2M13 2L2 13M13 2L24 13" stroke="currentColor" strokeWidth="1" />
           </svg>
         </button>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-8 max-w-5xl">
+        {/* Centered wordmark + tagline */}
+        <div className="text-center mb-16 md:mb-20">
+          <p className="ed-display text-[#33302A]" style={{ fontSize: "clamp(38px, 6vw, 84px)" }}>PROSE FLORALS</p>
+          <p className="font-times-italic italic text-[#33302A]/60 mt-2" style={{ fontSize: "clamp(15px, 1.6vw, 19px)" }}>
+            for the romantics — Boston, MA
+          </p>
+        </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-y-12 md:gap-y-0 md:divide-x md:divide-[#D8D2C2]">
           {/* Get Around */}
-          <div>
+          <div className="md:px-8 first:md:pl-0">
             <h3 className="label text-[#33302A] mb-5">Get Around</h3>
             <ul className="space-y-2.5">
               {getAround.map((l) => (
@@ -60,7 +68,7 @@ export default function Footer() {
           </div>
 
           {/* Links */}
-          <div>
+          <div className="md:px-8">
             <h3 className="label text-[#33302A] mb-5">Links</h3>
             <ul className="space-y-2.5">
               {links.map((l) =>
@@ -82,7 +90,7 @@ export default function Footer() {
           </div>
 
           {/* Contact */}
-          <div>
+          <div className="md:px-8">
             <h3 className="label text-[#33302A] mb-5">Contact</h3>
             <p className="font-sans-pf text-[13px] text-[#33302A]/70 leading-relaxed mb-4">
               We are based in Boston, MA, and serve the surrounding areas.
@@ -107,7 +115,7 @@ export default function Footer() {
           </div>
 
           {/* Our Mission */}
-          <div>
+          <div className="md:px-8">
             <h3 className="label text-[#33302A] mb-5">Our Mission</h3>
             <p className="font-sans-pf text-[13px] text-[#33302A]/70 leading-relaxed mb-5">
               To create dynamic floral designs that highlight our happy couple&apos;s style and story.
@@ -119,7 +127,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <p className="font-sans-pf text-[11px] text-[#33302A]/40 mt-12 md:text-right">
+        <p className="font-sans-pf text-[11px] text-[#33302A]/40 mt-16 text-center tracking-wide">
           Prose Florals LLC, {new Date().getFullYear()}. All rights reserved.
         </p>
       </div>

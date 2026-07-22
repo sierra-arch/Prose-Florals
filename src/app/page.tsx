@@ -34,16 +34,33 @@ export default function Home() {
             <p className="folio hidden md:block">Vol. 01 — The Romantics</p>
           </div>
 
-          <PhotoCollage items={heroCollage} height="h-[440px] md:h-[600px] lg:h-[640px]" />
+          <div className="relative">
+            <PhotoCollage items={heroCollage} height="h-[440px] md:h-[600px] lg:h-[640px]" />
+            {/* scattered doodle stars */}
+            <svg className="doodle-star absolute top-[6%] left-[36%] w-6 h-6 hidden md:block" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 2c.6 5 4 8.4 9 9-5 .6-8.4 4-9 9-.6-5-4-8.4-9-9 5-.6 8.4-4 9-9z" fill="currentColor"/>
+            </svg>
+            <svg className="doodle-star absolute bottom-[10%] left-[54%] w-4 h-4 hidden md:block" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 2c.6 5 4 8.4 9 9-5 .6-8.4 4-9 9-.6-5-4-8.4-9-9 5-.6 8.4-4 9-9z" fill="currentColor"/>
+            </svg>
+            <svg className="doodle-star absolute top-[40%] right-[2%] w-5 h-5 hidden md:block" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 2c.6 5 4 8.4 9 9-5 .6-8.4 4-9 9-.6-5-4-8.4-9-9 5-.6 8.4-4 9-9z" fill="currentColor"/>
+            </svg>
+          </div>
 
           {/* Oversized wordmark statement */}
-          <div className="mt-4 md:mt-6 relative">
+          <div className="mt-6 md:mt-8 relative">
             <h1 className="ed-display text-[#33302A] text-center" style={{ fontSize: "clamp(52px, 13vw, 210px)" }}>
               PROSE FLORALS
             </h1>
-            <p className="font-times-italic italic text-center text-[#33302A]/70 -mt-2 md:-mt-4" style={{ fontSize: "clamp(18px, 2.4vw, 30px)" }}>
-              wedding florals, done differently — for the romantics.
+            <p className="font-times-italic italic text-center text-[#33302A]/70 mt-1 md:mt-2" style={{ fontSize: "clamp(18px, 2.4vw, 30px)" }}>
+              wedding florals, done <span className="squiggle">differently</span> — for the romantics.
             </p>
+            {/* hand-drawn flourish under the tagline */}
+            <svg className="flourish mx-auto mt-7 w-[180px] md:w-[240px]" viewBox="0 0 240 20" fill="none" aria-hidden="true">
+              <path d="M4 12c30-10 56 8 86 4s40-14 66-8 30 10 30 10" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round"/>
+              <circle cx="120" cy="9" r="2" fill="currentColor"/>
+            </svg>
           </div>
         </div>
       </section>

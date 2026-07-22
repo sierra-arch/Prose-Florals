@@ -69,6 +69,11 @@ html {
   scroll-behavior: smooth;
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 body {
   background-color: #F4F1E8;
   color: #33302A;
@@ -263,4 +268,39 @@ body {
 @keyframes edMarquee {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
+}
+
+/* ─── Hand-drawn accents (Castillo-inspired playful editorial) ─── */
+
+/* Squiggle underline drawn under a word */
+.squiggle {
+  position: relative;
+  display: inline-block;
+}
+.squiggle::after {
+  content: "";
+  position: absolute;
+  left: -2%;
+  right: -2%;
+  bottom: -0.32em;
+  height: 0.42em;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='16' viewBox='0 0 240 16' fill='none'%3E%3Cpath d='M2 9C40 3 60 13 98 8s52-9 90-3 48 6 48 6' stroke='%233B4127' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+/* A small hand-drawn star doodle */
+.doodle-star {
+  display: inline-block;
+  color: var(--color-gold, #B99C6E);
+  opacity: 0.9;
+}
+
+/* A flourish squiggle used as a divider or accent line */
+.flourish {
+  display: block;
+  color: var(--color-olive, #3B4127);
+  opacity: 0.7;
 }
