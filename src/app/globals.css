@@ -1,17 +1,56 @@
 @import "tailwindcss";
 
-@theme inline {
-  --color-cream: #FAF7F2;
-  --color-cream-dark: #F0EAE0;
-  --color-green: #2D4A3E;
-  --color-green-light: #3B5E4F;
-  --color-brown: #2C1A0E;
-  --color-brown-light: #6B4C35;
-  --color-foreground: #1a1a1a;
+/* ─── Real Prose Florals fonts (from Showit CDN, self-hosted) ─── */
+@font-face {
+  font-family: "Magnolia";
+  src: url("/fonts/magnolia-medium.woff") format("woff");
+  font-weight: 400 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Copperplate CC";
+  src: url("/fonts/copperplate-heavy.woff") format("woff");
+  font-weight: 400 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Times Now Light";
+  src: url("/fonts/timesnow-light.woff") format("woff");
+  font-weight: 300 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Times Now Light Italic";
+  src: url("/fonts/timesnow-lightitalic.woff") format("woff");
+  font-weight: 300 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Galanthia";
+  src: url("/fonts/galanthia-regular.woff") format("woff");
+  font-weight: 400;
+  font-display: swap;
+}
 
-  --font-serif: var(--font-cormorant);
-  --font-display: var(--font-cinzel);
-  --font-script: var(--font-great-vibes);
+@theme inline {
+  /* Exact palette pulled from live proseflorals.com */
+  --color-cream: #F9F9F5;       /* rgb(249,249,245) page background */
+  --color-cream-dark: #F0EAE0;
+  --color-brown: #302B29;       /* rgb(48,43,41) primary text */
+  --color-brown-soft: rgba(48, 43, 41, 0.6);
+  --color-green: #373F24;       /* rgb(55,63,36) deep forest band */
+  --color-ink: #070707;
+  --color-mauve: #C9B7AE;       /* muted rose band on Services */
+  --color-gold: #B99C6E;
+
+  --font-magnolia: "Magnolia", "Times New Roman", serif;
+  --font-copperplate: "Copperplate CC", "Copperplate Gothic", serif;
+  --font-times: "Times Now Light", "Times New Roman", serif;
+  --font-times-italic: "Times Now Light Italic", "Times New Roman", serif;
+  --font-galanthia: "Galanthia", cursive;
+  --font-sans: "Public Sans", "Inter", system-ui, sans-serif;
 }
 
 * {
@@ -25,25 +64,61 @@ html {
 }
 
 body {
-  background-color: #FAF7F2;
-  color: #1a1a1a;
-  font-family: var(--font-cormorant), Georgia, serif;
+  background-color: #F9F9F5;
+  color: #302B29;
+  font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
-h1, h2, h3, h4 {
-  font-family: var(--font-cinzel), 'Copperplate Gothic', serif;
-  letter-spacing: 0.05em;
+/* ─── Font utility classes ─── */
+.font-magnolia { font-family: var(--font-magnolia); }
+.font-copperplate { font-family: var(--font-copperplate); }
+.font-times { font-family: var(--font-times); }
+.font-times-italic { font-family: var(--font-times-italic); font-style: italic; }
+.font-galanthia { font-family: var(--font-galanthia); }
+.font-sans-pf { font-family: var(--font-sans); }
+
+/* Copperplate is used as spaced small-caps labels throughout the site */
+.label {
+  font-family: var(--font-copperplate);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.68rem;
+  line-height: 1.6;
 }
 
-.font-script {
-  font-family: var(--font-great-vibes), cursive;
+/* Big Magnolia display headings */
+.display {
+  font-family: var(--font-magnolia);
+  letter-spacing: 0.02em;
+  line-height: 1.02;
+  font-weight: 400;
 }
 
-.font-serif {
-  font-family: var(--font-cormorant), Georgia, serif;
+/* Delicate italic accent (Times Now) */
+.accent-italic {
+  font-family: var(--font-times-italic);
+  font-style: italic;
 }
 
-.font-display {
-  font-family: var(--font-cinzel), serif;
+::selection {
+  background: #373F24;
+  color: #F9F9F5;
+}
+
+/* Hide scrollbar on horizontal scrollers but keep functionality */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Fade-up on scroll */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.reveal {
+  opacity: 0;
+}
+.reveal.in {
+  animation: fadeUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }

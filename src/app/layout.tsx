@@ -1,45 +1,36 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond, Cinzel, Great_Vibes } from "next/font/google";
+import { Public_Sans } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
-const cormorant = Cormorant_Garamond({
-  variable: "--font-cormorant",
+const publicSans = Public_Sans({
+  variable: "--font-public-sans",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600"],
-  style: ["normal", "italic"],
-});
-
-const cinzel = Cinzel({
-  variable: "--font-cinzel",
-  subsets: ["latin"],
-  weight: ["400", "600", "700"],
-});
-
-const greatVibes = Great_Vibes({
-  variable: "--font-great-vibes",
-  subsets: ["latin"],
-  weight: ["400"],
 });
 
 export const metadata: Metadata = {
-  title: "Prose Florals | Luxury Wedding Floristry",
+  title: "Prose Florals | Boston Wedding & Event Florist",
   description:
-    "Romantic, fine-art wedding floristry. We celebrate love through intentional, handcrafted floral design.",
+    "Boston-based wedding and event florist. Modern-romantic florals that highlight our couples' style & story. Full-service design, setup, and coordination.",
+  openGraph: {
+    title: "Prose Florals | Boston Wedding & Event Florist",
+    description:
+      "Modern-romantic wedding florals for the romantics. Based in Boston, MA.",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body
-        className={`${cormorant.variable} ${cinzel.variable} ${greatVibes.variable} antialiased`}
-      >
+      <body className={`${publicSans.variable} antialiased`}>
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
+import { INQUIRY } from "@/lib/images";
 
 const leftLinks = [
   { label: "Home", href: "/" },
@@ -15,95 +16,118 @@ const rightLinks = [
   { label: "Reviews", href: "/reviews" },
 ];
 
+const allLinks = [...leftLinks, ...rightLinks, { label: "Contact", href: "/contact" }];
+
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    onScroll();
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 bg-[#F9F9F5] border-b border-[#E8E0D6]">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-
-          {/* Left nav links */}
-          <nav className="hidden md:flex items-center gap-8 flex-1">
+      <header
+        className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
+          scrolled ? "bg-[#F9F9F5]/95 backdrop-blur-sm border-b border-[#E7E2D8]" : "bg-transparent"
+        }`}
+      >
+        <div className="max-w-[1400px] mx-auto px-6 md:px-10 h-[68px] flex items-center justify-between">
+          {/* Left links */}
+          <nav className="hidden lg:flex items-center gap-9 flex-1">
             {leftLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="font-display text-[10px] tracking-[0.2em] uppercase text-[#2C1A0E] hover:text-[#2D4A3E] transition-colors duration-200"
+                className="label text-[#302B29] hover:text-[#373F24] transition-colors"
               >
                 {link.label}
               </Link>
             ))}
           </nav>
 
-          {/* Centered Logo */}
+          {/* Center logo */}
           <Link
             href="/"
-            className="font-display text-lg md:text-xl tracking-[0.25em] uppercase text-[#2C1A0E] text-center flex-shrink-0"
+            className="font-magnolia text-[#302B29] text-2xl md:text-[28px] tracking-[0.28em] whitespace-nowrap flex-shrink-0 pl-2"
+            style={{ fontWeight: 400 }}
           >
-            Prose Florals
+            PROSE&nbsp;FLORALS
           </Link>
 
-          {/* Right nav links + Inquire */}
-          <nav className="hidden md:flex items-center gap-8 flex-1 justify-end">
+          {/* Right links */}
+          <nav className="hidden lg:flex items-center gap-9 flex-1 justify-end">
             {rightLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="font-display text-[10px] tracking-[0.2em] uppercase text-[#2C1A0E] hover:text-[#2D4A3E] transition-colors duration-200"
+                className="label text-[#302B29] hover:text-[#373F24] transition-colors"
               >
                 {link.label}
               </Link>
             ))}
             <a
-              href="https://proseflorals.hbportal.co/public/6525822feddaf700db0fc732/1-Enter_your_details"
+              href={INQUIRY}
               target="_blank"
               rel="noopener noreferrer"
-              className="font-serif italic text-[#2C1A0E] text-sm underline underline-offset-2 hover:text-[#2D4A3E] transition-colors duration-200"
+              className="font-times-italic italic text-[#302B29] text-[17px] hover:text-[#373F24] transition-colors"
             >
               Inquire
             </a>
+            <button
+              onClick={() => setOpen(true)}
+              aria-label="Open menu"
+              className="flex flex-col gap-[5px] ml-1"
+            >
+              <span className="block w-6 h-px bg-[#302B29]" />
+              <span className="block w-6 h-px bg-[#302B29]" />
+            </button>
           </nav>
 
           {/* Mobile hamburger */}
           <button
-            className="md:hidden flex flex-col gap-1.5 p-2 ml-auto"
-            onClick={() => setOpen(!open)}
-            aria-label="Toggle menu"
+            className="lg:hidden flex flex-col gap-1.5 p-2 ml-auto"
+            onClick={() => setOpen(true)}
+            aria-label="Open menu"
           >
-            <span className={`block w-6 h-px bg-[#2C1A0E] transition-all duration-300 ${open ? "rotate-45 translate-y-2" : ""}`} />
-            <span className={`block w-6 h-px bg-[#2C1A0E] transition-all duration-300 ${open ? "opacity-0" : ""}`} />
-            <span className={`block w-6 h-px bg-[#2C1A0E] transition-all duration-300 ${open ? "-rotate-45 -translate-y-2" : ""}`} />
+            <span className="block w-6 h-px bg-[#302B29]" />
+            <span className="block w-6 h-px bg-[#302B29]" />
+            <span className="block w-6 h-px bg-[#302B29]" />
           </button>
         </div>
       </header>
 
-      {/* Mobile full-screen overlay menu */}
+      {/* Full-screen overlay menu */}
       {open && (
-        <div className="fixed inset-0 z-40 bg-[#2C1A0E] flex flex-col items-center justify-center gap-8">
+        <div className="fixed inset-0 z-[60] bg-[#373F24] flex flex-col items-center justify-center gap-7 animate-[fadeUp_0.4s_ease]">
           <button
             onClick={() => setOpen(false)}
-            className="absolute top-6 right-6 text-[#FAF7F2] text-2xl"
+            className="absolute top-7 right-8 text-[#F9F9F5] text-3xl font-light leading-none"
             aria-label="Close menu"
           >
-            ✕
+            &times;
           </button>
-          {[...leftLinks, ...rightLinks].map((link) => (
+          <p className="label text-[#C9B7AE] mb-2">Prose Florals</p>
+          {allLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               onClick={() => setOpen(false)}
-              className="font-display text-sm tracking-[0.25em] uppercase text-[#FAF7F2] hover:text-[#C9B99A] transition-colors"
+              className="font-magnolia text-[#F9F9F5] text-3xl md:text-4xl tracking-[0.06em] hover:text-[#C9B7AE] transition-colors"
             >
               {link.label}
             </Link>
           ))}
           <a
-            href="https://proseflorals.hbportal.co/public/6525822feddaf700db0fc732/1-Enter_your_details"
+            href={INQUIRY}
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setOpen(false)}
-            className="font-serif italic text-[#FAF7F2] mt-4 text-base underline underline-offset-2"
+            className="font-times-italic italic text-[#C9B7AE] mt-3 text-xl"
           >
             Inquire
           </a>
