@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Reveal from "@/components/Reveal";
 
 export type CollageItem = {
   src: string;
@@ -31,13 +30,12 @@ export default function PhotoCollage({
 }) {
   return (
     <div className={className}>
-      {/* Desktop: absolutely-positioned scatter */}
+      {/* Desktop: absolutely-positioned scatter (always visible, gentle fade-in via CSS) */}
       <div className={`relative hidden md:block ${height}`}>
         {items.map((it, i) => (
-          <Reveal
+          <div
             key={i}
-            delay={it.delay ?? i * 90}
-            className={`absolute ${it.tilt ? `tilt-${it.tilt}` : ""}`}
+            className={`collage-item absolute ${it.tilt ? `tilt-${it.tilt}` : ""}`}
             style={{
               top: it.top,
               left: it.left,
@@ -45,12 +43,13 @@ export default function PhotoCollage({
               bottom: it.bottom,
               width: it.w,
               zIndex: it.z ?? i,
+              animationDelay: `${it.delay ?? i * 90}ms`,
             }}
           >
             <div className="relative w-full plate overflow-hidden" style={{ aspectRatio: it.ratio ?? "3/4" }}>
-              <Image src={it.src} alt={it.alt ?? "Prose Florals floral design"} fill sizes="40vw" className="object-cover" />
+              <Image src={it.src} alt={it.alt ?? "Prose Florals floral design"} fill sizes="40vw" className="object-cover" priority={i < 3} />
             </div>
-          </Reveal>
+          </div>
         ))}
       </div>
 
@@ -58,13 +57,12 @@ export default function PhotoCollage({
       {mobileGrid && (
         <div className="grid grid-cols-2 gap-4 md:hidden px-1">
           {items.map((it, i) => (
-            <Reveal
+            <div
               key={i}
-              delay={(i % 2) * 90}
               className={`relative overflow-hidden plate ${i % 3 === 0 ? "col-span-2 aspect-[16/10]" : "aspect-[3/4]"} ${i % 2 ? "mt-4" : ""}`}
             >
-              <Image src={it.src} alt={it.alt ?? "Prose Florals floral design"} fill sizes="50vw" className="object-cover" />
-            </Reveal>
+              <Image src={it.src} alt={it.alt ?? "Prose Florals floral design"} fill sizes="50vw" className="object-cover" priority={i < 2} />
+            </div>
           ))}
         </div>
       )}

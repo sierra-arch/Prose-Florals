@@ -214,6 +214,19 @@ body {
   box-shadow: 0 24px 60px -34px rgba(28, 26, 21, 0.5);
 }
 
+/* Collage items: always render, gentle opacity fade-in on load (no scroll observer, tilt-safe) */
+.collage-item {
+  opacity: 0;
+  animation: collageFade 0.7s ease-out forwards;
+}
+@keyframes collageFade {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .collage-item { opacity: 1; animation: none; }
+}
+
 /* Collage tilt helpers */
 .tilt-l { transform: rotate(-2.4deg); }
 .tilt-r { transform: rotate(2.2deg); }
