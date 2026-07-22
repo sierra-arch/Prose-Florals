@@ -69,8 +69,8 @@ export default function Home() {
       <section className="section-y container-wide">
         <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-stretch">
           {/* Left: text panel on bone */}
-          <Reveal className="flex flex-col justify-center bg-[#EAE5D6] px-8 md:px-16 py-14 md:py-20 relative">
-            <span className="vertical-rl eyebrow text-[#33302A]/45 absolute right-6 top-10 hidden md:block">
+          <Reveal className="flex flex-col justify-center bg-[#EAE5D6] px-8 md:px-16 lg:px-20 py-14 md:py-24 relative overflow-hidden">
+            <span className="vertical-rl eyebrow text-[#33302A]/30 absolute right-4 top-1/2 -translate-y-1/2 hidden xl:block">
               What We Do
             </span>
             <p className="eyebrow text-[#3B4127] mb-8">What We Do:</p>
@@ -176,7 +176,14 @@ export default function Home() {
       </section>
 
       {/* ─── TESTIMONIAL (quiet, centered) ─── */}
-      <section className="section-y px-6 bg-[#EAE5D6] relative grain">
+      <section className="section-y px-6 bg-[#EAE5D6] relative grain overflow-hidden">
+        {/* soft doodle accents */}
+        <svg className="doodle-star absolute top-[22%] left-[14%] w-6 h-6 hidden md:block" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M12 2c.6 5 4 8.4 9 9-5 .6-8.4 4-9 9-.6-5-4-8.4-9-9 5-.6 8.4-4 9-9z" fill="currentColor"/>
+        </svg>
+        <svg className="doodle-star absolute bottom-[24%] right-[16%] w-5 h-5 hidden md:block" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M12 2c.6 5 4 8.4 9 9-5 .6-8.4 4-9 9-.6-5-4-8.4-9-9 5-.6 8.4-4 9-9z" fill="currentColor"/>
+        </svg>
         <div className="max-w-3xl mx-auto text-center relative">
           <p className="ed-display text-[#3B4127]/25 leading-none select-none" style={{ fontSize: "clamp(60px, 9vw, 130px)" }}>&ldquo;</p>
           <p className="font-times text-[#33302A] leading-[1.5] -mt-6 md:-mt-10" style={{ fontSize: "clamp(22px, 3vw, 36px)" }}>
