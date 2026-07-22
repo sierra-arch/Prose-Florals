@@ -33,7 +33,7 @@ export default function Navbar() {
     <>
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
-          scrolled ? "bg-[#F9F9F5]/95 backdrop-blur-sm border-b border-[#E7E2D8]" : "bg-transparent"
+          scrolled ? "bg-[#F4F1E8]/95 backdrop-blur-sm border-b border-[#D8D2C2]" : "bg-transparent"
         }`}
       >
         <div className="max-w-[1600px] mx-auto px-6 md:px-14 h-[92px] flex items-center justify-between">
@@ -43,7 +43,7 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="label text-[#302B29] hover:text-[#373F24] transition-colors"
+                className="label text-[#33302A] hover:text-[#3B4127] transition-colors"
               >
                 {link.label}
               </Link>
@@ -53,7 +53,7 @@ export default function Navbar() {
           {/* Center logo */}
           <Link
             href="/"
-            className="font-magnolia text-[#302B29] text-2xl md:text-[28px] tracking-[0.28em] whitespace-nowrap flex-shrink-0 pl-2"
+            className="font-magnolia text-[#33302A] text-2xl md:text-[28px] tracking-[0.28em] whitespace-nowrap flex-shrink-0 pl-2"
             style={{ fontWeight: 400 }}
           >
             PROSE&nbsp;FLORALS
@@ -65,7 +65,7 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="label text-[#302B29] hover:text-[#373F24] transition-colors"
+                className="label text-[#33302A] hover:text-[#3B4127] transition-colors"
               >
                 {link.label}
               </Link>
@@ -74,7 +74,7 @@ export default function Navbar() {
               href={INQUIRY}
               target="_blank"
               rel="noopener noreferrer"
-              className="font-times-italic italic text-[#302B29] text-[17px] hover:text-[#373F24] transition-colors"
+              className="font-times-italic italic text-[#33302A] text-[17px] hover:text-[#3B4127] transition-colors"
             >
               Inquire
             </a>
@@ -83,8 +83,8 @@ export default function Navbar() {
               aria-label="Open menu"
               className="flex flex-col gap-[5px] ml-1"
             >
-              <span className="block w-6 h-px bg-[#302B29]" />
-              <span className="block w-6 h-px bg-[#302B29]" />
+              <span className="block w-6 h-px bg-[#33302A]" />
+              <span className="block w-6 h-px bg-[#33302A]" />
             </button>
           </nav>
 
@@ -94,19 +94,19 @@ export default function Navbar() {
             onClick={() => setOpen(true)}
             aria-label="Open menu"
           >
-            <span className="block w-6 h-px bg-[#302B29]" />
-            <span className="block w-6 h-px bg-[#302B29]" />
-            <span className="block w-6 h-px bg-[#302B29]" />
+            <span className="block w-6 h-px bg-[#33302A]" />
+            <span className="block w-6 h-px bg-[#33302A]" />
+            <span className="block w-6 h-px bg-[#33302A]" />
           </button>
         </div>
       </header>
 
       {/* Full-screen overlay menu */}
       {open && (
-        <div className="fixed inset-0 z-[60] bg-[#373F24] flex flex-col items-center justify-center gap-7 animate-[fadeUp_0.4s_ease]">
+        <div className="fixed inset-0 z-[60] bg-[#3B4127] flex flex-col items-center justify-center gap-7 animate-[fadeUp_0.4s_ease]">
           <button
             onClick={() => setOpen(false)}
-            className="absolute top-7 right-8 text-[#F9F9F5] text-3xl font-light leading-none"
+            className="absolute top-7 right-8 text-[#F4F1E8] text-3xl font-light leading-none"
             aria-label="Close menu"
           >
             &times;
@@ -117,7 +117,7 @@ export default function Navbar() {
               key={link.href}
               href={link.href}
               onClick={() => setOpen(false)}
-              className="font-magnolia text-[#F9F9F5] text-3xl md:text-4xl tracking-[0.06em] hover:text-[#C9B7AE] transition-colors"
+              className="font-magnolia text-[#F4F1E8] text-3xl md:text-4xl tracking-[0.06em] hover:text-[#C9B7AE] transition-colors"
             >
               {link.label}
             </Link>

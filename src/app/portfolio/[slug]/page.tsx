@@ -59,9 +59,9 @@ export default async function GalleryPage({
   const blocks = galleryLayout(rest);
 
   return (
-    <main className="bg-[#F9F9F5]">
+    <main className="bg-[#F4F1E8]">
       {/* Grand cover */}
-      <section className="relative h-[70vh] md:h-[88vh] w-full overflow-hidden bg-[#302B29]">
+      <section className="relative h-[70vh] md:h-[88vh] w-full overflow-hidden bg-[#33302A]">
         <Image src={cover} alt={g.coverAlt} fill priority sizes="100vw" className="object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-black/10" />
         <div className="absolute inset-x-0 bottom-0 container-wide pb-12 md:pb-20">
@@ -81,10 +81,10 @@ export default async function GalleryPage({
       <section className="container-pf section-y">
         <div className="grid md:grid-cols-[1.6fr_1fr] gap-12 md:gap-20 max-w-6xl">
           <div>
-            <p className="label text-[#302B29]/60 mb-7">About the Event</p>
+            <p className="label text-[#33302A]/60 mb-7">About the Event</p>
             <div className="space-y-6">
               {g.about.map((p, i) => (
-                <p key={i} className="font-times text-[18px] md:text-[20px] text-[#302B29]/80 leading-[1.85]">
+                <p key={i} className="font-times text-[18px] md:text-[20px] text-[#33302A]/80 leading-[1.85]">
                   {p}
                 </p>
               ))}
@@ -93,14 +93,14 @@ export default async function GalleryPage({
           <div className="md:pt-11">
             <ul className="space-y-3.5">
               {g.vendors.map((v) => (
-                <li key={v.role} className="font-times text-[17px] md:text-[18px] text-[#302B29]/75">
+                <li key={v.role} className="font-times text-[17px] md:text-[18px] text-[#33302A]/75">
                   {v.role} —{" "}
                   {v.url ? (
-                    <a href={v.url} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 decoration-[#302B29]/30 hover:decoration-[#373F24] hover:text-[#373F24] transition-colors">
+                    <a href={v.url} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 decoration-[#33302A]/30 hover:decoration-[#3B4127] hover:text-[#3B4127] transition-colors">
                       {v.name}
                     </a>
                   ) : (
-                    <span className="underline underline-offset-4 decoration-[#302B29]/30">{v.name}</span>
+                    <span className="underline underline-offset-4 decoration-[#33302A]/30">{v.name}</span>
                   )}
                 </li>
               ))}
@@ -148,7 +148,7 @@ export default async function GalleryPage({
 
       {/* Back to portfolio */}
       <section className="container-pf pb-20 text-center">
-        <Link href="/portfolio" className="label text-[#302B29] hover:text-[#373F24] transition-colors inline-flex items-center gap-3">
+        <Link href="/portfolio" className="label text-[#33302A] hover:text-[#3B4127] transition-colors inline-flex items-center gap-3">
           <svg width="30" height="14" viewBox="0 0 30 14" fill="none" stroke="currentColor" strokeWidth="1"><path d="M29 7H1M1 7l6-6M1 7l6 6" /></svg>
           View Full Portfolio
         </Link>

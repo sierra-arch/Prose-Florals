@@ -35,15 +35,21 @@
 }
 
 @theme inline {
-  /* Exact palette pulled from live proseflorals.com */
-  --color-cream: #F9F9F5;       /* rgb(249,249,245) page background */
-  --color-cream-dark: #F0EAE0;
-  --color-brown: #302B29;       /* rgb(48,43,41) primary text */
-  --color-brown-soft: rgba(48, 43, 41, 0.6);
-  --color-green: #373F24;       /* rgb(55,63,36) deep forest band */
-  --color-ink: #070707;
-  --color-mauve: #C9B7AE;       /* muted rose band on Services */
+  /* ─── Editorial "Garden Green + Bone" palette ─── */
+  --color-bone: #F4F1E8;        /* warm bone/ivory canvas */
+  --color-bone-2: #EAE5D6;      /* slightly deeper bone for panels */
+  --color-cream: #F4F1E8;       /* alias -> bone (keeps old refs alive) */
+  --color-cream-dark: #EAE5D6;
+  --color-olive: #3B4127;       /* deep olive-green primary accent */
+  --color-olive-deep: #2A2E1B;  /* darkest olive for surrounds */
+  --color-moss: #6B7350;        /* mid moss for secondary accents */
+  --color-brown: #33302A;       /* warm near-espresso text */
+  --color-brown-soft: rgba(51, 48, 42, 0.62);
+  --color-green: #3B4127;       /* alias -> olive (keeps old refs alive) */
+  --color-ink: #1C1A15;
+  --color-mauve: #C9B7AE;
   --color-gold: #B99C6E;
+  --color-line: #D8D2C2;        /* thin rule / border on bone */
 
   --font-magnolia: "Magnolia", "Times New Roman", serif;
   --font-copperplate: "Copperplate CC", "Copperplate Gothic", serif;
@@ -64,8 +70,8 @@ html {
 }
 
 body {
-  background-color: #F9F9F5;
-  color: #302B29;
+  background-color: #F4F1E8;
+  color: #33302A;
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -160,8 +166,72 @@ body {
 }
 
 ::selection {
-  background: #373F24;
-  color: #F9F9F5;
+  background: #3B4127;
+  color: #F4F1E8;
+}
+
+/* ─── Editorial utilities ─── */
+
+/* Oversized editorial serif display */
+.ed-display {
+  font-family: var(--font-magnolia);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: 0.01em;
+}
+
+/* Fine-spaced small-caps eyebrow label (Copperplate) */
+.eyebrow {
+  font-family: var(--font-copperplate);
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  font-size: 0.64rem;
+  line-height: 1.6;
+}
+
+/* Vertical rotated label (magazine spine text) */
+.vertical-rl {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  letter-spacing: 0.32em;
+}
+
+/* Thin-rule editorial list row (TABLESCAPE STYLING / FLORAL DESIGN ...) */
+.rule-row {
+  border-top: 1px solid var(--color-line);
+  transition: background-color 0.5s ease, padding-left 0.5s cubic-bezier(0.22,1,0.36,1);
+}
+.rule-row:last-child { border-bottom: 1px solid var(--color-line); }
+.rule-row:hover { padding-left: 0.75rem; }
+
+/* Editorial photo frame — subtle inner border + soft shadow, magazine plate */
+.plate {
+  box-shadow: 0 24px 60px -34px rgba(28, 26, 21, 0.5);
+}
+
+/* Collage tilt helpers */
+.tilt-l { transform: rotate(-2.4deg); }
+.tilt-r { transform: rotate(2.2deg); }
+.tilt-ls { transform: rotate(-1.2deg); }
+.tilt-rs { transform: rotate(1.4deg); }
+
+/* Page-number / caption flourish */
+.folio {
+  font-family: var(--font-times);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  color: var(--color-brown-soft);
+}
+
+/* Grain overlay for the moody surround sections */
+.grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+  opacity: 0.06;
+  pointer-events: none;
+  mix-blend-mode: multiply;
 }
 
 /* Hide scrollbar on horizontal scrollers but keep functionality */
@@ -178,4 +248,19 @@ body {
 }
 .reveal.in {
   animation: fadeUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Slow parallax-ish image reveal (clip) */
+@keyframes clipReveal {
+  from { clip-path: inset(0 0 100% 0); }
+  to { clip-path: inset(0 0 0 0); }
+}
+.clip-reveal.in {
+  animation: clipReveal 1.1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Marquee for the editorial rule strips */
+@keyframes edMarquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }

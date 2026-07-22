@@ -19,13 +19,13 @@ export default function ReviewsPage() {
   const secondHalf = REVIEWS.slice(11);
 
   return (
-    <main className="bg-[#F9F9F5]">
+    <main className="bg-[#F4F1E8]">
       {/* LOVE NOTES intro */}
       <section className="title-zone container-pf text-center">
-        <h1 className="font-magnolia text-[#302B29] leading-[0.9]" style={{ fontSize: "clamp(64px, 15vw, 200px)" }}>
+        <h1 className="font-magnolia text-[#33302A] leading-[0.9]" style={{ fontSize: "clamp(64px, 15vw, 200px)" }}>
           LOVE NOTES
         </h1>
-        <p className="label text-[#302B29]/70 mt-8">From Our Lovely Past Clients</p>
+        <p className="label text-[#33302A]/70 mt-8">From Our Lovely Past Clients</p>
       </section>
 
       {/* Large circular feature photo */}
@@ -40,14 +40,14 @@ export default function ReviewsPage() {
         <div className="max-w-3xl mx-auto space-y-16 md:space-y-24 text-center">
           {firstHalf.map((r, i) => (
             <Reveal key={i}>
-              <p className="font-times text-[#302B29]/90 leading-[1.55]" style={{ fontSize: "clamp(19px, 2.1vw, 26px)" }}>
+              <p className="font-times text-[#33302A]/90 leading-[1.55]" style={{ fontSize: "clamp(19px, 2.1vw, 26px)" }}>
                 &ldquo;{r.quote}&rdquo;
               </p>
-              <p className="font-times text-[#302B29]/70 mt-5 text-[18px]">
+              <p className="font-times text-[#33302A]/70 mt-5 text-[18px]">
                 &mdash; {r.author}
                 {r.venue && (
                   <>
-                    , <span className="underline underline-offset-4 decoration-[#302B29]/30">{r.venue}</span>
+                    , <span className="underline underline-offset-4 decoration-[#33302A]/30">{r.venue}</span>
                   </>
                 )}
               </p>
@@ -66,7 +66,7 @@ export default function ReviewsPage() {
             <div className="relative w-full md:w-[280px] aspect-[3/4] overflow-hidden mx-auto mb-7">
               <Image src={GALLERY_COVERS["taylor-ethan"]} alt="Prose Florals wedding" fill sizes="280px" className="object-cover" />
             </div>
-            <Link href="/portfolio" className="label text-[#302B29] hover:text-[#373F24] transition-colors">
+            <Link href="/portfolio" className="label text-[#33302A] hover:text-[#3B4127] transition-colors">
               View Full Portfolio
             </Link>
           </div>
@@ -78,14 +78,14 @@ export default function ReviewsPage() {
         <div className="max-w-3xl mx-auto space-y-16 md:space-y-24 text-center">
           {secondHalf.map((r, i) => (
             <Reveal key={i}>
-              <p className="font-times text-[#302B29]/90 leading-[1.55]" style={{ fontSize: "clamp(19px, 2.1vw, 26px)" }}>
+              <p className="font-times text-[#33302A]/90 leading-[1.55]" style={{ fontSize: "clamp(19px, 2.1vw, 26px)" }}>
                 &ldquo;{r.quote}&rdquo;
               </p>
-              <p className="font-times text-[#302B29]/70 mt-5 text-[18px]">
+              <p className="font-times text-[#33302A]/70 mt-5 text-[18px]">
                 &mdash; {r.author}
                 {r.venue && (
                   <>
-                    , <span className="underline underline-offset-4 decoration-[#302B29]/30">{r.venue}</span>
+                    , <span className="underline underline-offset-4 decoration-[#33302A]/30">{r.venue}</span>
                   </>
                 )}
               </p>

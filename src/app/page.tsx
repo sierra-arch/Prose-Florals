@@ -1,187 +1,175 @@
 import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
+import PhotoCollage from "@/components/PhotoCollage";
 import { IMG, INQUIRY } from "@/lib/images";
+import { GALLERIES, GALLERY_COVERS } from "@/lib/galleries";
 
-const workCards = [
-  { photo: IMG.brideParty, label: "Weddings", num: "01" },
-  { photo: IMG.coupleSunset, label: "Elopements", num: "02" },
-  { photo: IMG.bouquetClose, label: "Florals", num: "03" },
+// Scattered editorial hero cluster (Terre Verde / Drifter Floral style)
+const heroCollage = [
+  { src: IMG.heroTwoBrides, alt: "Two brides with vibrant bouquets", top: "8%", left: "1%", w: "22%", ratio: "3/4", tilt: "ls" as const, z: 3 },
+  { src: IMG.brideMoody, alt: "Moody bridal portrait", top: "30%", left: "22%", w: "16%", ratio: "3/4", tilt: "rs" as const, z: 2 },
+  { src: IMG.centerpiece, alt: "Candlelit tablescape", top: "12%", left: "39%", w: "25%", ratio: "4/3", tilt: "" as const, z: 4 },
+  { src: IMG.coupleForest, alt: "Couple in the forest", top: "46%", left: "59%", w: "15%", ratio: "3/4", tilt: "ls" as const, z: 3 },
+  { src: IMG.bouquetLush, alt: "Lush bridal bouquet", top: "10%", left: "73%", w: "21%", ratio: "3/4", tilt: "r" as const, z: 5 },
+  { src: IMG.meadowInstall, alt: "Meadow ground install", bottom: "1%", left: "29%", w: "21%", ratio: "16/10", tilt: "rs" as const, z: 1 },
+];
+
+const services = [
+  { t: "Full Service Weddings", meta: "Design · Delivery · Setup", href: "/services" },
+  { t: "Floral Design & Installs", meta: "Bouquets · Arches · Meadows", href: "/services" },
+  { t: "Editorial & Events", meta: "Styling · Corporate · Shoots", href: "/services" },
+  { t: "DIY Florals with Ease", meta: "Curated · Bulk · Guided", href: "/services" },
 ];
 
 export default function Home() {
   return (
-    <main className="bg-[#F9F9F5]">
-      {/* ─── HERO ─── */}
-      <section className="relative w-full h-screen min-h-[620px]">
-        <Image
-          src={IMG.heroTwoBrides}
-          alt="Two brides holding vibrant Prose Florals bouquets in a Boston garden"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-black/10" />
-        <p className="absolute bottom-10 right-8 md:right-16 max-w-[280px] text-right font-times italic text-white text-lg md:text-xl leading-snug drop-shadow-sm">
-          Boston Area Full Service Wedding Florist for the romantics.
-        </p>
+    <main className="bg-[#F4F1E8] overflow-x-clip">
+      {/* ─── EDITORIAL COLLAGE HERO ─── */}
+      <section className="relative pt-[140px] md:pt-[168px] pb-10 md:pb-16">
+        <div className="container-wide">
+          {/* eyebrow row */}
+          <div className="flex items-baseline justify-between mb-8 md:mb-12">
+            <p className="eyebrow text-[#33302A]/60">Boston, MA · Est. Wedding &amp; Event Florist</p>
+            <p className="folio hidden md:block">Vol. 01 — The Romantics</p>
+          </div>
+
+          <PhotoCollage items={heroCollage} height="h-[440px] md:h-[600px] lg:h-[640px]" />
+
+          {/* Oversized wordmark statement */}
+          <div className="mt-4 md:mt-6 relative">
+            <h1 className="ed-display text-[#33302A] text-center" style={{ fontSize: "clamp(52px, 13vw, 210px)" }}>
+              PROSE FLORALS
+            </h1>
+            <p className="font-times-italic italic text-center text-[#33302A]/70 -mt-2 md:-mt-4" style={{ fontSize: "clamp(18px, 2.4vw, 30px)" }}>
+              wedding florals, done differently — for the romantics.
+            </p>
+          </div>
+        </div>
       </section>
 
-      {/* ─── FLOWERS with INTENTION ─── */}
-      <section className="section-y-lg container-pf">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-16 md:gap-20 items-center">
-          {/* Left: overlapping photos */}
-          <Reveal className="md:w-[48%] relative w-full" as="div">
-            <div className="relative aspect-[4/5] w-[80%]">
-              <Image src={IMG.coupleKiss} alt="Couple embracing on their wedding day" fill sizes="40vw" className="object-cover" />
-            </div>
-            <div className="absolute bottom-[-32px] right-0 w-[52%] aspect-[3/4] border-[6px] border-[#F9F9F5] shadow-sm">
-              <Image src={IMG.bouquetBold} alt="Bold, colorful bridal bouquet" fill sizes="30vw" className="object-cover" />
-            </div>
+      {/* ─── WHAT WE DO (KADO-style split) ─── */}
+      <section className="section-y container-wide">
+        <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-stretch">
+          {/* Left: text panel on bone */}
+          <Reveal className="flex flex-col justify-center bg-[#EAE5D6] px-8 md:px-16 py-14 md:py-20 relative">
+            <span className="vertical-rl eyebrow text-[#33302A]/45 absolute right-6 top-10 hidden md:block">
+              What We Do
+            </span>
+            <p className="eyebrow text-[#3B4127] mb-8">What We Do:</p>
+            <h2 className="ed-display text-[#33302A] mb-8" style={{ fontSize: "clamp(34px, 4.6vw, 66px)" }}>
+              Flowers for weddings, events &amp; installations
+            </h2>
+            <p className="font-times text-[18px] md:text-[19px] text-[#33302A]/72 leading-[1.85] max-w-md">
+              Every couple has their own romance, and we believe that should be reflected in their florals. We create dynamic floral designs that highlight our couple&apos;s style &amp; story — combining your vision, modern design, and a little dramatic flare.
+            </p>
+            <Link href="/about" className="eyebrow text-[#33302A] border-b border-[#33302A] pb-1 self-start mt-10 hover:text-[#3B4127] hover:border-[#3B4127] transition-colors">
+              Read Our Story
+            </Link>
           </Reveal>
 
-          {/* Right: text */}
-          <Reveal className="md:w-[52%] relative pt-8 md:pt-0" delay={120}>
-            <div className="absolute -top-4 right-2 w-16 h-16 opacity-60">
-              <Image src={IMG.monogram} alt="Prose Florals monogram" fill className="object-contain" />
-            </div>
-            <h2 className="display text-[#302B29] mb-6" style={{ fontSize: "clamp(42px, 5.5vw, 76px)" }}>
-              FLOWERS
-              <br />
-              <span className="font-times-italic italic font-light">with </span>
-              INTENTION
-            </h2>
-            <p className="label text-[#302B29] mb-6 leading-relaxed">
-              We create dynamic floral designs that
-              <br className="hidden md:block" /> highlight our couple&apos;s style &amp; story.
-            </p>
-            <p className="font-times text-[19px] text-[#302B29]/70 leading-relaxed mb-4">
-              Welcome to wedding florals done differently. Every couple has their own romance, and we believe that should be reflected in their wedding florals!
-            </p>
-            <p className="font-times text-[19px] text-[#302B29]/70 leading-relaxed">
-              It has been our honor to get to know incredible couples at <em className="font-times-italic">such</em> a special time in their life and help immortalize their romance in the form of intentionally selected florals to highlight their love story.
-            </p>
+          {/* Right: tall feature image */}
+          <Reveal delay={120} className="relative min-h-[420px] md:min-h-0 plate overflow-hidden">
+            <Image src={IMG.bouquetBold} alt="A bold, colorful Prose Florals arrangement" fill sizes="50vw" className="object-cover" />
+            <span className="absolute bottom-4 right-4 folio text-white/85">fig. 01</span>
           </Reveal>
         </div>
       </section>
 
-      {/* ─── ways to work TOGETHER ─── */}
-      <section>
-        <div className="grid grid-cols-3">
-          {workCards.map((c) => (
-            <Link key={c.num} href="/portfolio" className="relative aspect-[3/4] overflow-hidden group block">
-              <Image src={c.photo} alt={c.label} fill sizes="33vw" className="object-cover transition-transform duration-[900ms] group-hover:scale-105" />
-              <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-400 flex flex-col justify-between p-6 md:p-8">
-                <div />
-                <div>
-                  <span className="font-times-italic italic text-white block leading-none" style={{ fontSize: "clamp(24px, 3.5vw, 48px)" }}>Explore</span>
-                  <span className="display text-white block tracking-[0.08em]" style={{ fontSize: "clamp(20px, 3vw, 40px)" }}>{c.label}</span>
-                </div>
-                <p className="label text-white/60">{c.num}</p>
-              </div>
-            </Link>
+      {/* ─── SERVICES — thin-rule editorial list (Terre Verde style) ─── */}
+      <section className="section-y container-pf">
+        <div className="mb-12 md:mb-16 flex items-end justify-between">
+          <h2 className="ed-display text-[#33302A]" style={{ fontSize: "clamp(30px, 4vw, 56px)" }}>
+            <span className="font-times-italic italic font-light">welcome to our</span> OFFERINGS
+          </h2>
+          <p className="folio hidden md:block">§ Services</p>
+        </div>
+        <div>
+          {services.map((s, i) => (
+            <Reveal key={s.t} delay={i * 70}>
+              <Link href={s.href} className="rule-row group flex items-center justify-between gap-6 py-6 md:py-8">
+                <span className="flex items-baseline gap-5 md:gap-8">
+                  <span className="folio text-[#33302A]/40">{String(i + 1).padStart(2, "0")}</span>
+                  <span className="font-times text-[#33302A] group-hover:text-[#3B4127] transition-colors" style={{ fontSize: "clamp(22px, 3vw, 40px)" }}>
+                    {s.t}
+                  </span>
+                </span>
+                <span className="eyebrow text-[#33302A]/45 hidden sm:block text-right">{s.meta}</span>
+              </Link>
+            </Reveal>
           ))}
         </div>
-
-        <div className="max-w-6xl mx-auto container-pf section-y flex flex-col md:flex-row gap-12 md:gap-16 items-end">
-          <div className="md:w-1/2">
-            <h2 className="text-[#302B29] leading-[1]" style={{ fontSize: "clamp(42px, 6vw, 84px)" }}>
-              <span className="font-times-italic italic font-light block">ways to work</span>
-              <span className="display block tracking-[0.06em]">TOGETHER</span>
-            </h2>
-          </div>
-          <div className="md:w-1/2">
-            <p className="font-times text-[19px] text-[#302B29]/70 leading-relaxed mb-8">
-              We&apos;re known for professional, timely communication <em className="font-times-italic">and</em> stunning floral artistry, because you shouldn&apos;t have to choose.
-            </p>
-            <div className="flex flex-wrap gap-8">
-              <Link href="/services" className="label text-[#302B29] border-b border-[#302B29] pb-1 hover:text-[#373F24] hover:border-[#373F24] transition-colors">
-                Prose Weddings
-              </Link>
-              <Link href="/experience" className="font-times-italic italic text-[17px] text-[#302B29] border-b border-[#302B29] pb-1 hover:text-[#373F24] hover:border-[#373F24] transition-colors">
-                The Experience
-              </Link>
-            </div>
-          </div>
-        </div>
       </section>
 
-      {/* ─── SIERRA BETTIS green band ─── */}
-      <section className="grid grid-cols-1 md:grid-cols-2">
-        <div className="relative aspect-[4/5] md:aspect-auto md:min-h-[560px]">
+      {/* ─── MOODY OLIVE TEAM BAND ─── */}
+      <section className="relative grid md:grid-cols-2 grain">
+        <div className="relative aspect-[4/5] md:aspect-auto md:min-h-[600px]">
           <Image src={IMG.bridePortrait} alt="Sierra Bettis, founder of Prose Florals" fill sizes="50vw" className="object-cover" />
         </div>
-        <div className="bg-[#373F24] flex flex-col justify-center px-8 md:px-20 py-24 md:py-32 relative">
-          <div className="absolute top-8 right-8 w-14 h-14 opacity-30">
-            <Image src={IMG.monogramWhite} alt="" fill className="object-contain" />
-          </div>
-          <p className="label text-[#C9B7AE] mb-4">Behind the Blooms</p>
-          <h2 className="display text-[#F9F9F5] mb-6" style={{ fontSize: "clamp(40px, 5vw, 68px)" }}>
-            SIERRA BETTIS
+        <div className="bg-[#2A2E1B] flex flex-col justify-center px-8 md:px-20 py-20 md:py-32 relative">
+          <span className="vertical-rl eyebrow text-[#F4F1E8]/35 absolute right-7 top-14 hidden md:block">
+            Sincerely, Prose
+          </span>
+          <p className="eyebrow text-[#C9B7AE] mb-6">Behind the Blooms</p>
+          <h2 className="ed-display text-[#F4F1E8] mb-7" style={{ fontSize: "clamp(38px, 5vw, 74px)" }}>
+            SIERRA &amp; <span className="font-times-italic italic font-light">Kattie</span>
           </h2>
-          <p className="font-times text-[18px] text-[#F9F9F5]/75 leading-relaxed max-w-md mb-8">
-            As a passionate wedding florist with a decade of experience, Sierra brings her signature timeless, editorial style and classic, romantic aesthetic to modern love stories.
+          <p className="font-times text-[18px] text-[#F4F1E8]/78 leading-[1.85] max-w-md mb-9">
+            A passionate Boston florist duo bringing a timeless, editorial style and classic, romantic aesthetic to modern love stories — with professional, timely communication every step of the way.
           </p>
-          <Link href="/about" className="label text-[#F9F9F5] border-b border-[#F9F9F5]/50 pb-1 self-start hover:border-[#C9B7AE] hover:text-[#C9B7AE] transition-colors">
-            Learn More about the Prose Team
+          <Link href="/about" className="eyebrow text-[#F4F1E8] border-b border-[#F4F1E8]/45 pb-1 self-start hover:border-[#C9B7AE] hover:text-[#C9B7AE] transition-colors">
+            Meet the Prose Team
           </Link>
         </div>
       </section>
 
-      {/* ─── WE MAKE PLAYFUL ARRANGEMENTS ─── */}
-      <section className="section-y-lg container-pf">
-        <Reveal className="text-center max-w-4xl mx-auto mb-20 md:mb-24">
-          <p className="label text-[#302B29]/60 mb-6">Our Approach</p>
-          <h2 className="text-[#302B29] leading-[1.05]" style={{ fontSize: "clamp(34px, 5vw, 66px)" }}>
-            <span className="display">WE MAKE PLAYFUL</span>
-            <br />
-            <span className="display">ARRANGEMENTS </span>
-            <span className="font-times-italic italic font-light">for</span>
-            <br />
-            <span className="display">YOUR MOST</span>
-            <br />
-            <span className="font-times-italic italic font-light">TIMELESS </span>
-            <span className="display">MOMENTS</span>
+      {/* ─── FEATURED WEDDINGS ─── */}
+      <section className="section-y container-wide">
+        <div className="mb-12 md:mb-16 text-center">
+          <p className="eyebrow text-[#33302A]/55 mb-4">Selected Work</p>
+          <h2 className="ed-display text-[#33302A]" style={{ fontSize: "clamp(32px, 4.4vw, 62px)" }}>
+            FEATURED <span className="font-times-italic italic font-light">weddings</span>
           </h2>
-          <p className="font-times text-[18px] text-[#302B29]/65 leading-relaxed max-w-xl mx-auto mt-8">
-            Our approach is to present stunning pieces by combining our client&apos;s vision boards, modern design aspects, and a little dramatic flare.
-          </p>
-        </Reveal>
-
-        {/* Collaged photos */}
-        <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 items-center">
-          <Reveal className="relative aspect-[3/4] md:mt-16">
-            <Image src={IMG.coupleForest} alt="Couple in a moody forest setting" fill sizes="33vw" className="object-cover" />
-          </Reveal>
-          <Reveal className="relative aspect-[4/5]" delay={100}>
-            <Image src={IMG.ceremonyArch} alt="Floral ceremony arch installation" fill sizes="33vw" className="object-cover" />
-          </Reveal>
-          <Reveal className="relative aspect-[3/4] md:mt-24" delay={200}>
-            <Image src={IMG.bouquetLush} alt="Lush bridal bouquet detail" fill sizes="33vw" className="object-cover" />
-          </Reveal>
+        </div>
+        <div className="grid md:grid-cols-3 gap-x-8 gap-y-14 md:gap-x-10">
+          {GALLERIES.map((g, i) => (
+            <Reveal key={g.slug} delay={i * 110}>
+              <Link href={`/portfolio/${g.slug}`} className="group block">
+                <div className={`relative aspect-[3/4] overflow-hidden plate mb-6 ${i === 1 ? "md:mt-14" : ""}`}>
+                  <Image
+                    src={GALLERY_COVERS[g.slug]}
+                    alt={g.coverAlt}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.05]"
+                  />
+                  <span className="absolute top-4 left-4 folio text-white/85">0{i + 1}</span>
+                </div>
+                <p className="eyebrow text-[#33302A] mb-2 group-hover:text-[#3B4127] transition-colors">{g.venueLabel}</p>
+                <p className="font-times text-[20px] md:text-[22px] text-[#33302A]/80 leading-snug">{g.tagline}</p>
+              </Link>
+            </Reveal>
+          ))}
+        </div>
+        <div className="text-center mt-16">
+          <Link href="/portfolio" className="eyebrow text-[#33302A] border-b border-[#33302A] pb-1.5 hover:text-[#3B4127] hover:border-[#3B4127] transition-colors">
+            View the Full Portfolio
+          </Link>
         </div>
       </section>
 
-      {/* ─── Testimonial ─── */}
-      <section className="section-y px-6 bg-[#F9F9F5]">
-        <div className="max-w-3xl mx-auto text-center">
-          <p className="font-times text-[#302B29] leading-relaxed" style={{ fontSize: "clamp(22px, 3vw, 34px)" }}>
-            &ldquo;From start to finish I had the most wonderful experience with Prose Florals. They were <em className="font-times-italic">exactly</em> what we had envisioned, maybe <em className="font-times-italic">even</em> better!&rdquo;
+      {/* ─── TESTIMONIAL (quiet, centered) ─── */}
+      <section className="section-y px-6 bg-[#EAE5D6] relative grain">
+        <div className="max-w-3xl mx-auto text-center relative">
+          <p className="ed-display text-[#3B4127]/25 leading-none select-none" style={{ fontSize: "clamp(60px, 9vw, 130px)" }}>&ldquo;</p>
+          <p className="font-times text-[#33302A] leading-[1.5] -mt-6 md:-mt-10" style={{ fontSize: "clamp(22px, 3vw, 36px)" }}>
+            From start to finish I had the most wonderful experience with Prose Florals. They were <em className="font-times-italic">exactly</em> what we had envisioned, maybe <em className="font-times-italic">even</em> better!
           </p>
-          <div className="flex items-center justify-center gap-4 mt-8">
-            <div className="relative w-12 h-12 rounded-full overflow-hidden border border-[#302B29]/15">
-              <Image src={IMG.bouquetDetail2} alt="" fill sizes="48px" className="object-cover" />
-            </div>
-            <div className="text-left">
-              <p className="label text-[#302B29]/50 text-[10px]">Kind Words From</p>
-              <p className="font-times-italic italic text-[#302B29] text-lg">Meaghan &amp; Abel, La Brassa</p>
-            </div>
-          </div>
+          <p className="font-times-italic italic text-[#33302A]/70 text-lg mt-8">— Meaghan &amp; Abel, La Brassa</p>
         </div>
       </section>
 
-      {/* ─── EXPLORE PROSE FLORALS WEDDINGS ─── */}
+      {/* ─── EXPLORE CTA (image mosaic) ─── */}
       <section className="relative">
         <div className="grid grid-cols-2 md:grid-cols-4">
           {[IMG.brideMoody, IMG.coupleWalk, IMG.brideBrick, IMG.reception].map((src, i) => (
@@ -190,39 +178,30 @@ export default function Home() {
             </div>
           ))}
         </div>
-        <div className="absolute inset-0 bg-black/25 flex flex-col items-center justify-center text-center px-6">
-          <h2 className="display text-white leading-[1.05]" style={{ fontSize: "clamp(34px, 6vw, 88px)" }}>
-            EXPLORE
-          </h2>
-          <p className="font-times-italic italic text-white leading-[1.1]" style={{ fontSize: "clamp(30px, 5.5vw, 80px)" }}>
-            Prose Florals
-          </p>
-          <h2 className="display text-white leading-[1.05]" style={{ fontSize: "clamp(34px, 6vw, 88px)" }}>
-            WEDDINGS
-          </h2>
-          <Link
-            href="/portfolio"
-            className="mt-8 label text-white border border-white/60 px-9 py-3.5 hover:bg-white hover:text-[#302B29] transition-all duration-300"
-          >
+        <div className="absolute inset-0 bg-[#2A2E1B]/45 flex flex-col items-center justify-center text-center px-6">
+          <h2 className="ed-display text-white leading-[1]" style={{ fontSize: "clamp(34px, 6vw, 92px)" }}>EXPLORE</h2>
+          <p className="font-times-italic italic text-white leading-[1.05]" style={{ fontSize: "clamp(30px, 5.5vw, 82px)" }}>Prose Florals</p>
+          <h2 className="ed-display text-white leading-[1]" style={{ fontSize: "clamp(34px, 6vw, 92px)" }}>WEDDINGS</h2>
+          <Link href="/portfolio" className="mt-9 eyebrow text-white border border-white/60 px-9 py-3.5 hover:bg-white hover:text-[#33302A] transition-all duration-300">
             View the Portfolio
           </Link>
         </div>
       </section>
 
-      {/* ─── Inquire CTA ─── */}
-      <section className="section-y-lg px-6 text-center bg-[#302B29]">
-        <p className="label text-[#C9B7AE] mb-5">Begin Your Journey</p>
-        <h2 className="font-times-italic italic text-white font-light mb-4" style={{ fontSize: "clamp(30px, 4vw, 56px)" }}>
-          Ready to Celebrate?
+      {/* ─── INQUIRE CTA ─── */}
+      <section className="section-y-lg px-6 text-center bg-[#3B4127]">
+        <p className="eyebrow text-[#C9B7AE] mb-6">Begin Your Journey</p>
+        <h2 className="ed-display text-white mb-5" style={{ fontSize: "clamp(36px, 5.5vw, 82px)" }}>
+          SHALL WE <span className="font-times-italic italic font-light">begin?</span>
         </h2>
-        <p className="font-times text-white/65 text-lg italic mb-10 max-w-md mx-auto leading-relaxed">
+        <p className="font-times text-white/70 text-lg italic mb-10 max-w-md mx-auto leading-relaxed">
           Introduce yourself and tell us a little about your event to get started. We look forward to meeting you!
         </p>
         <a
           href={INQUIRY}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block label text-[#302B29] bg-[#F9F9F5] px-12 py-4 hover:bg-[#F0EAE0] transition-colors"
+          className="inline-block eyebrow text-[#33302A] bg-[#F4F1E8] px-12 py-4 hover:bg-[#EAE5D6] transition-colors"
         >
           Inquire Now
         </a>

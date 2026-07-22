@@ -17,7 +17,7 @@ export default function HeroCarousel({ images }: { images: string[] }) {
   }, [n]);
 
   return (
-    <section className="relative h-[78vh] md:h-[92vh] w-full overflow-hidden bg-[#302B29]">
+    <section className="relative h-[78vh] md:h-[92vh] w-full overflow-hidden bg-[#33302A]">
       {images.map((src, idx) => (
         <div
           key={idx}

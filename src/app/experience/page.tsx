@@ -65,7 +65,7 @@ const experienceTestimonials = [
 
 export default function ExperiencePage() {
   return (
-    <main className="bg-[#F9F9F5]">
+    <main className="bg-[#F4F1E8]">
       <PageHero
         image={IMG.coupleForest}
         alt="Romantic forest bridal portrait by Prose Florals"
@@ -76,8 +76,8 @@ export default function ExperiencePage() {
 
       {/* Tailored process intro */}
       <section className="section-y-lg container-pf text-center">
-        <p className="label text-[#302B29]/50 mb-7">The Experience</p>
-        <h2 className="text-[#302B29] leading-[1.08]" style={{ fontSize: "clamp(34px, 5vw, 70px)" }}>
+        <p className="label text-[#33302A]/50 mb-7">The Experience</p>
+        <h2 className="text-[#33302A] leading-[1.08]" style={{ fontSize: "clamp(34px, 5vw, 70px)" }}>
           <span className="display">A TAILORED PROCESS</span>
           <span className="block font-times-italic italic font-light mt-2">iconic results</span>
         </h2>
@@ -89,8 +89,8 @@ export default function ExperiencePage() {
           {method.map((m, i) => (
             <Reveal key={m.n} delay={i * 120}>
               <p className="font-magnolia text-[#C9B7AE] leading-none mb-4" style={{ fontSize: "clamp(56px, 6vw, 92px)" }}>{m.n}</p>
-              <h3 className="label text-[#302B29] mb-4">{m.t}</h3>
-              <p className="font-times text-[17px] text-[#302B29]/70 leading-relaxed">{m.b}</p>
+              <h3 className="label text-[#33302A] mb-4">{m.t}</h3>
+              <p className="font-times text-[17px] text-[#33302A]/70 leading-relaxed">{m.b}</p>
             </Reveal>
           ))}
         </div>
@@ -107,22 +107,22 @@ export default function ExperiencePage() {
           style={{ backgroundImage: `url(${IMG.coupleForest})` }}
           aria-hidden
         />
-        <div className="absolute inset-0 bg-[#F9F9F5]/55" aria-hidden />
+        <div className="absolute inset-0 bg-[#F4F1E8]/55" aria-hidden />
 
         <div className="relative container-pf section-y-lg">
           <div className="text-center mb-16 md:mb-24">
-            <p className="label text-[#302B29]/70">How It Works</p>
+            <p className="label text-[#33302A]/70">How It Works</p>
           </div>
           <div className="space-y-10 md:space-y-16 max-w-5xl mx-auto">
             {journey.map((j, i) => (
               <Reveal key={j.t}>
-                <div className={`grid md:grid-cols-2 bg-[#373F24] shadow-[0_30px_80px_-30px_rgba(48,43,41,0.5)] overflow-hidden ${i % 2 === 1 ? "md:[&>*:first-child]:order-2" : ""}`}>
+                <div className={`grid md:grid-cols-2 bg-[#3B4127] shadow-[0_30px_80px_-30px_rgba(48,43,41,0.5)] overflow-hidden ${i % 2 === 1 ? "md:[&>*:first-child]:order-2" : ""}`}>
                   <div className="relative aspect-[4/3] md:aspect-auto md:min-h-[440px]">
                     <Image src={j.img} alt={j.t} fill sizes="50vw" className="object-cover" />
                   </div>
                   <div className="flex flex-col justify-center px-8 md:px-16 py-16 md:py-20">
                     <p className="font-magnolia text-[#C9B7AE] leading-none mb-5" style={{ fontSize: "clamp(44px, 5vw, 78px)" }}>{j.step}</p>
-                    <h3 className="mb-6" style={{ fontSize: "clamp(26px, 3.2vw, 44px)", color: "#F9F9F5" }}>
+                    <h3 className="mb-6" style={{ fontSize: "clamp(26px, 3.2vw, 44px)", color: "#F4F1E8" }}>
                       <span className="font-times-italic italic font-light">{j.t}</span>
                     </h3>
                     <p className="font-times text-[17px] leading-relaxed max-w-md" style={{ color: "rgba(249,249,245,0.85)" }}>{j.b}</p>
@@ -137,12 +137,12 @@ export default function ExperiencePage() {
       {/* Wide testimonial band */}
       <section className="relative py-40 px-6 overflow-hidden">
         <Image src={IMG.reception} alt="" fill sizes="100vw" className="object-cover" />
-        <div className="absolute inset-0 bg-[#302B29]/62" />
+        <div className="absolute inset-0 bg-[#33302A]/62" />
         <div className="relative max-w-3xl mx-auto text-center">
-          <p className="font-times text-[#F9F9F5] leading-relaxed" style={{ fontSize: "clamp(22px, 3vw, 36px)" }}>
+          <p className="font-times text-[#F4F1E8] leading-relaxed" style={{ fontSize: "clamp(22px, 3vw, 36px)" }}>
             &ldquo;They understood our vision immediately, and put together an amazing proposal based on our budget and needs. You can tell that she has a <em className="font-times-italic">genuine passion</em> for her work.&rdquo;
           </p>
-          <p className="font-times-italic italic text-[#F9F9F5]/80 text-lg mt-6">— Laurel &amp; Ty, The Pierce House</p>
+          <p className="font-times-italic italic text-[#F4F1E8]/80 text-lg mt-6">— Laurel &amp; Ty, The Pierce House</p>
         </div>
       </section>
 
@@ -150,21 +150,21 @@ export default function ExperiencePage() {
       <section className="section-y-lg container-pf">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16 md:mb-20">
-            <p className="label text-[#302B29]/60 mb-4">Good to Know</p>
-            <h2 className="text-[#302B29]" style={{ fontSize: "clamp(30px, 4vw, 54px)" }}>
+            <p className="label text-[#33302A]/60 mb-4">Good to Know</p>
+            <h2 className="text-[#33302A]" style={{ fontSize: "clamp(30px, 4vw, 54px)" }}>
               <span className="display">THE</span> <span className="font-times-italic italic">details</span>
             </h2>
           </div>
           <div className="grid md:grid-cols-2 gap-14 md:gap-20">
             <Reveal>
-              <h3 className="label text-[#302B29] mb-4">Our Rental Library</h3>
-              <p className="font-times text-[17px] text-[#302B29]/70 leading-relaxed">
+              <h3 className="label text-[#33302A] mb-4">Our Rental Library</h3>
+              <p className="font-times text-[17px] text-[#33302A]/70 leading-relaxed">
                 We maintain a curated collection of vessels for your celebration — vases, compotes, urns, arches, and candles in clear glass and white porcelain. Rentals are returned after your event, keeping your investment focused on the flowers themselves.
               </p>
             </Reveal>
             <Reveal delay={120}>
-              <h3 className="label text-[#302B29] mb-4">Foam-Free Mechanics</h3>
-              <p className="font-times text-[17px] text-[#302B29]/70 leading-relaxed">
+              <h3 className="label text-[#33302A] mb-4">Foam-Free Mechanics</h3>
+              <p className="font-times text-[17px] text-[#33302A]/70 leading-relaxed">
                 Wherever possible, we design using foam-free mechanics — chicken wire, reusable frogs, and water sources — to create lush, sustainable arrangements that are as kind to the planet as they are beautiful in your photos.
               </p>
             </Reveal>

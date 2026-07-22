@@ -22,20 +22,20 @@ const spans = [
 
 export default function PortfolioPage() {
   return (
-    <main className="bg-[#F9F9F5]">
+    <main className="bg-[#F4F1E8]">
       {/* Full-bleed hero carousel */}
       <HeroCarousel images={PORTFOLIO_HERO} />
 
       {/* Intro */}
       <section className="section-y-lg container-pf text-center">
-        <p className="label text-[#302B29]/50 mb-8">The Portfolio</p>
-        <h2 className="text-[#302B29] leading-[1.05]" style={{ fontSize: "clamp(30px, 4.4vw, 62px)" }}>
+        <p className="label text-[#33302A]/50 mb-8">The Portfolio</p>
+        <h2 className="text-[#33302A] leading-[1.05]" style={{ fontSize: "clamp(30px, 4.4vw, 62px)" }}>
           <span className="display">WE MAKE TIMELESS FLORALS</span>
-          <span className="block font-times-italic italic font-light mt-3 text-[#302B29]/80" style={{ fontSize: "clamp(20px, 2.6vw, 34px)" }}>
+          <span className="block font-times-italic italic font-light mt-3 text-[#33302A]/80" style={{ fontSize: "clamp(20px, 2.6vw, 34px)" }}>
             for brides and grooms with classic style.
           </span>
         </h2>
-        <p className="font-times text-[19px] md:text-[21px] text-[#302B29]/70 leading-[1.85] max-w-2xl mx-auto mt-10">
+        <p className="font-times text-[19px] md:text-[21px] text-[#33302A]/70 leading-[1.85] max-w-2xl mx-auto mt-10">
           Our client&apos;s desires are our biggest inspiration when creating a floral design plan. The amazing photographers and other vendors perfectly capture the pieces in the way they were meant to be seen. Please enjoy these stunning past events — we are so grateful to everyone who made these magical floral moments happen.
         </p>
       </section>
@@ -43,7 +43,7 @@ export default function PortfolioPage() {
       {/* Featured Weddings — named gallery index */}
       <section className="container-wide pb-8 md:pb-16">
         <div className="text-center mb-14 md:mb-20">
-          <p className="label text-[#302B29]/60">Featured Weddings</p>
+          <p className="label text-[#33302A]/60">Featured Weddings</p>
         </div>
         <div className="grid md:grid-cols-3 gap-x-8 gap-y-16 md:gap-x-10">
           {GALLERIES.map((g, i) => (
@@ -58,10 +58,10 @@ export default function PortfolioPage() {
                     className="object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.05]"
                   />
                 </div>
-                <p className="label text-[#302B29] mb-3 group-hover:text-[#373F24] transition-colors">
+                <p className="label text-[#33302A] mb-3 group-hover:text-[#3B4127] transition-colors">
                   {g.venueLabel}
                 </p>
-                <p className="font-times text-[21px] md:text-[23px] text-[#302B29]/80 leading-snug">
+                <p className="font-times text-[21px] md:text-[23px] text-[#33302A]/80 leading-snug">
                   {g.tagline}
                 </p>
               </Link>
@@ -73,7 +73,7 @@ export default function PortfolioPage() {
       {/* More weddings — masonry of the wider photo pool */}
       <section className="container-wide section-y">
         <div className="text-center mb-14 md:mb-20">
-          <p className="label text-[#302B29]/60">More Weddings</p>
+          <p className="label text-[#33302A]/60">More Weddings</p>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 auto-rows-[220px] md:auto-rows-[320px] gap-5 md:gap-7">
           {PORTFOLIO.slice(0, 18).map((src, i) => (

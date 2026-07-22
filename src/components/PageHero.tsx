@@ -24,7 +24,7 @@ export default function PageHero({
   tone?: "light" | "dark";
   overlay?: number;
 }) {
-  const text = tone === "light" ? "text-white" : "text-[#302B29]";
+  const text = tone === "light" ? "text-white" : "text-[#33302A]";
   return (
     <section className="relative w-full h-[88vh] min-h-[600px]">
       <Image src={image} alt={alt} fill priority sizes="100vw" className="object-cover" />

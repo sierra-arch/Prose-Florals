@@ -7,11 +7,13 @@ export default function Reveal({
   delay = 0,
   className = "",
   as: Tag = "div",
+  style,
 }: {
   children: React.ReactNode;
   delay?: number;
   className?: string;
   as?: keyof React.JSX.IntrinsicElements;
+  style?: React.CSSProperties;
 }) {
   const ref = useRef<HTMLElement>(null);
   const [inView, setInView] = useState(false);
@@ -60,7 +62,7 @@ export default function Reveal({
     <Component
       ref={ref}
       className={`reveal ${inView ? "in" : ""} ${className}`}
-      style={{ animationDelay: `${delay}ms` }}
+      style={{ animationDelay: `${delay}ms`, ...style }}
     >
       {children}
     </Component>

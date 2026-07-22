@@ -12,11 +12,11 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <main className="bg-[#F9F9F5]">
+    <main className="bg-[#F4F1E8]">
       {/* ─── Intro ─── */}
       <section className="title-zone container-pf">
-        <p className="label text-[#302B29]/50 mb-8">We believe great stories transcend mediums</p>
-        <h1 className="title-hero text-[#302B29]">ABOUT PROSE FLORALS</h1>
+        <p className="label text-[#33302A]/50 mb-8">We believe great stories transcend mediums</p>
+        <h1 className="title-hero text-[#33302A]">ABOUT PROSE FLORALS</h1>
       </section>
 
       {/* ─── Staggered editorial photo collage ─── */}
@@ -36,7 +36,7 @@ export default function AboutPage() {
 
       <section className="section-y container-pf">
         <div className="max-w-2xl mx-auto text-center">
-          <p className="font-times text-[21px] md:text-[24px] text-[#302B29]/75 leading-[1.9]">
+          <p className="font-times text-[21px] md:text-[24px] text-[#33302A]/75 leading-[1.9]">
             Known for our modern-romantic style, relaxed approach, and iconic silhouettes, our Boston-based studio sits at the cross-section of artfully curated flair and the kind of expertly-designed floral pieces you&apos;ll be proud to have in your wedding albums forever.
           </p>
         </div>
@@ -45,11 +45,11 @@ export default function AboutPage() {
       {/* ─── OUR STYLE (mauve) ─── */}
       <section className="grid grid-cols-1 md:grid-cols-2">
         <div className="bg-[#C9B7AE] flex flex-col justify-center px-8 md:px-20 py-24 md:py-36 order-2 md:order-1">
-          <h2 className="text-[#F9F9F5] leading-[0.95] mb-7">
+          <h2 className="text-[#F4F1E8] leading-[0.95] mb-7">
             <span className="font-times-italic italic block" style={{ fontSize: "clamp(44px, 5vw, 78px)" }}>OUR</span>
             <span className="display block" style={{ fontSize: "clamp(40px, 4.5vw, 70px)" }}>STYLE</span>
           </h2>
-          <p className="font-times text-[18px] text-[#302B29]/80 leading-relaxed max-w-md">
+          <p className="font-times text-[18px] text-[#33302A]/80 leading-relaxed max-w-md">
             As flowers are the poetry that brings beauty to the world, we are the <em className="font-times-italic">prose</em> that arranges it in a way that makes it relatable. The flowers bring the beauty, we bring the structure — together creating emotion, inspiration, and joy! Classic style is eternal, and Playa Blanca roses never go out of style.
           </p>
         </div>
@@ -60,12 +60,12 @@ export default function AboutPage() {
 
       {/* ─── OUR STORY (white + photo) ─── */}
       <section className="grid grid-cols-1 md:grid-cols-2">
-        <div className="bg-[#F9F9F5] flex flex-col justify-center px-8 md:px-20 py-24 md:py-36">
-          <h2 className="text-[#302B29] leading-[0.95] mb-7">
+        <div className="bg-[#F4F1E8] flex flex-col justify-center px-8 md:px-20 py-24 md:py-36">
+          <h2 className="text-[#33302A] leading-[0.95] mb-7">
             <span className="font-times-italic italic block" style={{ fontSize: "clamp(44px, 5vw, 78px)" }}>OUR</span>
             <span className="display block" style={{ fontSize: "clamp(40px, 4.5vw, 70px)" }}>STORY</span>
           </h2>
-          <p className="font-times text-[18px] text-[#302B29]/70 leading-relaxed max-w-md">
+          <p className="font-times text-[18px] text-[#33302A]/70 leading-relaxed max-w-md">
             It all started with a pile of wedding magazines and a love of botanical sculpture. We&apos;re a Wedding and Events Florist based in Boston, MA. Passion burns out of everything we do here. Each bloom is carefully selected, every client appreciated, each event prioritized.
           </p>
         </div>
@@ -79,12 +79,12 @@ export default function AboutPage() {
         <div className="relative aspect-[4/5] md:aspect-auto md:min-h-[520px] order-1">
           <Image src={IMG.meadowInstall} alt="A lush floral installation by Prose Florals" fill sizes="50vw" className="object-cover" />
         </div>
-        <div className="bg-[#302B29] flex flex-col justify-center px-8 md:px-20 py-24 md:py-36 order-2">
-          <h2 className="text-[#F9F9F5] leading-[0.95] mb-7">
+        <div className="bg-[#33302A] flex flex-col justify-center px-8 md:px-20 py-24 md:py-36 order-2">
+          <h2 className="text-[#F4F1E8] leading-[0.95] mb-7">
             <span className="font-times-italic italic block" style={{ fontSize: "clamp(44px, 5vw, 78px)" }}>OUR</span>
             <span className="display block" style={{ fontSize: "clamp(40px, 4.5vw, 70px)" }}>METHOD</span>
           </h2>
-          <p className="font-times text-[18px] text-[#F9F9F5]/75 leading-relaxed max-w-md">
+          <p className="font-times text-[18px] text-[#F4F1E8]/75 leading-relaxed max-w-md">
             We do not simply match our recommended floral choices to your bridesmaid&apos;s dresses. We take your whole event into our design philosophy, and build a design brief that captures and ADDS to your current aesthetic. During your consultation, we ask how you want your event to FEEL, and select botanics that support that vision.
           </p>
         </div>
@@ -94,8 +94,8 @@ export default function AboutPage() {
       <section className="section-y-lg container-pf">
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-14 md:gap-20 items-start">
           <Reveal>
-            <p className="label text-[#302B29] mb-6">Sierra&apos;s Wedding Flower History</p>
-            <div className="space-y-4 font-times text-[18px] text-[#302B29]/70 leading-relaxed">
+            <p className="label text-[#33302A] mb-6">Sierra&apos;s Wedding Flower History</p>
+            <div className="space-y-4 font-times text-[18px] text-[#33302A]/70 leading-relaxed">
               <p>
                 From my first wild clover, babydoll ceremony, to the blissful moment when I walked down the aisle with the love of my life, wedding flowers have been part of my story for decades.
               </p>
@@ -106,7 +106,7 @@ export default function AboutPage() {
                 This journey of floral design has been a delightful one, creating stunning arrangements for friends, family, and clients, each with their own unique and diverse visions. It&apos;s more than just a job; it&apos;s a heartfelt privilege to contribute to people&apos;s big days.
               </p>
             </div>
-            <p className="font-galanthia text-[#302B29] text-[40px] leading-none mt-8">Much love, Sierra</p>
+            <p className="font-galanthia text-[#33302A] text-[40px] leading-none mt-8">Much love, Sierra</p>
           </Reveal>
           <Reveal delay={140} className="grid grid-cols-2 gap-3">
             <div className="relative aspect-[3/4] col-span-1">
@@ -134,8 +134,8 @@ export default function AboutPage() {
             </div>
           </Reveal>
           <Reveal delay={140} className="order-1 md:order-2">
-            <p className="label text-[#302B29] mb-6">Kattie&apos;s Path to Wedding Florals</p>
-            <div className="space-y-4 font-times text-[18px] text-[#302B29]/70 leading-relaxed">
+            <p className="label text-[#33302A] mb-6">Kattie&apos;s Path to Wedding Florals</p>
+            <div className="space-y-4 font-times text-[18px] text-[#33302A]/70 leading-relaxed">
               <p>
                 I&apos;ve always had a deep passion for event coordinating. Whether I&apos;m creating magical themes for my kids&apos; birthdays or was meticulously planning work events, I&apos;ve always aimed to craft a special experience for everyone involved. I have watched my little sister for years make brides beautiful on their special day and manage her own bridal business.
               </p>
@@ -143,16 +143,16 @@ export default function AboutPage() {
                 In 2022, my perspective on the wedding industry changed entirely when I met Sierra, the flower fairy herself. I discovered that my superpower in events lies in my administrative and coordinating skills behind the scenes. Now, I&apos;m thrilled to be a part of the ultimate event: weddings!
               </p>
             </div>
-            <p className="font-galanthia text-[#302B29] text-[40px] leading-none mt-8">xo, Kattie</p>
+            <p className="font-galanthia text-[#33302A] text-[40px] leading-none mt-8">xo, Kattie</p>
           </Reveal>
         </div>
       </section>
 
       {/* ─── Inspiration list ─── */}
-      <section className="section-y px-6 border-y border-[#E7E2D8]">
+      <section className="section-y px-6 border-y border-[#D8D2C2]">
         <div className="max-w-4xl mx-auto text-center">
-          <p className="label text-[#302B29]/50 mb-5">The Inspiration</p>
-          <p className="font-times-italic italic text-[#302B29] leading-relaxed" style={{ fontSize: "clamp(20px, 2.6vw, 30px)" }}>
+          <p className="label text-[#33302A]/50 mb-5">The Inspiration</p>
+          <p className="font-times-italic italic text-[#33302A] leading-relaxed" style={{ fontSize: "clamp(20px, 2.6vw, 30px)" }}>
             Still Moments &middot; Architecture &middot; Romance &middot; Tiny Growing Things &middot; The Ocean &middot; Jane Eyre &middot; Kittens &middot; Silky Veils
           </p>
         </div>
@@ -161,10 +161,10 @@ export default function AboutPage() {
       {/* ─── Quote ─── */}
       <section className="section-y-lg container-pf">
         <div className="max-w-3xl mx-auto text-center">
-          <p className="font-times text-[#302B29] leading-relaxed" style={{ fontSize: "clamp(22px, 3vw, 34px)" }}>
+          <p className="font-times text-[#33302A] leading-relaxed" style={{ fontSize: "clamp(22px, 3vw, 34px)" }}>
             &ldquo;Prose Florals is a superb florist, who took deep and thoughtful care to understand our vision <em className="font-times-italic">even when we couldn&apos;t articulate it ourselves!</em> We were blown away by the quality of the bouquets and arrangements and received so many compliments. They were truly exquisite!&rdquo;
           </p>
-          <p className="font-times-italic italic text-[#302B29]/70 text-lg mt-6">— Miriam &amp; Elliot, The Graduate</p>
+          <p className="font-times-italic italic text-[#33302A]/70 text-lg mt-6">— Miriam &amp; Elliot, The Graduate</p>
         </div>
       </section>
 
