@@ -1,19 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
-import PhotoCollage from "@/components/PhotoCollage";
 import { IMG, INQUIRY } from "@/lib/images";
 import { GALLERIES, GALLERY_COVERS } from "@/lib/galleries";
-
-// Scattered editorial hero cluster (Terre Verde / Drifter Floral style)
-const heroCollage = [
-  { src: IMG.heroTwoBrides, alt: "Two brides with vibrant bouquets", top: "8%", left: "1%", w: "22%", ratio: "3/4", tilt: "ls" as const, z: 3 },
-  { src: IMG.brideMoody, alt: "Moody bridal portrait", top: "30%", left: "22%", w: "16%", ratio: "3/4", tilt: "rs" as const, z: 2 },
-  { src: IMG.centerpiece, alt: "Candlelit tablescape", top: "12%", left: "39%", w: "25%", ratio: "4/3", tilt: "" as const, z: 4 },
-  { src: IMG.coupleForest, alt: "Couple in the forest", top: "46%", left: "59%", w: "15%", ratio: "3/4", tilt: "ls" as const, z: 3 },
-  { src: IMG.bouquetLush, alt: "Lush bridal bouquet", top: "10%", left: "73%", w: "21%", ratio: "3/4", tilt: "r" as const, z: 5 },
-  { src: IMG.meadowInstall, alt: "Meadow ground install", bottom: "1%", left: "29%", w: "21%", ratio: "16/10", tilt: "rs" as const, z: 1 },
-];
 
 const services = [
   { t: "Full Service Weddings", meta: "Design · Delivery · Setup", href: "/services" },
@@ -25,25 +14,20 @@ const services = [
 export default function Home() {
   return (
     <main className="bg-[#F4F1E8] overflow-x-clip">
-      {/* ─── EDITORIAL COLLAGE HERO — one confident move: the scattered
-          photo cluster. Nothing layered on top of it. ─── */}
-      <section className="relative pt-[140px] md:pt-[168px] pb-10 md:pb-16">
-        <div className="container-wide">
-          <div className="flex items-baseline justify-between mb-8 md:mb-12">
-            <p className="eyebrow text-[#33302A]/60">Boston, MA · Est. Wedding &amp; Event Florist</p>
-            <p className="folio hidden md:block">Vol. 01 — The Romantics</p>
-          </div>
-
-          <PhotoCollage items={heroCollage} height="h-[440px] md:h-[600px] lg:h-[640px]" />
-
-          <div className="mt-6 md:mt-8">
-            <h1 className="ed-display text-[#33302A] text-center" style={{ fontSize: "clamp(52px, 13vw, 210px)" }}>
-              PROSE FLORALS
-            </h1>
-            <p className="font-times-italic italic text-center text-[#33302A]/70 mt-1 md:mt-2" style={{ fontSize: "clamp(18px, 2.4vw, 30px)" }}>
-              wedding florals, done <span className="squiggle">differently</span> — for the romantics.
-            </p>
-          </div>
+      {/* ─── HERO — one large full-bleed photo, matching the same hero
+          pattern used sitewide (About, Services, Experience, Contact):
+          single image, centered overlay type, nothing layered on top
+          beyond the title itself. ─── */}
+      <section className="relative w-full h-[92vh] min-h-[640px]">
+        <Image src={IMG.heroTwoBrides} alt="Two brides with vibrant bouquets" fill priority sizes="100vw" className="object-cover" />
+        <div className="absolute inset-0 bg-black/28" />
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
+          <h1 className="ed-display text-white leading-[0.98]" style={{ fontSize: "clamp(52px, 13vw, 190px)" }}>
+            PROSE FLORALS
+          </h1>
+          <p className="font-times-italic italic text-white/85 mt-3 md:mt-4" style={{ fontSize: "clamp(18px, 2.4vw, 30px)" }}>
+            wedding florals, done differently — for the romantics.
+          </p>
         </div>
       </section>
 
