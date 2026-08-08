@@ -74,6 +74,21 @@ export const LIVE = {
   faqMarigolds: `${L}91d269-zc-217.jpg`,
   faqCastle: `${L}2aced8-308.jpg`,
   experienceClosingCta: `${L}46695e-fc-film-13-websize.jpg`, // bridesmaids, floral pattern
+
+  // Portfolio index — named wedding covers
+  samTerrieFeature: `${L}97c666-img-1951.jpg`,
+  zoeChapman: `${L}9a8a79-zc-398.jpg`,
+  francesClayton: `${L}8de8d8-frances-clayton-398-websize.jpg`,
+  annekeMatt: `${L}f66afd-img-5294.jpg`,
+  abigailSchaeffer: `${L}9a1185-img-6270.jpg`,
+  kalilaDavid: `${L}466036-kalila-and-amp-david-493.jpg`,
+  meganNico: `${L}cc4a55-bono-family-and-friends-81-websize.jpg`,
+  emmaTyler: `${L}585623-img-1084.jpg`,
+  laurelTy: `${L}82a04d-img-2051.jpg`,
+  karaShane: `${L}5a3934-dscf3856.jpg`,
+  meaghanAbel: `${L}63aebb-delgado-17.jpg`,
+  editorialFizzyOrange: `${L}d70409-beach-wedding-bridesmaids-bright-bold-romantic-boston-prose-florals.jpg`,
+  editorialForestRomance: `${L}b91312-deep-moody-forest-bridal-bouquet-boston-florist-prose-florals-.jpg`,
 };
 
 export const IMG = {

@@ -1,6 +1,8 @@
 // Real per-wedding gallery data, mirrored from proseflorals.com
 // Photos self-hosted in /public/images/galleries/<slug>/
 
+import { LIVE, IMG } from "./images";
+
 export type Vendor = { role: string; name: string; url?: string };
 
 export type Gallery = {
@@ -61,7 +63,7 @@ export const GALLERIES: Gallery[] = [
     slug: "maggie-billy",
     couple: "MAGGIE & BILLY",
     subtitle: "BREAKING TRADITION",
-    venueLabel: "ROCKPORT ART MUSEUM",
+    venueLabel: "ROCKPORT ART ASSOCIATION",
     tagline: "Maggie + Billy \u2013 A Vibrant Palette for a Coastal Wedding.",
     coverAlt: "Maggie and Billy coastal wedding florals by Prose Florals",
     about: [
@@ -91,3 +93,40 @@ export const GALLERY_COVERS: Record<string, string> = {
 // carousel auto-advances; this keeps the mood consistent slide to slide.
 const heroAll = range("portfolio-hero", "ph", 10);
 export const PORTFOLIO_HERO: string[] = [heroAll[0], heroAll[3], heroAll[5], heroAll[6], heroAll[8], heroAll[9]];
+
+// Index-only cards for the Portfolio page's Featured/More Weddings rows —
+// one real photo + real venue/couple copy per wedding, matching the live
+// site exactly. Only the 3 in GALLERIES above have a full detail page; the
+// rest link nowhere (no `slug`), same as the live site's non-clickable tiles.
+export type PortfolioCard = { venueLabel: string; tagline: string; photo: string; slug?: string };
+
+export const FEATURED_WEDDINGS: PortfolioCard[] = [
+  { venueLabel: "THE REGATTA PLACE", tagline: "Zoë + Chapman - Bright, Sculptural Summer Wedding with Mounds of Flavor.", photo: LIVE.zoeChapman },
+  { venueLabel: "COMMANDER'S MANSION", tagline: "Frances + Clayton - Muted Rainbow Hues paired with Historic Architecture.", photo: LIVE.francesClayton },
+  { venueLabel: "CHASE YOUNG GALLERY", tagline: "Taylor + Ethan - Soft & Romantic Understated Elegance", photo: `${G}/taylor-ethan/te_04.jpg`, slug: "taylor-ethan" },
+  { venueLabel: "THE DENNIS INN", tagline: "Emily + Chris - Soft, Dreamy Pastels and Floral Patterns.", photo: `${G}/emily-chris/ec_02.jpg`, slug: "emily-chris" },
+  { venueLabel: "ROCKPORT ART ASSOCIATION", tagline: "Maggie + Billy - A Vibrant Palette for a Coastal Wedding.", photo: `${G}/maggie-billy/mb_04.jpg`, slug: "maggie-billy" },
+  { venueLabel: "THE ESTATE AT MORAINE FARM", tagline: "Anneke + Matt - Warm Summer Wedding with Bright Wildflowers.", photo: LIVE.annekeMatt },
+  { venueLabel: "THE CONNEMARA HOUSE", tagline: "Abigail + Schaeffer - Cottage Garden Charm with a Soft, Romantic palette.", photo: LIVE.abigailSchaeffer },
+];
+
+export const MORE_WEDDINGS: PortfolioCard[] = [
+  { venueLabel: "THE CHARLES RIVER MUSEUM", tagline: "Kalila + David - Romantic and Warmth creating Timeless Elegance.", photo: LIVE.kalilaDavid },
+  { venueLabel: "NORTHERN SPY", tagline: "Megan + Nico - Textured, Soft Pinks with a Delicate & Inviting Ambiance.", photo: LIVE.meganNico },
+  { venueLabel: "WILLOWDALE ESTATE", tagline: "Emma + Tyler - Winter Blues with a Touch of Magic", photo: LIVE.emmaTyler },
+  { venueLabel: "PIERCE HOUSE", tagline: "Laurel + Ty - Delicate, Blue & Lilac Wildflowers for a Forest Wedding.", photo: LIVE.laurelTy },
+  { venueLabel: "LORING-GREENOUGH HOUSE", tagline: "Gabriela + Ian - Vintage Allure and Timeless Elegance Wedding.", photo: IMG.coupleKiss },
+  { venueLabel: "ROGER WILLIAMS BOTANICAL GARDENS", tagline: "Kara + Shane - Winter Tropical Garden Wedding on NYE.", photo: LIVE.karaShane },
+  { venueLabel: "LA BRASSA", tagline: "Meaghan + Abel - A Heartfelt Spring Wedding with a Soft, Natural Palette.", photo: LIVE.meaghanAbel },
+];
+
+export const PORTFOLIO_FEATURE = {
+  couple: "SAM + TERRIE - SOFT ROMANCE",
+  tagline: "A delicate approach for a white and peach bouquet.",
+  photo: LIVE.samTerrieFeature,
+};
+
+export const EDITORIAL_PROJECTS = [
+  { title: "Fizzy Orange - Sunshine & Flowers", photo: LIVE.editorialFizzyOrange },
+  { title: "Forest Romance - A Dramatic Flair", photo: LIVE.editorialForestRomance },
+];
