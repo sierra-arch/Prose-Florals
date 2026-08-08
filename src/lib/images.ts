@@ -2,6 +2,43 @@
 // Filenames preserved from the original site; grouped by role for clean page code.
 
 const P = "/images/";
+const L = "/images/live/";
+
+// Pulled directly from the live proseflorals.com (Showit) site, at full
+// resolution — the exact photos, not approximations from the general pool.
+export const LIVE = {
+  aboutHeroLeft: `${L}c030dc-zc-634.jpg`, // colorful bridal party group hug
+  aboutHeroMiddle: `${L}b01519-20240907-wilczynski-mees-012709.jpg`, // B&W box hug
+  aboutHeroRight: `${L}414529-frances-clayton-22-websize.jpg`, // bride arranging bouquet on shelf
+  collageA: `${L}7ce446-bettiswedding-184.jpg`,
+  collageB: `${L}960c60-frances-clayton-23-websize.jpg`,
+  collageC: `${L}b84804-img-5295.jpg`,
+  collageD: `${L}2b6911-img-1948.jpg`,
+
+  ourStyleBouquet: `${L}1dcbb4-abigailschaefferwedding-220.jpg`,
+  ourStoryCouple: `${L}52d3fd-bettiswedding-324.jpg`,
+
+  sierraChildhood: `${L}73febe-3490923c-944b-45f8-91a1-cd0c345c6dbf.jpg`,
+  sierraCoupleChair: `${L}0fedf1-bride-and-groom-bouquets-boston-florist-prose-florals.jpg`,
+  sierraBridesHug: `${L}403ef6-bettiswedding-337.jpg`,
+
+  kattiePianoCouple: `${L}fcbb34-wedding-431-original.jpg`,
+  kattieMomBride: `${L}451cd9-wedding-343-original.jpg`,
+  kattieMakeup: `${L}17b03c-0018-original.jpg`,
+  kattieBeach: `${L}c3e1dc-img-2992.jpg`,
+
+  teamCart1: `${L}90f412-img-8930.jpg`,
+  teamArrange: `${L}53f40d-img-8931.jpg`,
+  teamArch: `${L}722718-img-8936.jpg`,
+  teamCart2: `${L}53fbbf-img-2958.jpg`,
+
+  favoriteCat: `${L}f613b7-castillohollidayphoto2bfilm-gabby26ianwedding-editor27schoice-006-2048x1358.jpg`,
+  favoriteStyle: `${L}1b7500-zc-13.jpg`,
+  favoriteQuiet: `${L}14c985-img-1972.jpg`,
+
+  closingExchangeA: `${L}2e514f-frances-clayton-27-websize.jpg`,
+  closingExchangeB: `${L}60da25-frances-clayton-35-websize.jpg`,
+};
 
 export const IMG = {
   // Brand
