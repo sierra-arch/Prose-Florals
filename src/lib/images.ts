@@ -89,6 +89,22 @@ export const LIVE = {
   meaghanAbel: `${L}63aebb-delgado-17.jpg`,
   editorialFizzyOrange: `${L}d70409-beach-wedding-bridesmaids-bright-bold-romantic-boston-prose-florals.jpg`,
   editorialForestRomance: `${L}b91312-deep-moody-forest-bridal-bouquet-boston-florist-prose-florals-.jpg`,
+
+  // Homepage "Flowers for Your Story" rotator — pulled from the live
+  // homepage's actual rotating set, matched pair-by-pair against the
+  // user's screenshots and verified same-wedding by filename/venue.
+  maggieBillyMain: `${L}8615e0-maggie-and-billywedding-preceremony0481.jpg`,
+  maggieBillyDetail: `${L}f92ddc-maggie-and-billywedding-preceremony0435.jpg`,
+  hydrangeaArchMain: `${L}849560-img-6269.jpg`,
+  hydrangeaArchDetail: `${L}b2d3dd-0l4a8276.jpg`,
+  industrialToastMain: `${L}a3c5da-dsc-7409.jpg`,
+  industrialToastDetail: `${L}b9907c-2024-09-28-thegoods-387.jpg`,
+  charlesRiverMain: `${L}069348-img-8228.jpg`,
+  charlesRiverDetail: `${L}253f93-kalila-and-amp-david-430.jpg`,
+  zoeChapmanMain2: `${L}d4629e-zc-495.jpg`,
+  zoeChapmanDetail2: `${L}2dc648-zc-250.jpg`,
+  windowSeatMain: `${L}14c985-img-1972.jpg`,
+  windowSeatDetail: `${L}080afe-img-1954.jpg`,
 };
 
 export const IMG = {
