@@ -57,25 +57,47 @@ export default function Home() {
           the top of the text column. Wide, even gap between photo and
           text — matching the live site's more generous spacing. Real copy
           from the live site. ─── */}
-      <section className="section-y-lg container-wide">
+      <section className="section-y-lg container-wide pr-6 md:pr-14 lg:pr-24">
         <div className="grid md:grid-cols-2 gap-x-20 lg:gap-x-28 gap-y-10 items-start">
           <RotatingPair pairs={intentionPairs} />
-          <div className="relative">
+          <div className="relative max-w-lg">
             <Monogram className="hidden md:block absolute -top-4 right-0 w-14 h-16 text-[#33302A]/70" />
             <h2 className="ed-display text-[#33302A] leading-[1.02] mb-8" style={{ fontSize: "clamp(38px, 4.6vw, 66px)" }}>
-              FLOWERS <span className="font-times-italic italic font-light">with</span> INTENTION
+              FLOWERS <span className="font-times-italic italic font-light">for</span> YOUR STORY
             </h2>
             <p className="eyebrow text-[#33302A] mb-8" style={{ letterSpacing: "0.12em" }}>
               We create dynamic floral designs that highlight our couple&apos;s style &amp; story.
             </p>
             <p className="font-times text-[17px] text-[#33302A]/75 leading-[1.85] mb-6">
-              Welcome to wedding florals done differently. Every couple has their own romance, and we believe that should be reflected in their wedding florals!
+              Every couple has their own romance, and we believe that should be reflected in their wedding florals!
             </p>
             <p className="font-times text-[17px] text-[#33302A]/75 leading-[1.85]">
               It has been our honor to get to know incredible couples at <span className="font-times-italic italic">such</span> a special time in their life and help immortalize their romance in the form of intentionally selected florals to highlight their love story.
             </p>
           </div>
         </div>
+      </section>
+
+      {/* ─── OUR OFFERINGS — big stacked serif category words with a photo
+          bleeding into the last line, plus a short real line of copy
+          beneath. A bold typographic moment under the rotating pair. ─── */}
+      <section className="section-y-lg container-pf text-center">
+        <p className="label text-[#33302A]/50 mb-10">Our Offerings</p>
+        <div className="relative inline-block">
+          <h2 className="display text-[#33302A] leading-[0.92]" style={{ fontSize: "clamp(48px, 9vw, 130px)" }}>
+            {["WEDDINGS", "EVENTS", "EDITORIAL", "CORPORATE"].map((word) => (
+              <Link key={word} href="/services" className="block hover:text-[#3B4127] transition-colors">
+                {word}
+              </Link>
+            ))}
+          </h2>
+          <div className="hidden md:block absolute bottom-0 right-0 translate-x-1/4 w-[240px] lg:w-[300px] aspect-[3/4] plate">
+            <Image src={LIVE.corporateBand} alt="" fill sizes="300px" className="object-cover" />
+          </div>
+        </div>
+        <p className="font-times text-[19px] md:text-[21px] text-[#33302A]/75 leading-[1.7] max-w-xl mx-auto mt-12">
+          We help bride + grooms fulfill their floral visions by creating living art to grace their special days.
+        </p>
       </section>
 
       {/* ─── WHAT WE DO — text panel, one clean photo, generous whitespace ─── */}
