@@ -7,17 +7,17 @@ import RotatingPair, { type PhotoPair } from "@/components/RotatingPair";
 import { IMG, LIVE, INQUIRY } from "@/lib/images";
 import { GALLERIES, GALLERY_COVERS } from "@/lib/galleries";
 
-// Real couple + floral-detail pairs, cross-fading through several different
-// weddings — matches the auto-rotating pair on the live homepage.
+// Real couple + floral-detail pairs — checked frame-by-frame (not just by
+// filename) after several of the library's "bouquetClose/Lush/Detail2/3"
+// entries turned out to be five near-identical crops of the same delivery-
+// box moment mislabeled as distinct photos, and "coupleWalk" turned out to
+// be a dress-fabric close-up, not a couple. Only pairs confirmed as two
+// genuinely different photos from the same real wedding are kept here.
 const intentionPairs: PhotoPair[] = [
-  { main: IMG.coupleKiss, detail: IMG.bouquetDetail2, alt: "Bride and groom embracing" },
-  { main: IMG.coupleEmbrace, detail: IMG.bouquetClose, alt: "Florist embracing a bride" },
-  { main: IMG.brideMoody, detail: IMG.bouquetBold, alt: "Bride in a moody forest setting" },
-  { main: IMG.bridePortrait, detail: IMG.bouquetLush, alt: "Bride at a brick mansion" },
-  { main: IMG.coupleWalk, detail: IMG.bouquetDetail3, alt: "Couple walking together" },
-  { main: IMG.coupleForest, detail: LIVE.faqMarigolds, alt: "Bride in a deep forest" },
-  { main: LIVE.zoeChapman, detail: LIVE.methodColor, alt: "Bride in a floral archway" },
-  { main: IMG.brideBrick, detail: IMG.bouquetWhite, alt: "Bride portrait" },
+  { main: LIVE.zoeChapman, detail: LIVE.faqMarigolds, alt: "Zoë and Chapman's wedding" },
+  { main: IMG.coupleKiss, detail: LIVE.favoriteCat, alt: "Gabby and Ian's wedding" },
+  { main: IMG.brideMoody, detail: IMG.coupleForest, alt: "A moody bridal portrait shoot" },
+  { main: IMG.bridePortrait, detail: IMG.brideBrick, alt: "Frances and Clayton's wedding" },
 ];
 
 const homeTestimonials = [
