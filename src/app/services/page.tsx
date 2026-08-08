@@ -153,15 +153,19 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Corporate band (olive) */}
+      {/* Corporate band (wine) */}
       <section className="grid md:grid-cols-2">
-        <div className="bg-[#3B4127] flex flex-col justify-center px-8 md:px-20 py-24 md:py-32 order-2 md:order-1">
-          <h2 className="display text-[#F4F1E8] mb-8" style={{ fontSize: "clamp(40px, 5vw, 72px)" }}>CORPORATE</h2>
-          <p className="label text-[#C9B7AE] mb-3">Partnerships &amp; Collaborations</p>
-          <p className="font-sans-pf text-[16px] text-[#F4F1E8]/90 leading-relaxed max-w-md">
+        <div className="bg-[#4A1420] flex flex-col justify-center px-8 md:px-20 py-24 md:py-32 order-2 md:order-1 relative overflow-hidden">
+          <div className="grain-overlay" />
+          <div className="romantic-glow" />
+          <h2 className="relative z-10 display text-[#F4F1E8] mb-8" style={{ fontSize: "clamp(40px, 5vw, 72px)" }}>CORPORATE</h2>
+          <p className="relative z-10 label text-[#C9B7AE] mb-3">Partnerships &amp; Collaborations</p>
+          <p className="relative z-10 font-sans-pf text-[16px] text-[#F4F1E8]/90 leading-relaxed max-w-md">
             We work with a limited number of collaborations with local vendors. Looking to partner with a dynamic floral team, please use the link below to introduce yourself!
           </p>
-          <LinkRow dark />
+          <div className="relative z-10">
+            <LinkRow dark />
+          </div>
         </div>
         <div className="relative aspect-[4/5] md:aspect-auto md:min-h-[560px] order-1 md:order-2">
           <Image src={LIVE.corporateBand} alt="Wine and a single ranunculus on a table" fill sizes="50vw" className="object-cover" />
@@ -239,10 +243,10 @@ export default function ServicesPage() {
           We&apos;re known for professional, timely communication <em className="font-times-italic">and</em> stunning artistry, because you shouldn&apos;t have to choose.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-10">
-          <Link href="/portfolio" className="label text-[#33302A] border-b border-[#33302A] pb-1 hover:text-[#3B4127] hover:border-[#3B4127] transition-colors">
+          <Link href="/portfolio" className="label text-[#33302A] border-b border-[#33302A] pb-1 hover:text-[#4A1420] hover:border-[#4A1420] transition-colors">
             View the Portfolio
           </Link>
-          <a href={INQUIRY} target="_blank" rel="noopener noreferrer" className="label text-[#33302A] border-b border-[#33302A] pb-1 hover:text-[#3B4127] hover:border-[#3B4127] transition-colors">
+          <a href={INQUIRY} target="_blank" rel="noopener noreferrer" className="label text-[#33302A] border-b border-[#33302A] pb-1 hover:text-[#4A1420] hover:border-[#4A1420] transition-colors">
             Get in Touch
           </a>
         </div>

@@ -96,7 +96,7 @@ export default async function GalleryPage({
                 <li key={v.role} className="font-times text-[17px] md:text-[18px] text-[#33302A]/75">
                   {v.role} —{" "}
                   {v.url ? (
-                    <a href={v.url} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 decoration-[#33302A]/30 hover:decoration-[#3B4127] hover:text-[#3B4127] transition-colors">
+                    <a href={v.url} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 decoration-[#33302A]/30 hover:decoration-[#4A1420] hover:text-[#4A1420] transition-colors">
                       {v.name}
                     </a>
                   ) : (
@@ -148,7 +148,7 @@ export default async function GalleryPage({
 
       {/* Back to portfolio */}
       <section className="container-pf pb-20 text-center">
-        <Link href="/portfolio" className="label text-[#33302A] hover:text-[#3B4127] transition-colors inline-flex items-center gap-3">
+        <Link href="/portfolio" className="label text-[#33302A] hover:text-[#4A1420] transition-colors inline-flex items-center gap-3">
           <svg width="30" height="14" viewBox="0 0 30 14" fill="none" stroke="currentColor" strokeWidth="1"><path d="M29 7H1M1 7l6-6M1 7l6 6" /></svg>
           View Full Portfolio
         </Link>

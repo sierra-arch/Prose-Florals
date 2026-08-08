@@ -66,7 +66,7 @@ export default function ReviewsPage() {
             <div className="relative w-full md:w-[280px] aspect-[3/4] overflow-hidden mx-auto mb-7">
               <Image src={GALLERY_COVERS["taylor-ethan"]} alt="Prose Florals wedding" fill sizes="280px" className="object-cover" />
             </div>
-            <Link href="/portfolio" className="label text-[#33302A] hover:text-[#3B4127] transition-colors">
+            <Link href="/portfolio" className="label text-[#33302A] hover:text-[#4A1420] transition-colors">
               View Full Portfolio
             </Link>
           </div>

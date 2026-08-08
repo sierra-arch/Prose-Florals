@@ -49,7 +49,7 @@ function WeddingRows({ items }: { items: PortfolioCard[] }) {
                     className="object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.05]"
                   />
                 </div>
-                <p className="label text-[#33302A] mb-3 group-hover:text-[#3B4127] transition-colors">
+                <p className="label text-[#33302A] mb-3 group-hover:text-[#4A1420] transition-colors">
                   {card.venueLabel}
                 </p>
                 <p className="font-times text-[21px] md:text-[23px] text-[#33302A]/80 leading-snug">
@@ -82,7 +82,7 @@ export default function PortfolioPage() {
       <HeroCarousel images={PORTFOLIO_HERO} />
 
       {/* Intro on taupe band, with Weddings / Editorial tabs */}
-      <section className="bg-[#A9998A] pt-24 pb-14 md:pt-32 md:pb-20 px-6 text-center">
+      <section className="bg-[#8C6B6A] pt-24 pb-14 md:pt-32 md:pb-20 px-6 text-center">
         <h1 className="display text-[#F4F1E8] leading-[1.02] mb-10" style={{ fontSize: "clamp(48px, 8vw, 130px)" }}>
           PORTFOLIO
         </h1>
@@ -120,7 +120,9 @@ export default function PortfolioPage() {
       {/* Sam + Terrie full-bleed feature */}
       <section className="relative h-[80vh] min-h-[560px] overflow-hidden flex items-center justify-center text-center px-6">
         <Image src={PORTFOLIO_FEATURE.photo} alt={PORTFOLIO_FEATURE.couple} fill sizes="100vw" className="object-cover" />
-        <div className="absolute inset-0 bg-[#33302A]/30" />
+        <div className="absolute inset-0 bg-[#4A1420]/35" />
+        <div className="grain-overlay" />
+        <div className="romantic-glow" />
         <div className="relative">
           <h2 className="display text-[#F4F1E8] leading-[1.02] mb-6" style={{ fontSize: "clamp(36px, 6vw, 78px)" }}>
             {PORTFOLIO_FEATURE.couple}

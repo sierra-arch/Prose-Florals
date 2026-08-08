@@ -9,7 +9,9 @@ export default function BeginCTA({ image = IMG.beachBridesmaids }: { image?: str
   return (
     <section className="relative py-28 md:py-36 px-6 text-center overflow-hidden">
       <Image src={image} alt="" fill sizes="100vw" className="object-cover" />
-      <div className="absolute inset-0 bg-[#33302A]/45" />
+      <div className="absolute inset-0 bg-[#4A1420]/55" />
+      <div className="grain-overlay" />
+      <div className="romantic-glow" />
       <div className="relative max-w-xl mx-auto">
         <h2 className="display text-[#F4F1E8] mb-6" style={{ fontSize: "clamp(40px, 6vw, 88px)" }}>
           SHALL WE BEGIN?
@@ -21,7 +23,7 @@ export default function BeginCTA({ image = IMG.beachBridesmaids }: { image?: str
           href={INQUIRY}
           target="_blank"
           rel="noopener noreferrer"
-          className="label text-[#F4F1E8] bg-[#3B4127] rounded-full px-12 py-4 inline-block hover:bg-[#2A2E1B] transition-colors"
+          className="label text-[#F4F1E8] bg-[#4A1420] rounded-full px-12 py-4 inline-block hover:bg-[#330D16] transition-colors"
         >
           Inquire
         </a>

@@ -41,7 +41,7 @@ const journey = [
     t: "Planning, Prepping & Perfecting",
     b: "Over our months of working together, anticipating your Big Day, we will continue tweaking your designs and adding/subtracting pieces to make your floral plan absolutely perfect!",
     img: LIVE.journeyPlanning,
-    bg: "#A9998A",
+    bg: "#8C6B6A",
     dark: true,
   },
   {
@@ -49,7 +49,7 @@ const journey = [
     t: "Expert Delivery of Stunning Blooms",
     b: "Our Favorite day!! We get to hand-deliver your bouquets and pin on the boutonnieres, set up the larger installs and place your centerpieces - setting the beautiful scene for your wedding.",
     img: LIVE.journeyDelivery,
-    bg: "#3B4127",
+    bg: "#4A1420",
     dark: true,
   },
 ];
@@ -85,10 +85,12 @@ const experienceTestimonials = [
 export default function ExperiencePage() {
   return (
     <main className="bg-[#F4F1E8]">
-      {/* Hero — headline + photo split on dark olive */}
-      <section className="grid md:grid-cols-2 bg-[#3B4127]">
-        <div className="flex items-center px-8 md:px-16 py-24 md:py-0">
-          <h1 className="text-[#F4F1E8] leading-[0.98]" style={{ fontSize: "clamp(48px, 7.5vw, 110px)" }}>
+      {/* Hero — headline + photo split, deep wine + grain */}
+      <section className="grid md:grid-cols-2 bg-[#4A1420]">
+        <div className="relative overflow-hidden flex items-center px-8 md:px-16 py-24 md:py-0">
+          <div className="grain-overlay" />
+          <div className="romantic-glow" />
+          <h1 className="relative z-10 text-[#F4F1E8] leading-[0.98]" style={{ fontSize: "clamp(48px, 7.5vw, 110px)" }}>
             <span className="display">EMBRACE</span>
             <br />
             <span className="font-times-italic italic font-light">THE</span>{" "}
@@ -101,9 +103,10 @@ export default function ExperiencePage() {
       </section>
 
       {/* Continuation — intro copy + second photo, same dark band */}
-      <section className="grid md:grid-cols-2 bg-[#3B4127]">
-        <div className="flex items-center px-8 md:px-16 py-20 md:py-28">
-          <div>
+      <section className="grid md:grid-cols-2 bg-[#4A1420]">
+        <div className="relative overflow-hidden flex items-center px-8 md:px-16 py-20 md:py-28">
+          <div className="grain-overlay" />
+          <div className="relative z-10">
             <p className="label text-[#F4F1E8]/60 mb-6">The Prose Florals Experience</p>
             <p className="font-times text-[17px] leading-relaxed max-w-md" style={{ color: "rgba(249,249,245,0.9)" }}>
               Our desire is for each of our clients to feel listened to, appreciated, and wowed by the designs we create together. We are honored to walk with our clients from first contact to post-event celebration.
@@ -189,12 +192,13 @@ export default function ExperiencePage() {
                   <div className="relative aspect-[4/3] md:aspect-auto md:min-h-[440px]">
                     <Image src={j.img} alt={j.t} fill sizes="50vw" className="object-cover" />
                   </div>
-                  <div className="flex flex-col justify-center px-8 md:px-16 py-16 md:py-20">
-                    <p className="font-sans-pf text-[15px] mb-5" style={{ color: j.dark ? "rgba(249,249,245,0.7)" : "rgba(51,48,42,0.55)" }}>{j.step}</p>
-                    <h3 className="mb-6" style={{ fontSize: "clamp(26px, 3.2vw, 44px)", color: j.dark ? "#F4F1E8" : "#33302A" }}>
+                  <div className="relative overflow-hidden flex flex-col justify-center px-8 md:px-16 py-16 md:py-20">
+                    {j.bg === "#4A1420" && <div className="grain-overlay" />}
+                    <p className="relative z-10 font-sans-pf text-[15px] mb-5" style={{ color: j.dark ? "rgba(249,249,245,0.7)" : "rgba(51,48,42,0.55)" }}>{j.step}</p>
+                    <h3 className="relative z-10 mb-6" style={{ fontSize: "clamp(26px, 3.2vw, 44px)", color: j.dark ? "#F4F1E8" : "#33302A" }}>
                       {j.t}
                     </h3>
-                    <p className="font-sans-pf text-[17px] leading-relaxed max-w-md" style={{ color: j.dark ? "rgba(249,249,245,0.85)" : "rgba(51,48,42,0.7)" }}>{j.b}</p>
+                    <p className="relative z-10 font-sans-pf text-[17px] leading-relaxed max-w-md" style={{ color: j.dark ? "rgba(249,249,245,0.85)" : "rgba(51,48,42,0.7)" }}>{j.b}</p>
                   </div>
                 </div>
               </Reveal>
@@ -206,7 +210,9 @@ export default function ExperiencePage() {
       {/* Wide two-tier quote */}
       <section className="relative py-32 md:py-44 px-6 overflow-hidden">
         <Image src={LIVE.bigQuoteBg} alt="" fill sizes="100vw" className="object-cover" />
-        <div className="absolute inset-0 bg-[#33302A]/45" />
+        <div className="absolute inset-0 bg-[#4A1420]/50" />
+        <div className="grain-overlay" />
+        <div className="romantic-glow" />
         <div className="relative max-w-4xl mx-auto text-center">
           <p className="font-times italic text-[#F4F1E8]" style={{ fontSize: "clamp(24px, 3.6vw, 44px)", lineHeight: 1.25 }}>
             &ldquo;THEY UNDERSTOOD OUR VISION IMMEDIATELY — AND PUT TOGETHER AN AMAZING PROPOSAL BASED ON OUR BUDGET AND NEEDS.&rdquo;
