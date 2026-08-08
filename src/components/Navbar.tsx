@@ -2,7 +2,9 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { INQUIRY } from "@/lib/images";
+import Image from "next/image";
+import Monogram from "@/components/Monogram";
+import { INQUIRY, INSTAGRAM, PINTEREST, IMG } from "@/lib/images";
 
 const leftLinks = [
   { label: "Home", href: "/" },
@@ -101,9 +103,10 @@ export default function Navbar() {
         </div>
       </header>
 
-      {/* Full-screen overlay menu */}
+      {/* Full-screen overlay menu — monogram, stacked links, small photo
+          teaser, and social icons, matching the live site's takeover nav. */}
       {open && (
-        <div className="fixed inset-0 z-[60] bg-[#3B4127] flex flex-col items-center justify-center gap-7 animate-[fadeUp_0.4s_ease]">
+        <div className="fixed inset-0 z-[60] bg-[#3B4127] flex flex-col items-center justify-center gap-6 animate-[fadeUp_0.4s_ease] overflow-y-auto py-16">
           <button
             onClick={() => setOpen(false)}
             className="absolute top-7 right-8 text-[#F4F1E8] text-3xl font-light leading-none"
@@ -111,6 +114,7 @@ export default function Navbar() {
           >
             &times;
           </button>
+          <Monogram className="w-10 h-12 text-[#C9B7AE] mb-1" />
           <p className="label text-[#C9B7AE] mb-2">Prose Florals</p>
           {allLinks.map((link) => (
             <Link
@@ -131,6 +135,18 @@ export default function Navbar() {
           >
             Inquire
           </a>
+
+          <div className="relative w-20 h-20 mt-4 overflow-hidden opacity-80">
+            <Image src={IMG.bouquetLush} alt="" fill sizes="80px" className="object-cover" />
+          </div>
+          <div className="flex items-center gap-6 mt-1">
+            <a href={INSTAGRAM} target="_blank" rel="noopener noreferrer" className="label text-[#F4F1E8]/80 hover:text-[#F4F1E8] transition-colors">
+              Instagram
+            </a>
+            <a href={PINTEREST} target="_blank" rel="noopener noreferrer" className="label text-[#F4F1E8]/80 hover:text-[#F4F1E8] transition-colors">
+              Pinterest
+            </a>
+          </div>
         </div>
       )}
     </>

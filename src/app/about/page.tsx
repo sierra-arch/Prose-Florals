@@ -4,6 +4,7 @@ import Reveal from "@/components/Reveal";
 import BeginCTA from "@/components/BeginCTA";
 import WaxSeal from "@/components/WaxSeal";
 import RibbonDivider from "@/components/RibbonDivider";
+import Sketch from "@/components/Sketch";
 import { IMG, FRESH } from "@/lib/images";
 
 export const metadata: Metadata = {
@@ -147,7 +148,7 @@ export default function AboutPage() {
               </p>
             </div>
             <div className="flex items-end gap-3 mt-8">
-              <p className="font-galanthia text-[#33302A] text-[40px] leading-none">xo, Kattie</p>
+              <p className="font-galanthia text-[#33302A] text-[40px] leading-none">Xoxo, Kattie</p>
               <WaxSeal color="#4A1420" className="w-9 h-9 opacity-70 mb-0.5" />
             </div>
           </Reveal>
@@ -159,10 +160,59 @@ export default function AboutPage() {
       {/* ─── Inspiration list — paper texture instead of flat bone color ─── */}
       <section className="section-y px-6 border-y border-[#D8D2C2] paper">
         <div className="max-w-4xl mx-auto text-center relative">
+          <Sketch name="ginkgo" className="w-14 h-14 mx-auto mb-5 text-[#3B4127]/70" />
           <p className="label text-[#33302A]/50 mb-5">The Inspiration</p>
           <p className="font-times-italic italic text-[#33302A] leading-relaxed" style={{ fontSize: "clamp(20px, 2.6vw, 30px)" }}>
             Still Moments &middot; Architecture &middot; Romance &middot; Tiny Growing Things &middot; The Ocean &middot; Jane Eyre &middot; Kittens &middot; Silky Veils
           </p>
+        </div>
+      </section>
+
+      {/* ─── Pure decorative script moment — no photo, no CTA, no
+          supporting copy. Type as an atmospheric pause between sections. ─── */}
+      <section className="section-y-lg px-6 text-center">
+        <p className="font-galanthia text-[#3B4127] leading-[1.15]" style={{ fontSize: "clamp(38px, 7vw, 90px)" }}>
+          to have and to hold
+        </p>
+        <p className="font-galanthia text-[#33302A]/70 leading-[1.15] mt-2" style={{ fontSize: "clamp(24px, 4.2vw, 52px)" }}>
+          from this day forward
+        </p>
+      </section>
+
+      {/* ─── Our Favorite Things — playful, specific, personal. Keeps the
+          site from feeling purely aspirational. ─── */}
+      <section className="section-y bg-[#EAE5D6] px-6">
+        <div className="max-w-5xl mx-auto">
+          <p className="label text-[#33302A]/50 text-center mb-14 md:mb-16">Our Favorite Things</p>
+          <div className="grid md:grid-cols-3 gap-12 md:gap-10">
+            <Reveal className="text-center">
+              <div className="relative w-full aspect-[4/5] mb-6 plate tilt-ls overflow-hidden">
+                <Image src={FRESH.scrap6} alt="An iconic visitor making a surprise appearance" fill sizes="33vw" className="object-cover" />
+              </div>
+              <p className="label text-[#3B4127] mb-3">Iconic Visitors</p>
+              <p className="font-times text-[16px] text-[#33302A]/70 leading-relaxed">
+                There&rsquo;s just something about a dog padding down the aisle or a cat making a surprise appearance in the flat-lay photos!
+              </p>
+            </Reveal>
+            <Reveal delay={100} className="text-center">
+              <div className="relative w-full aspect-[4/5] mb-6 plate tilt-r overflow-hidden">
+                <Image src={FRESH.scrap7} alt="Personal design style" fill sizes="33vw" className="object-cover" />
+              </div>
+              <p className="label text-[#3B4127] mb-3">Personal Style</p>
+              <p className="font-times text-[16px] text-[#33302A]/70 leading-relaxed">
+                Floral design is a bit like painting — every arrangement carries a little of the designer&rsquo;s own hand and eye.
+              </p>
+            </Reveal>
+            <Reveal delay={200} className="text-center">
+              <div className="relative w-full aspect-[4/5] mb-6 plate tilt-rs overflow-hidden">
+                <Image src={FRESH.scrap10} alt="A quiet moment before the ceremony" fill sizes="33vw" className="object-cover" />
+              </div>
+              <p className="label text-[#3B4127] mb-3">Quiet Moments</p>
+              <p className="font-times text-[16px] text-[#33302A]/70 leading-relaxed">
+                The pinning of the boutonnieres, the passing of the bouquet — the small hand-offs that mean the most.
+              </p>
+            </Reveal>
+          </div>
         </div>
       </section>
 

@@ -61,6 +61,33 @@ const experienceTestimonials = [
     author: "Meaghan and Abel, La Brassa",
     photo: IMG.coupleWalk,
   },
+  {
+    // Real quote, verbatim — styled with mixed italic + small-caps emphasis
+    // mid-sentence, matching the live site's device.
+    quote: "I was absolutely blown away by Prose's design. Their work was so stunning and unique!",
+    quoteNode: (
+      <>
+        <em className="font-times-italic">I was absolutely blown away by Prose&rsquo;s design.</em>{" "}
+        <span style={{ fontFamily: "var(--font-sans)", letterSpacing: "0.04em" }}>
+          THEIR WORK WAS SO STUNNING AND UNIQUE!
+        </span>
+      </>
+    ),
+    author: "Caroline Giuliano Photography",
+    photo: IMG.bouquetBold,
+  },
+  {
+    // Real quote, verbatim — bold-word emphasis as a third styling option.
+    quote: "She totally got it and I put my trust in her. The final product was so stunning while staying in budget.",
+    quoteNode: (
+      <>
+        She totally got it and I put my <strong>trust</strong> in her. The final product was so{" "}
+        <strong>stunning</strong> while staying in budget.
+      </>
+    ),
+    author: "Megan McMorris, Northern Spy",
+    photo: IMG.brideBouquet,
+  },
 ];
 
 export default function ExperiencePage() {

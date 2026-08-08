@@ -1,10 +1,25 @@
 @import "tailwindcss";
 
 /* ─── Real Prose Florals fonts (from Showit CDN, self-hosted) ─── */
+/* Magnolia — real licensed weights (converted from the supplied .otf files
+   to .woff2), replacing the single placeholder file that faked the 400-700
+   range off one weight's glyphs. */
 @font-face {
   font-family: "Magnolia";
-  src: url("/fonts/magnolia-medium.woff") format("woff");
-  font-weight: 400 700;
+  src: url("/fonts/magnolia-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Magnolia";
+  src: url("/fonts/magnolia-medium-v2.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Magnolia";
+  src: url("/fonts/magnolia-bold.woff2") format("woff2");
+  font-weight: 700;
   font-display: swap;
 }
 @font-face {

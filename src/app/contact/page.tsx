@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Sketch from "@/components/Sketch";
 import { IMG, INQUIRY, GUIDE, INSTAGRAM, PINTEREST } from "@/lib/images";
 
 export const metadata: Metadata = {
@@ -58,7 +59,10 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <p className="font-galanthia text-[#33302A] text-[44px] leading-none mt-12">Prose Florals</p>
+          <div className="flex items-end gap-3 mt-12">
+            <p className="font-galanthia text-[#33302A] text-[44px] leading-none">Prose Florals</p>
+            <Sketch name="hand-bouquet" className="w-10 h-10 text-[#B99C6E] opacity-80 mb-0.5" />
+          </div>
         </div>
       </section>
     </main>

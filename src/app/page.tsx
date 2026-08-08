@@ -5,6 +5,8 @@ import PhotoCollage from "@/components/PhotoCollage";
 import ScallopDivider from "@/components/ScallopDivider";
 import WaxSeal from "@/components/WaxSeal";
 import RibbonDivider from "@/components/RibbonDivider";
+import Sketch from "@/components/Sketch";
+import Monogram from "@/components/Monogram";
 import { IMG, INQUIRY } from "@/lib/images";
 import { GALLERIES, GALLERY_COVERS } from "@/lib/galleries";
 
@@ -39,16 +41,13 @@ export default function Home() {
 
           <div className="relative">
             <PhotoCollage items={heroCollage} height="h-[440px] md:h-[600px] lg:h-[640px]" />
-            {/* scattered doodle stars */}
-            <svg className="doodle-star absolute top-[6%] left-[36%] w-6 h-6 hidden md:block" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M12 2c.6 5 4 8.4 9 9-5 .6-8.4 4-9 9-.6-5-4-8.4-9-9 5-.6 8.4-4 9-9z" fill="currentColor"/>
-            </svg>
-            <svg className="doodle-star absolute bottom-[10%] left-[54%] w-4 h-4 hidden md:block" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M12 2c.6 5 4 8.4 9 9-5 .6-8.4 4-9 9-.6-5-4-8.4-9-9 5-.6 8.4-4 9-9z" fill="currentColor"/>
-            </svg>
-            <svg className="doodle-star absolute top-[40%] right-[2%] w-5 h-5 hidden md:block" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M12 2c.6 5 4 8.4 9 9-5 .6-8.4 4-9 9-.6-5-4-8.4-9-9 5-.6 8.4-4 9-9z" fill="currentColor"/>
-            </svg>
+            {/* Botanical sketch accents — licensed hand-drawn line art,
+                replacing the generic sparkle doodles with real florals. */}
+            <Sketch name="sprig" className="absolute top-[4%] left-[35%] w-10 h-10 hidden md:block text-[#B99C6E] opacity-90" />
+            <Sketch name="branch-bloom" className="absolute top-[38%] right-[1%] w-9 h-9 hidden md:block text-[#3B4127] opacity-80 rotate-[18deg]" />
+            {/* PF monogram crest — bottom-corner-of-hero-photo placement,
+                one of the mark's 3-4 recurring spots sitewide. */}
+            <Monogram className="absolute bottom-3 right-3 w-6 h-8 text-white/85 z-10" />
           </div>
 
           {/* Oversized wordmark statement */}
@@ -66,6 +65,32 @@ export default function Home() {
             </svg>
           </div>
         </div>
+      </section>
+
+      {/* ─── OUR APPROACH — photos overlapping display type. The headline is
+          background texture; the photos are the foreground layer. Distinct
+          from a "collage next to text" moment — the type itself is part of
+          the collage. Second instance of this device is on Featured
+          Weddings below (a photo notched into the heading). ─── */}
+      <section className="relative py-20 md:py-32 overflow-hidden container-wide">
+        <h2
+          className="ed-display text-[#33302A]/90 text-center leading-[0.92] px-4"
+          style={{ fontSize: "clamp(40px, 8.4vw, 132px)" }}
+        >
+          WE MAKE PLAYFUL ARRANGEMENTS{" "}
+          <span className="font-times-italic italic font-light">for</span> YOUR MOST{" "}
+          <span className="font-times-italic italic font-light">TIMELESS</span> MOMENTS
+        </h2>
+        <Reveal className="absolute left-[6%] md:left-[12%] top-[18%] w-[46%] md:w-[30%] aspect-[3/4] plate tilt-ls z-10">
+          <div className="relative w-full h-full overflow-hidden">
+            <Image src={IMG.coupleKiss} alt="Bride and groom embracing" fill sizes="30vw" className="object-cover" />
+          </div>
+        </Reveal>
+        <Reveal delay={140} className="absolute right-[8%] md:right-[16%] bottom-[6%] w-[34%] md:w-[20%] aspect-[3/4] plate tilt-r z-10">
+          <div className="relative w-full h-full overflow-hidden">
+            <Image src={IMG.brideParty} alt="Bridal party with bouquets" fill sizes="20vw" className="object-cover" />
+          </div>
+        </Reveal>
       </section>
 
       {/* ─── WHAT WE DO (KADO-style split) ─── */}
@@ -124,6 +149,29 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ─── Numbered 01/02/03 navigation teaser — three full-bleed panels,
+          each a distinct "chapter" (tone/photo contrast is fine here,
+          unlike the rest of the site). ─── */}
+      <section className="grid md:grid-cols-3">
+        {[
+          { n: "01", pre: "Explore", cap: "SERVICES", href: "/services", img: IMG.centerpiece },
+          { n: "02", pre: "The", cap: "PORTFOLIO", href: "/portfolio", img: IMG.bouquetLush },
+          { n: "03", pre: "About the", cap: "FLORIST", href: "/about", img: IMG.coupleForest },
+        ].map((panel) => (
+          <Link key={panel.n} href={panel.href} className="group relative aspect-[3/4] md:aspect-auto md:h-[64vh] overflow-hidden block">
+            <Image src={panel.img} alt={panel.cap} fill sizes="33vw" className="object-cover transition-transform duration-[1200ms] group-hover:scale-105" />
+            <div className="absolute inset-0 bg-[#17130F]/30 group-hover:bg-[#17130F]/40 transition-colors" />
+            <span className="absolute bottom-5 left-5 folio text-white/85">{panel.n}</span>
+            <div className="absolute inset-0 flex items-center justify-center text-center px-4">
+              <h3 className="text-white leading-[1.05]" style={{ fontSize: "clamp(26px, 3.2vw, 42px)" }}>
+                <span className="font-times-italic italic font-light block">{panel.pre}</span>
+                <span className="ed-display block">{panel.cap}</span>
+              </h3>
+            </div>
+          </Link>
+        ))}
+      </section>
+
       <RibbonDivider className="w-full h-6 md:h-7 my-2" color="#4A1420" />
 
       {/* ─── MOODY OLIVE TEAM BAND ─── */}
@@ -144,6 +192,10 @@ export default function Home() {
           <span className="vertical-rl eyebrow text-[#F4F1E8]/35 absolute right-7 top-14 hidden md:block z-10">
             Sincerely, Prose
           </span>
+          {/* PF monogram — large-scale watermark on the dark color block,
+              per the live site's device (distinct corner from the
+              botanical plate so the two don't compete). */}
+          <Monogram className="absolute bottom-6 left-6 w-16 h-20 text-[#F4F1E8]/[0.08] pointer-events-none select-none" />
           <div className="relative z-10 flex flex-col items-start">
             <p className="eyebrow text-[#C9B7AE] mb-6">Behind the Blooms</p>
             <h2 className="ed-display text-[#F4F1E8] mb-7" style={{ fontSize: "clamp(38px, 5vw, 74px)" }}>
@@ -166,11 +218,19 @@ export default function Home() {
 
       {/* ─── FEATURED WEDDINGS ─── */}
       <section className="section-y container-wide">
-        <div className="mb-12 md:mb-16 text-center">
+        <div className="relative mb-12 md:mb-16 text-center">
           <p className="eyebrow text-[#33302A]/55 mb-4">Selected Work</p>
           <h2 className="ed-display text-[#33302A]" style={{ fontSize: "clamp(32px, 4.4vw, 62px)" }}>
             FEATURED <span className="font-times-italic italic font-light">weddings</span>
           </h2>
+          {/* Second, lighter instance of the photo-over-text device — a
+              small photo notched into the heading rather than a full
+              overlapping layer. */}
+          <Reveal className="hidden md:block absolute -top-4 right-[14%] w-24 aspect-[3/4] plate tilt-rs">
+            <div className="relative w-full h-full overflow-hidden">
+              <Image src={IMG.bouquetDetail2} alt="" fill sizes="96px" className="object-cover" />
+            </div>
+          </Reveal>
         </div>
         <div className="grid md:grid-cols-3 gap-x-8 gap-y-14 md:gap-x-10">
           {GALLERIES.map((g, i) => (
@@ -198,6 +258,12 @@ export default function Home() {
           </Link>
         </div>
       </section>
+
+      {/* PF monogram — section-divider placement, quiet chapter mark
+          between Featured Weddings and the testimonial. */}
+      <div className="flex justify-center py-2">
+        <Monogram className="w-6 h-8 text-[#33302A]/25" />
+      </div>
 
       {/* ─── TESTIMONIAL — the site's deep-register moment: near-black,
           gold foil, manuscript italic, a wax seal instead of the sparkle
@@ -227,22 +293,25 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ─── EXPLORE CTA — two calm, tonally-matched photos flanking a solid
-          text panel, rather than text layered over a busy 4-photo mosaic ─── */}
-      <section className="grid md:grid-cols-3">
-        <div className="relative aspect-[3/4] md:aspect-auto md:min-h-[560px]">
-          <Image src={IMG.bridePortrait} alt="Prose Florals wedding" fill sizes="33vw" className="object-cover" />
-        </div>
-        <div className="bg-[#2A2E1B] flex flex-col items-center justify-center text-center px-6 py-16 md:py-0">
-          <h2 className="ed-display text-white leading-[1]" style={{ fontSize: "clamp(34px, 4.4vw, 64px)" }}>EXPLORE</h2>
-          <p className="font-times-italic italic text-white leading-[1.05]" style={{ fontSize: "clamp(30px, 4vw, 56px)" }}>Prose Florals</p>
-          <h2 className="ed-display text-white leading-[1]" style={{ fontSize: "clamp(34px, 4.4vw, 64px)" }}>WEDDINGS</h2>
+      {/* ─── EXPLORE CTA — washed photo collage behind display type: the
+          collage opacity is pulled way down so a huge mixed roman/italic
+          headline reads clearly on top of the whole thing. Distinct from
+          device #1 (full-opacity photos layered on text) — here the
+          photos are texture, not foreground. ─── */}
+      <section className="relative grid grid-cols-3 md:grid-cols-6 h-[70vh] md:h-[80vh] overflow-hidden bg-[#33302A]">
+        {[IMG.brideMoody, IMG.coupleWalk, IMG.brideBrick, IMG.reception, IMG.coupleForest, IMG.bouquetClose].map((src, i) => (
+          <div key={i} className="relative opacity-30">
+            <Image src={src} alt="" fill sizes="17vw" className="object-cover grayscale" />
+          </div>
+        ))}
+        <div className="absolute inset-0 bg-[#33302A]/35" />
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
+          <h2 className="ed-display text-white leading-[1]" style={{ fontSize: "clamp(34px, 6vw, 92px)" }}>EXPLORE</h2>
+          <p className="font-times-italic italic text-white leading-[1.05]" style={{ fontSize: "clamp(30px, 5.5vw, 82px)" }}>Prose Florals</p>
+          <h2 className="ed-display text-white leading-[1]" style={{ fontSize: "clamp(34px, 6vw, 92px)" }}>WEDDINGS</h2>
           <Link href="/portfolio" className="mt-9 eyebrow text-white border border-white/60 px-9 py-3.5 hover:bg-white hover:text-[#33302A] transition-all duration-300">
             View the Portfolio
           </Link>
-        </div>
-        <div className="relative aspect-[3/4] md:aspect-auto md:min-h-[560px]">
-          <Image src={IMG.brideBouquet} alt="Prose Florals wedding" fill sizes="33vw" className="object-cover" />
         </div>
       </section>
 

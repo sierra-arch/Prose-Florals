@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import PageHero from "@/components/PageHero";
 import BeginCTA from "@/components/BeginCTA";
-import { IMG, INQUIRY } from "@/lib/images";
+import { IMG, INQUIRY, FRESH } from "@/lib/images";
 
 export const metadata: Metadata = {
   title: "Services | Prose Florals — Boston Wedding Florist",
@@ -95,7 +96,9 @@ export default function ServicesPage() {
         </div>
         <div className="bg-[#C9B7AE] flex flex-col justify-center px-8 md:px-20 py-24 md:py-32">
           <p className="label text-[#33302A]/70 mb-4">Prose Weddings</p>
-          <h2 className="display text-[#F4F1E8] mb-6" style={{ fontSize: "clamp(34px, 4vw, 60px)" }}>WEDDINGS</h2>
+          <h2 className="text-[#F4F1E8] mb-6" style={{ fontSize: "clamp(34px, 4vw, 60px)" }}>
+            <span className="font-times-italic italic font-light">Full-Service</span> <span className="display">WEDDINGS</span>
+          </h2>
           <p className="font-times text-[17px] text-[#33302A]/80 leading-relaxed mb-7 max-w-md">
             Our signature experience. After an initial consult, we craft a Custom Design Brief and Floral Proposal, then hand-deliver every piece to your venue on the day of. Full-service, start to finish.
           </p>
@@ -111,7 +114,9 @@ export default function ServicesPage() {
       <section className="grid md:grid-cols-2">
         <div className="bg-[#3B4127] flex flex-col justify-center px-8 md:px-20 py-24 md:py-32 order-2 md:order-1">
           <p className="label text-[#C9B7AE] mb-4">Partnerships &amp; Collaborations</p>
-          <h2 className="display text-[#F4F1E8] mb-6" style={{ fontSize: "clamp(34px, 4vw, 60px)" }}>CORPORATE</h2>
+          <h2 className="text-[#F4F1E8] mb-6" style={{ fontSize: "clamp(34px, 4vw, 60px)" }}>
+            <span className="font-times-italic italic font-light">Editorial &amp;</span> <span className="display">CORPORATE</span>
+          </h2>
           <p className="font-times text-[17px] text-[#F4F1E8]/75 leading-relaxed mb-7 max-w-md">
             From editorial shoots to brand launches and galas, we partner with photographers, planners, and companies to bring botanical artistry to every occasion.
           </p>
@@ -165,15 +170,28 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Ready CTA */}
+      {/* Pure full-bleed photo breather — no headline, no overlay text, no
+          CTA, just a visual pause before the closing section. */}
+      <div className="relative aspect-[21/9] w-full overflow-hidden">
+        <Image src={FRESH.scrap9} alt="" fill sizes="100vw" className="object-cover" />
+      </div>
+
+      {/* Ready CTA — paired underlined text links instead of a solid
+          button; a lighter editorial close, reserving solid buttons for
+          higher-intent moments elsewhere (e.g. the homepage Inquire CTA). */}
       <section className="section-y-lg px-6 text-center bg-[#F4F1E8]">
         <h2 className="text-[#33302A] mb-8" style={{ fontSize: "clamp(34px, 5vw, 72px)" }}>
           <span className="display">READY TO MAKE MAGIC?</span>{" "}
           <span className="font-times-italic italic font-light">let&apos;s connect</span>
         </h2>
-        <a href={INQUIRY} target="_blank" rel="noopener noreferrer" className="label text-[#F4F1E8] bg-[#3B4127] px-12 py-4 inline-block hover:bg-[#2A2E1B] transition-colors">
-          Inquire Now
-        </a>
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-10">
+          <Link href="/portfolio" className="label text-[#33302A] border-b border-[#33302A] pb-1 hover:text-[#3B4127] hover:border-[#3B4127] transition-colors">
+            View the Portfolio
+          </Link>
+          <a href={INQUIRY} target="_blank" rel="noopener noreferrer" className="label text-[#33302A] border-b border-[#33302A] pb-1 hover:text-[#3B4127] hover:border-[#3B4127] transition-colors">
+            Get in Touch
+          </a>
+        </div>
       </section>
     </main>
   );

@@ -5,6 +5,10 @@ import { useState } from "react";
 
 export type Testimonial = {
   quote: string;
+  /** Rich version of the quote — mixed italic/small-caps/bold emphasis.
+      Overrides `quote` for display when present; `quote` still used for the
+      plain-text tab label fallback. */
+  quoteNode?: React.ReactNode;
   author: string;
   photo?: string;
 };
@@ -24,7 +28,22 @@ export default function TestimonialCarousel({
   return (
     <section className="section-y-lg px-6 bg-[#EAE5D6]">
       <div className="max-w-4xl mx-auto text-center relative">
-        <p className="label text-[#33302A]/55 mb-10">{label}</p>
+        <p className="label text-[#33302A]/55 mb-8">{label}</p>
+
+        {/* Named tabs — jump directly to a couple, not just prev/next */}
+        <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 mb-10">
+          {items.map((item, idx) => (
+            <button
+              key={idx}
+              onClick={() => setI(idx)}
+              className={`label transition-colors ${
+                idx === i ? "text-[#3B4127]" : "text-[#33302A]/35 hover:text-[#33302A]/60"
+              }`}
+            >
+              {item.author.split(",")[0]}
+            </button>
+          ))}
+        </div>
 
         {/* Arrows */}
         <button
@@ -48,9 +67,9 @@ export default function TestimonialCarousel({
             className="font-times text-[#33302A] leading-[1.5] anim-fade"
             style={{ fontSize: "clamp(21px, 2.9vw, 34px)" }}
           >
-            &ldquo;{t.quote}&rdquo;
+            &ldquo;{t.quoteNode ?? t.quote}&rdquo;
           </blockquote>
-          <p className="font-times-italic italic text-[#33302A]/70 text-lg mt-8">— {t.author}</p>
+          <p className="font-times-italic italic text-[#33302A]/70 text-lg mt-8">— {t.author}, Past Clients</p>
 
           {t.photo && (
             <div className="relative w-24 h-24 md:w-28 md:h-28 rounded-full overflow-hidden mx-auto mt-10 ring-1 ring-[#33302A]/10">

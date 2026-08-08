@@ -42,3 +42,11 @@ next-env.d.ts
 
 # large media (hosted on Cloudinary)
 /public/portfolio/
+
+# Raw source libraries dropped in for reference — only the specific files
+# actually wired up (converted Magnolia .woff2s in public/fonts/, curated
+# sketches copied into public/images/sketches/) are meant to ship. Keeping
+# the rest out avoids deploying ~15 unused licensed fonts + 94 unused
+# sketch files.
+/public/fonts/Fonts/
+/Sketches/
