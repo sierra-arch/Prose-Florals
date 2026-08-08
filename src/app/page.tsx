@@ -3,8 +3,22 @@ import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import Monogram from "@/components/Monogram";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
-import { IMG, INQUIRY } from "@/lib/images";
+import RotatingPair, { type PhotoPair } from "@/components/RotatingPair";
+import { IMG, LIVE, INQUIRY } from "@/lib/images";
 import { GALLERIES, GALLERY_COVERS } from "@/lib/galleries";
+
+// Real couple + floral-detail pairs, cross-fading through several different
+// weddings — matches the auto-rotating pair on the live homepage.
+const intentionPairs: PhotoPair[] = [
+  { main: IMG.coupleKiss, detail: IMG.bouquetDetail2, alt: "Bride and groom embracing" },
+  { main: IMG.coupleEmbrace, detail: IMG.bouquetClose, alt: "Florist embracing a bride" },
+  { main: IMG.brideMoody, detail: IMG.bouquetBold, alt: "Bride in a moody forest setting" },
+  { main: IMG.bridePortrait, detail: IMG.bouquetLush, alt: "Bride at a brick mansion" },
+  { main: IMG.coupleWalk, detail: IMG.bouquetDetail3, alt: "Couple walking together" },
+  { main: IMG.coupleForest, detail: LIVE.faqMarigolds, alt: "Bride in a deep forest" },
+  { main: LIVE.zoeChapman, detail: LIVE.methodColor, alt: "Bride in a floral archway" },
+  { main: IMG.brideBrick, detail: IMG.bouquetWhite, alt: "Bride portrait" },
+];
 
 const homeTestimonials = [
   {
@@ -37,21 +51,16 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ─── FLOWERS with INTENTION — two overlapping photos (one large,
-          one tucked into its corner), text block, monogram at the seam.
-          Real copy from the live site. ─── */}
+      {/* ─── FLOWERS with INTENTION — auto-rotating couple + floral-detail
+          pair (matches the live site's rotator), text block, monogram at
+          the top of the text column. Wide, even gap between photo and
+          text — matching the live site's more generous spacing. Real copy
+          from the live site. ─── */}
       <section className="section-y-lg container-wide">
-        <div className="grid md:grid-cols-2 gap-x-16 gap-y-10 items-center">
+        <div className="grid md:grid-cols-2 gap-x-20 lg:gap-x-28 gap-y-10 items-start">
+          <RotatingPair pairs={intentionPairs} />
           <div className="relative">
-            <div className="relative aspect-[4/5] w-full">
-              <Image src={IMG.coupleKiss} alt="Bride and groom embracing" fill sizes="42vw" className="object-cover" />
-            </div>
-            <div className="hidden md:block absolute -bottom-10 -right-10 w-[42%] aspect-[4/5]">
-              <Image src={IMG.bouquetDetail2} alt="Wedding florals detail" fill sizes="18vw" className="object-cover" />
-            </div>
-          </div>
-          <div className="md:pl-8 relative">
-            <Monogram className="hidden md:block absolute -top-2 right-0 w-12 h-14 text-[#33302A]/70" />
+            <Monogram className="hidden md:block absolute -top-4 right-0 w-14 h-16 text-[#33302A]/70" />
             <h2 className="ed-display text-[#33302A] leading-[1.02] mb-8" style={{ fontSize: "clamp(38px, 4.6vw, 66px)" }}>
               FLOWERS <span className="font-times-italic italic font-light">with</span> INTENTION
             </h2>
