@@ -254,6 +254,18 @@ body {
   box-shadow: 0 24px 60px -34px rgba(28, 26, 21, 0.5);
 }
 
+/* Film-grain texture overlay — tiled noise PNG at low opacity, for the
+   "moody" dark sections. Purely decorative, pointer-events off. */
+.grain-overlay {
+  position: absolute;
+  inset: 0;
+  background-image: url("/images/brand/grain.png");
+  background-size: 300px 300px;
+  opacity: 0.5;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+
 /* Collage items: always render, gentle opacity fade-in on load (no scroll observer, tilt-safe) */
 .collage-item {
   opacity: 0;

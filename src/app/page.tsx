@@ -3,6 +3,7 @@ import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import Monogram from "@/components/Monogram";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
+import SpiralText from "@/components/SpiralText";
 import { IMG, INQUIRY } from "@/lib/images";
 import { GALLERIES, GALLERY_COVERS } from "@/lib/galleries";
 
@@ -90,6 +91,46 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ─── MOODY COLLAGE — new "dark, filmic" beat: deep espresso-brown
+          backdrop, grain texture, a scattered mix of color + B&W real
+          photography, and a slow-spinning circular text device. A single
+          new moment, not layered onto every section. ─── */}
+      <section className="relative bg-[#2B1710] overflow-hidden py-24 md:py-36">
+        <div className="grain-overlay" />
+        <div className="relative container-wide">
+          <div className="relative min-h-[560px] md:min-h-[640px]">
+            <div className="absolute inset-0 flex items-center justify-center text-center pointer-events-none">
+              <div>
+                <p className="font-galanthia text-[#EAE5D6] text-[28px] md:text-[36px] leading-tight mb-3">
+                  guided by petals,
+                  <br />
+                  gathered with heart
+                </p>
+              </div>
+            </div>
+            <SpiralText
+              text="Boston • Weddings • Florals"
+              color="#C9B7AE"
+              duration={30}
+              className="absolute top-6 right-6 md:top-10 md:right-10 w-24 h-24 md:w-32 md:h-32"
+            />
+
+            <div className="absolute left-0 top-0 w-[30%] md:w-[24%] aspect-[3/4] plate">
+              <Image src={IMG.brideMoody} alt="" fill sizes="24vw" className="object-cover grayscale" />
+            </div>
+            <div className="absolute left-[8%] md:left-[14%] bottom-0 w-[26%] md:w-[20%] aspect-[4/5] plate">
+              <Image src={IMG.bouquetDetail3} alt="" fill sizes="20vw" className="object-cover" />
+            </div>
+            <div className="absolute right-[4%] md:right-[10%] top-[8%] w-[24%] md:w-[18%] aspect-[3/4] plate">
+              <Image src={IMG.coupleForest} alt="" fill sizes="18vw" className="object-cover" />
+            </div>
+            <div className="absolute right-0 bottom-0 w-[28%] md:w-[22%] aspect-[4/5] plate">
+              <Image src={IMG.brideBrick} alt="" fill sizes="22vw" className="object-cover grayscale" />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ─── OFFERINGS — thin-rule editorial list ─── */}
       <section className="pt-10 pb-16 md:pt-16 md:pb-28 container-pf">
         <div className="mb-12 md:mb-16 flex items-end justify-between">
@@ -169,17 +210,20 @@ export default function Home() {
           <Image src={IMG.bridePortrait} alt="Sierra Bettis, founder of Prose Florals" fill sizes="50vw" className="object-cover" />
         </div>
         <Monogram className="hidden md:block absolute top-10 left-1/2 -translate-x-1/2 w-12 h-14 text-[#F4F1E8]/80 z-10" />
-        <div className="bg-[#2A2E1B] flex flex-col justify-center px-8 md:px-20 py-20 md:py-32 relative">
-          <p className="eyebrow text-[#C9B7AE] absolute top-8 right-8 md:right-12">Behind the Blooms</p>
-          <h2 className="ed-display text-[#F4F1E8] mb-7" style={{ fontSize: "clamp(38px, 5vw, 74px)" }}>
-            SIERRA BETTIS
-          </h2>
-          <p className="font-times text-[18px] text-[#F4F1E8]/78 leading-[1.85] max-w-md mb-9">
-            As a passionate wedding florist with a decade of experience, Sierra brings her signature timeless, editorial style and classic, romantic aesthetic to modern love stories.
-          </p>
-          <Link href="/about" className="eyebrow text-[#F4F1E8] border-b border-[#F4F1E8]/45 pb-1 self-start hover:border-[#C9B7AE] hover:text-[#C9B7AE] transition-colors">
-            Learn More about the Prose Team
-          </Link>
+        <div className="bg-[#2B1710] flex flex-col justify-center px-8 md:px-20 py-20 md:py-32 relative overflow-hidden">
+          <div className="grain-overlay" />
+          <p className="eyebrow text-[#C9B7AE] absolute top-8 right-8 md:right-12 z-10">Behind the Blooms</p>
+          <div className="relative z-10">
+            <h2 className="ed-display text-[#F4F1E8] mb-7" style={{ fontSize: "clamp(38px, 5vw, 74px)" }}>
+              SIERRA BETTIS
+            </h2>
+            <p className="font-times text-[18px] text-[#F4F1E8]/78 leading-[1.85] max-w-md mb-9">
+              As a passionate wedding florist with a decade of experience, Sierra brings her signature timeless, editorial style and classic, romantic aesthetic to modern love stories.
+            </p>
+            <Link href="/about" className="eyebrow text-[#F4F1E8] border-b border-[#F4F1E8]/45 pb-1 self-start hover:border-[#C9B7AE] hover:text-[#C9B7AE] transition-colors">
+              Learn More about the Prose Team
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -266,23 +310,26 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ─── INQUIRE CTA — flat, confident olive block ─── */}
-      <section className="section-y-lg px-6 text-center bg-[#3B4127]">
-        <p className="eyebrow text-[#C9B7AE] mb-6">Begin Your Journey</p>
-        <h2 className="ed-display text-white mb-5" style={{ fontSize: "clamp(36px, 5.5vw, 82px)" }}>
-          SHALL WE <span className="font-times-italic italic font-light">begin?</span>
-        </h2>
-        <p className="font-times text-white/70 text-lg italic mb-10 max-w-md mx-auto leading-relaxed">
-          Introduce yourself and tell us a little about your event to get started. We look forward to meeting you!
-        </p>
-        <a
-          href={INQUIRY}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block eyebrow text-[#33302A] bg-[#F4F1E8] px-12 py-4 hover:bg-[#EAE5D6] transition-colors"
-        >
-          Inquire Now
-        </a>
+      {/* ─── INQUIRE CTA — deep espresso-brown, grain-textured ─── */}
+      <section className="relative section-y-lg px-6 text-center bg-[#1A0F0A] overflow-hidden">
+        <div className="grain-overlay" />
+        <div className="relative z-10">
+          <p className="eyebrow text-[#C9B7AE] mb-6">Begin Your Journey</p>
+          <h2 className="ed-display text-white mb-5" style={{ fontSize: "clamp(36px, 5.5vw, 82px)" }}>
+            SHALL WE <span className="font-times-italic italic font-light">begin?</span>
+          </h2>
+          <p className="font-times text-white/70 text-lg italic mb-10 max-w-md mx-auto leading-relaxed">
+            Introduce yourself and tell us a little about your event to get started. We look forward to meeting you!
+          </p>
+          <a
+            href={INQUIRY}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block eyebrow text-[#33302A] bg-[#F4F1E8] px-12 py-4 hover:bg-[#EAE5D6] transition-colors"
+          >
+            Inquire Now
+          </a>
+        </div>
       </section>
     </main>
   );
