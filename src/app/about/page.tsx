@@ -2,9 +2,6 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Reveal from "@/components/Reveal";
 import BeginCTA from "@/components/BeginCTA";
-import WaxSeal from "@/components/WaxSeal";
-import RibbonDivider from "@/components/RibbonDivider";
-import Sketch from "@/components/Sketch";
 import { IMG, FRESH } from "@/lib/images";
 
 export const metadata: Metadata = {
@@ -29,7 +26,7 @@ export default function AboutPage() {
           <Reveal className="relative aspect-[3/4] md:mt-16 plate tilt-ls">
             <Image src={FRESH.goods1} alt="Prose Florals wedding work" fill sizes="33vw" className="object-cover" />
           </Reveal>
-          <Reveal className="relative aspect-[4/5] md:-mt-4 plate tilt-r torn-bottom" delay={120}>
+          <Reveal className="relative aspect-[4/5] md:-mt-4 plate tilt-r" delay={120}>
             <Image src={IMG.coupleEmbrace} alt="Prose Florals florist embracing bride" fill sizes="33vw" className="object-cover" />
           </Reveal>
           <Reveal className="relative aspect-[3/4] md:mt-24 plate tilt-rs" delay={240}>
@@ -147,20 +144,14 @@ export default function AboutPage() {
                 In 2022, my perspective on the wedding industry changed entirely when I met Sierra, the flower fairy herself. I discovered that my superpower in events lies in my administrative and coordinating skills behind the scenes. Now, I&apos;m thrilled to be a part of the ultimate event: weddings!
               </p>
             </div>
-            <div className="flex items-end gap-3 mt-8">
-              <p className="font-galanthia text-[#33302A] text-[40px] leading-none">Xoxo, Kattie</p>
-              <WaxSeal color="#4A1420" className="w-9 h-9 opacity-70 mb-0.5" />
-            </div>
+            <p className="font-galanthia text-[#33302A] text-[40px] leading-none mt-8">Xoxo, Kattie</p>
           </Reveal>
         </div>
       </section>
 
-      <RibbonDivider className="w-full h-6 md:h-7 my-2" color="#4A1420" />
-
-      {/* ─── Inspiration list — paper texture instead of flat bone color ─── */}
-      <section className="section-y px-6 border-y border-[#D8D2C2] paper">
-        <div className="max-w-4xl mx-auto text-center relative">
-          <Sketch name="ginkgo" className="w-14 h-14 mx-auto mb-5 text-[#3B4127]/70" />
+      {/* ─── Inspiration list ─── */}
+      <section className="section-y px-6 border-y border-[#D8D2C2]">
+        <div className="max-w-4xl mx-auto text-center">
           <p className="label text-[#33302A]/50 mb-5">The Inspiration</p>
           <p className="font-times-italic italic text-[#33302A] leading-relaxed" style={{ fontSize: "clamp(20px, 2.6vw, 30px)" }}>
             Still Moments &middot; Architecture &middot; Romance &middot; Tiny Growing Things &middot; The Ocean &middot; Jane Eyre &middot; Kittens &middot; Silky Veils

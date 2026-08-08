@@ -4,7 +4,6 @@ import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import BeginCTA from "@/components/BeginCTA";
 import HeroCarousel from "@/components/HeroCarousel";
-import WaxSeal from "@/components/WaxSeal";
 import { PORTFOLIO_GROUPS, IMG } from "@/lib/images";
 import { GALLERIES, GALLERY_COVERS, PORTFOLIO_HERO } from "@/lib/galleries";
 
@@ -27,7 +26,7 @@ export default function PortfolioPage() {
       <HeroCarousel images={PORTFOLIO_HERO} />
 
       {/* Intro */}
-      <section className="section-y-lg container-pf text-center paper">
+      <section className="section-y-lg container-pf text-center">
         <p className="label text-[#33302A]/50 mb-8">The Portfolio</p>
         <h2 className="text-[#33302A] leading-[1.05]" style={{ fontSize: "clamp(30px, 4.4vw, 62px)" }}>
           <span className="display">WE MAKE TIMELESS FLORALS</span>
@@ -49,7 +48,7 @@ export default function PortfolioPage() {
           {GALLERIES.map((g, i) => (
             <Reveal key={g.slug} delay={i * 110}>
               <Link href={`/portfolio/${g.slug}`} className="group block">
-                <div className={`relative aspect-[3/4] overflow-hidden mb-6 plate ${i === 0 ? "torn-bottom" : ""}`}>
+                <div className="relative aspect-[3/4] overflow-hidden mb-6 plate">
                   <Image
                     src={GALLERY_COVERS[g.slug]}
                     alt={g.coverAlt}
@@ -90,12 +89,9 @@ export default function PortfolioPage() {
             const isLead = gi === 0;
             return (
               <div key={group.label}>
-                <div className="flex items-center justify-center gap-3 mb-8 md:mb-10">
-                  {isLead && <WaxSeal color="#4A1420" className="w-8 h-8 opacity-80" />}
-                  <p className="font-times-italic italic text-[#33302A]/60 text-lg md:text-xl text-center">
-                    {group.label}
-                  </p>
-                </div>
+                <p className="font-times-italic italic text-[#33302A]/60 text-lg md:text-xl text-center mb-8 md:mb-10">
+                  {group.label}
+                </p>
                 <div className="grid grid-cols-2 md:grid-cols-3 auto-rows-[220px] md:auto-rows-[320px] gap-5 md:gap-7">
                   {group.images.map((src, i) => (
                     <Reveal

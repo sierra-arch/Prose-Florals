@@ -4,7 +4,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { INQUIRY, GUIDE, INSTAGRAM, PINTEREST, FOOTER_STRIP } from "@/lib/images";
 import BotanicalStamp from "@/components/BotanicalStamp";
-import ScallopDivider from "@/components/ScallopDivider";
 
 const getAround = [
   { label: "Home", href: "/" },
@@ -32,11 +31,7 @@ const stripImgs = FOOTER_STRIP;
 
 export default function Footer() {
   return (
-    <footer className="bg-[#F4F1E8]">
-      {/* Scalloped seam — olive Inquire CTA above bulges into the bone footer,
-          rather than a hard rule. Low-risk pilot spot for the motif. */}
-      <ScallopDivider bumpColor="#3B4127" gapColor="#F4F1E8" bumpSize={16} />
-
+    <footer className="bg-[#F4F1E8] border-t border-[#D8D2C2]">
       {/* Top: brand line + 4 columns, centered with generous margins */}
       <div className="container-pf pt-20 md:pt-28 pb-14">
         {/* Centered wordmark + tagline + back-to-top */}
