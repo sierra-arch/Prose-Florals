@@ -38,6 +38,24 @@ export const LIVE = {
 
   closingExchangeA: `${L}2e514f-frances-clayton-27-websize.jpg`,
   closingExchangeB: `${L}60da25-frances-clayton-35-websize.jpg`,
+
+  // Services page
+  servicesHero: `${L}47b290-img-5131.jpg`, // B&W couple walking city street
+  knownPlayful: `${L}9d02cf-img-1953.jpg`, // pastel arrangement on mantel
+  knownSentimental: `${L}da07b0-zc-335.jpg`, // sunglasses couple, vibrant bouquet
+  knownHandsOn: `${L}8cf824-eawedding-1803.jpg`, // bride in garden
+  weddingsBand: `${L}003b01-film-abigailschaeffer-6.jpg`, // dusty-blue bridesmaids
+  corporateBand: `${L}f5c009-zc-377.jpg`, // wine + flower still life
+  testimonialBg1: `${L}6218ad-23-10-05-maggiore-0433.jpg`, // Dominique & Frank
+  testimonialBg2: `${L}e5b9e1-img-0835.jpg`, // Adi & Shuham
+  testimonialBg3: `${L}cac6b4-img-5293.jpg`, // Anneke & Matt
+  testimonialBg4: `${L}ecd8d1-bono-cocktail-hour-5-websize.jpg`, // Megan & Nico
+  offeringDiy: `${L}54a7d6-2c8488f6-2ed8-45e5-9ef1-5dd677dc8e7e-1-105-c.jpg`, // hands cutting rose
+  offeringEditorial: `${L}935a99-zo61fgta.jpg`, // bride embracing herself
+  offeringNonprofit: `${L}8b4fc3-img-0107.jpg`, // pink/white centerpiece
+  inspirationDress: `${L}ea53f1-frances-clayton-1274-websize.jpg`, // purple embroidered dress
+  inspirationCastle: `${L}2aced8-308.jpg`,
+  inspirationOcean: `${L}4d0570-136.jpg`,
 };
 
 export const IMG = {
