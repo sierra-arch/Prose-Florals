@@ -10,15 +10,18 @@ export type Testimonial = {
       plain-text tab label fallback. */
   quoteNode?: React.ReactNode;
   author: string;
+  venue?: string;
   photo?: string;
 };
 
 export default function TestimonialCarousel({
   items,
   label = "Thoughts on Our Experience",
+  showTabs = true,
 }: {
   items: Testimonial[];
   label?: string;
+  showTabs?: boolean;
 }) {
   const [i, setI] = useState(0);
   const n = items.length;
@@ -27,67 +30,63 @@ export default function TestimonialCarousel({
 
   return (
     <section className="section-y-lg px-6 bg-[#EAE5D6]">
-      <div className="max-w-4xl mx-auto text-center relative">
-        <p className="label text-[#33302A]/55 mb-8">{label}</p>
+      <div className="max-w-4xl mx-auto relative">
+        {showTabs && (
+          <>
+            <p className="label text-[#33302A]/55 mb-8 text-center">{label}</p>
+            <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 mb-10">
+              {items.map((item, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => setI(idx)}
+                  className={`label transition-colors ${
+                    idx === i ? "text-[#3B4127]" : "text-[#33302A]/35 hover:text-[#33302A]/60"
+                  }`}
+                >
+                  {item.author.split(",")[0]}
+                </button>
+              ))}
+            </div>
+          </>
+        )}
 
-        {/* Named tabs — jump directly to a couple, not just prev/next */}
-        <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 mb-10">
-          {items.map((item, idx) => (
-            <button
-              key={idx}
-              onClick={() => setI(idx)}
-              className={`label transition-colors ${
-                idx === i ? "text-[#3B4127]" : "text-[#33302A]/35 hover:text-[#33302A]/60"
-              }`}
-            >
-              {item.author.split(",")[0]}
+        {/* Arrows — top-right, matching the live site */}
+        {n > 1 && (
+          <div className="absolute right-0 top-0 flex gap-4">
+            <button onClick={() => go(i - 1)} aria-label="Previous testimonial" className="text-[#33302A]/50 hover:text-[#33302A] transition-colors">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1"><path d="M15 5l-7 7 7 7" /></svg>
             </button>
-          ))}
-        </div>
+            <button onClick={() => go(i + 1)} aria-label="Next testimonial" className="text-[#33302A]/50 hover:text-[#33302A] transition-colors">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1"><path d="M9 5l7 7-7 7" /></svg>
+            </button>
+          </div>
+        )}
 
-        {/* Arrows */}
-        <button
-          onClick={() => go(i - 1)}
-          aria-label="Previous testimonial"
-          className="absolute left-0 top-1/2 -translate-y-1/2 text-[#33302A]/50 hover:text-[#33302A] transition-colors"
+        <blockquote
+          key={i}
+          className="font-times text-[#33302A] leading-[1.5] anim-fade max-w-3xl"
+          style={{ fontSize: "clamp(22px, 3vw, 36px)" }}
         >
-          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1"><path d="M15 5l-7 7 7 7" /></svg>
-        </button>
-        <button
-          onClick={() => go(i + 1)}
-          aria-label="Next testimonial"
-          className="absolute right-0 top-1/2 -translate-y-1/2 text-[#33302A]/50 hover:text-[#33302A] transition-colors"
-        >
-          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1"><path d="M9 5l7 7-7 7" /></svg>
-        </button>
+          &ldquo;{t.quoteNode ?? t.quote}&rdquo;
+        </blockquote>
 
-        <div className="px-8 md:px-16">
-          <blockquote
-            key={i}
-            className="font-times text-[#33302A] leading-[1.5] anim-fade"
-            style={{ fontSize: "clamp(21px, 2.9vw, 34px)" }}
-          >
-            &ldquo;{t.quoteNode ?? t.quote}&rdquo;
-          </blockquote>
-          <p className="font-times-italic italic text-[#33302A]/70 text-lg mt-8">— {t.author}, Past Clients</p>
-
+        <div className="flex items-center gap-5 mt-10">
           {t.photo && (
-            <div className="relative w-24 h-24 md:w-28 md:h-28 rounded-full overflow-hidden mx-auto mt-10 ring-1 ring-[#33302A]/10">
-              <Image src={t.photo} alt={t.author} fill sizes="112px" className="object-cover" />
+            <div className="relative w-16 h-16 md:w-20 md:h-20 rounded-full overflow-hidden shrink-0 ring-1 ring-[#33302A]/10">
+              <Image src={t.photo} alt={t.author} fill sizes="80px" className="object-cover" />
             </div>
           )}
-        </div>
-
-        {/* Dots */}
-        <div className="flex justify-center gap-2.5 mt-12">
-          {items.map((_, idx) => (
-            <button
-              key={idx}
-              onClick={() => go(idx)}
-              aria-label={`Testimonial ${idx + 1}`}
-              className={`h-1.5 rounded-full transition-all duration-500 ${idx === i ? "w-6 bg-[#33302A]" : "w-1.5 bg-[#33302A]/25 hover:bg-[#33302A]/50"}`}
-            />
-          ))}
+          <div>
+            <p className="label text-[#33302A]/60 mb-1">Kind Words From</p>
+            <p className="font-sans-pf text-[15px] text-[#33302A]">
+              {t.author}
+              {t.venue && (
+                <>
+                  , <span className="underline underline-offset-4 decoration-[#33302A]/40">{t.venue}</span>
+                </>
+              )}
+            </p>
+          </div>
         </div>
       </div>
 
