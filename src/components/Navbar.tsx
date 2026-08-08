@@ -54,7 +54,7 @@ export default function Navbar() {
       >
         <div className="max-w-[1600px] mx-auto px-6 md:px-14 h-[92px] flex items-center justify-between">
           {/* Left links */}
-          <nav className="hidden lg:flex items-center gap-11 flex-1">
+          <nav className="hidden lg:flex items-center gap-5 xl:gap-8 2xl:gap-11 flex-1">
             {leftLinks.map((link) => (
               <Link
                 key={link.href}
@@ -76,7 +76,7 @@ export default function Navbar() {
           </Link>
 
           {/* Right links */}
-          <nav className="hidden lg:flex items-center gap-11 flex-1 justify-end">
+          <nav className="hidden lg:flex items-center gap-5 xl:gap-8 2xl:gap-11 flex-1 justify-end">
             {rightLinks.map((link) => (
               <Link
                 key={link.href}
