@@ -3,6 +3,8 @@ import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import Monogram from "@/components/Monogram";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
+import WaxSeal from "@/components/WaxSeal";
+import RibbonDivider from "@/components/RibbonDivider";
 import { IMG, INQUIRY } from "@/lib/images";
 import { GALLERIES, GALLERY_COVERS } from "@/lib/galleries";
 
@@ -35,6 +37,7 @@ export default function Home() {
             Boston Area Full Service Wedding<br />Florist for the romantics.
           </p>
         </div>
+        <WaxSeal className="hidden md:block absolute -bottom-12 left-8 md:left-16 w-28 h-28 z-10" />
       </section>
 
       {/* ─── FLOWERS with INTENTION — two overlapping photos (one large,
@@ -72,14 +75,14 @@ export default function Home() {
       <section className="section-y container-wide">
         <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-stretch">
           <Reveal className="flex flex-col justify-center bg-[#EAE5D6] px-8 md:px-16 lg:px-20 py-14 md:py-24">
-            <p className="eyebrow text-[#3B4127] mb-8">What We Do:</p>
+            <p className="eyebrow text-[#4A1420] mb-8">What We Do:</p>
             <h2 className="ed-display text-[#33302A] mb-8" style={{ fontSize: "clamp(34px, 4.6vw, 66px)" }}>
               Flowers for weddings, events &amp; installations
             </h2>
             <p className="font-times text-[18px] md:text-[19px] text-[#33302A]/72 leading-[1.85] max-w-md">
               Every couple has their own romance, and we believe that should be reflected in their florals. We create dynamic floral designs that highlight our couple&apos;s style &amp; story — combining your vision, modern design, and a little dramatic flare.
             </p>
-            <Link href="/about" className="eyebrow text-[#33302A] border-b border-[#33302A] pb-1 self-start mt-10 hover:text-[#3B4127] hover:border-[#3B4127] transition-colors">
+            <Link href="/about" className="eyebrow text-[#33302A] border-b border-[#33302A] pb-1 self-start mt-10 hover:text-[#4A1420] hover:border-[#4A1420] transition-colors">
               Read Our Story
             </Link>
           </Reveal>
@@ -104,7 +107,7 @@ export default function Home() {
               <Link href={s.href} className="rule-row group flex items-center justify-between gap-6 py-6 md:py-8">
                 <span className="flex items-baseline gap-5 md:gap-8">
                   <span className="folio text-[#33302A]/40">{String(i + 1).padStart(2, "0")}</span>
-                  <span className="font-times text-[#33302A] group-hover:text-[#3B4127] transition-colors" style={{ fontSize: "clamp(22px, 3vw, 40px)" }}>
+                  <span className="font-times text-[#33302A] group-hover:text-[#4A1420] transition-colors" style={{ fontSize: "clamp(22px, 3vw, 40px)" }}>
                     {s.t}
                   </span>
                 </span>
@@ -150,10 +153,10 @@ export default function Home() {
               We&apos;re known for professional, timely communication <span className="font-times-italic italic">and</span> stunning floral artistry, because you shouldn&apos;t have to choose.
             </p>
             <div className="flex flex-wrap gap-x-10 gap-y-3">
-              <Link href="/services" className="eyebrow text-[#33302A] border-b border-[#33302A] pb-1 hover:text-[#3B4127] hover:border-[#3B4127] transition-colors">
+              <Link href="/services" className="eyebrow text-[#33302A] border-b border-[#33302A] pb-1 hover:text-[#4A1420] hover:border-[#4A1420] transition-colors">
                 Prose Weddings
               </Link>
-              <Link href="/experience" className="eyebrow text-[#33302A] border-b border-[#33302A] pb-1 hover:text-[#3B4127] hover:border-[#3B4127] transition-colors">
+              <Link href="/experience" className="eyebrow text-[#33302A] border-b border-[#33302A] pb-1 hover:text-[#4A1420] hover:border-[#4A1420] transition-colors">
                 <span className="font-times-italic italic normal-case tracking-normal">The</span> Experience
               </Link>
             </div>
@@ -169,7 +172,7 @@ export default function Home() {
           <Image src={IMG.bridePortrait} alt="Sierra Bettis, founder of Prose Florals" fill sizes="50vw" className="object-cover" />
         </div>
         <Monogram className="hidden md:block absolute top-10 left-1/2 -translate-x-1/2 w-12 h-14 text-[#F4F1E8]/80 z-10" />
-        <div className="bg-[#2A2E1B] flex flex-col justify-center px-8 md:px-20 py-20 md:py-32 relative">
+        <div className="bg-[#330D16] flex flex-col justify-center px-8 md:px-20 py-20 md:py-32 relative">
           <p className="eyebrow text-[#C9B7AE] absolute top-8 right-8 md:right-12">Behind the Blooms</p>
           <h2 className="ed-display text-[#F4F1E8] mb-7" style={{ fontSize: "clamp(38px, 5vw, 74px)" }}>
             SIERRA BETTIS
@@ -205,14 +208,14 @@ export default function Home() {
                   />
                   <span className="absolute top-4 left-4 folio text-white/85">0{i + 1}</span>
                 </div>
-                <p className="eyebrow text-[#33302A] mb-2 group-hover:text-[#3B4127] transition-colors">{g.venueLabel}</p>
+                <p className="eyebrow text-[#33302A] mb-2 group-hover:text-[#4A1420] transition-colors">{g.venueLabel}</p>
                 <p className="font-times text-[20px] md:text-[22px] text-[#33302A]/80 leading-snug">{g.tagline}</p>
               </Link>
             </Reveal>
           ))}
         </div>
         <div className="text-center mt-16">
-          <Link href="/portfolio" className="eyebrow text-[#33302A] border-b border-[#33302A] pb-1.5 hover:text-[#3B4127] hover:border-[#3B4127] transition-colors">
+          <Link href="/portfolio" className="eyebrow text-[#33302A] border-b border-[#33302A] pb-1.5 hover:text-[#4A1420] hover:border-[#4A1420] transition-colors">
             View the Full Portfolio
           </Link>
         </div>
@@ -221,7 +224,8 @@ export default function Home() {
       {/* ─── OUR APPROACH — pure text statement, no photos. Confirmed by
           the live site: this is a quiet typographic beat, not another
           collage moment. ─── */}
-      <section className="section-y-lg container-pf text-center">
+      <section className="section-y-lg container-pf text-center relative">
+        <RibbonDivider className="hidden md:block absolute top-4 left-1/2 -translate-x-[calc(50%+220px)] w-16 h-24 -rotate-6" />
         <p className="eyebrow text-[#33302A]/55 mb-10">Our Approach</p>
         <h2 className="ed-display text-[#33302A] leading-[1.05]" style={{ fontSize: "clamp(36px, 6.4vw, 96px)" }}>
           WE MAKE PLAYFUL ARRANGEMENTS <span className="font-times-italic italic font-light">for</span> YOUR MOST{" "}
@@ -267,7 +271,7 @@ export default function Home() {
       </section>
 
       {/* ─── INQUIRE CTA — flat, confident olive block ─── */}
-      <section className="section-y-lg px-6 text-center bg-[#3B4127]">
+      <section className="section-y-lg px-6 text-center bg-[#4A1420]">
         <p className="eyebrow text-[#C9B7AE] mb-6">Begin Your Journey</p>
         <h2 className="ed-display text-white mb-5" style={{ fontSize: "clamp(36px, 5.5vw, 82px)" }}>
           SHALL WE <span className="font-times-italic italic font-light">begin?</span>

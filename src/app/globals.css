@@ -50,17 +50,17 @@
 }
 
 @theme inline {
-  /* ─── Editorial "Garden Green + Bone" palette ─── */
+  /* ─── Editorial "Wine + Bone" palette ─── */
   --color-bone: #F4F1E8;        /* warm bone/ivory canvas */
   --color-bone-2: #EAE5D6;      /* slightly deeper bone for panels */
   --color-cream: #F4F1E8;       /* alias -> bone (keeps old refs alive) */
   --color-cream-dark: #EAE5D6;
-  --color-olive: #3B4127;       /* deep olive-green primary accent */
-  --color-olive-deep: #2A2E1B;  /* darkest olive for surrounds */
+  --color-olive: #4A1420;       /* deep burgundy primary accent (alias name kept for old refs) */
+  --color-olive-deep: #330D16;  /* darkest burgundy for surrounds */
   --color-moss: #6B7350;        /* mid moss for secondary accents */
   --color-brown: #33302A;       /* warm near-espresso text */
   --color-brown-soft: rgba(51, 48, 42, 0.62);
-  --color-green: #3B4127;       /* alias -> olive (keeps old refs alive) */
+  --color-green: #4A1420;       /* alias -> burgundy (keeps old refs alive) */
   --color-ink: #1C1A15;
   --color-mauve: #C9B7AE;
   --color-gold: #B99C6E;
@@ -211,7 +211,7 @@ body {
 }
 
 ::selection {
-  background: #3B4127;
+  background: #4A1420;
   color: #F4F1E8;
 }
 
@@ -358,7 +358,7 @@ body {
 /* A flourish squiggle used as a divider or accent line */
 .flourish {
   display: block;
-  color: var(--color-olive, #3B4127);
+  color: var(--color-olive, #4A1420);
   opacity: 0.7;
 }
 

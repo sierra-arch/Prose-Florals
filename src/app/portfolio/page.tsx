@@ -49,7 +49,7 @@ function WeddingRows({ items }: { items: PortfolioCard[] }) {
                     className="object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.05]"
                   />
                 </div>
-                <p className="label text-[#33302A] mb-3 group-hover:text-[#3B4127] transition-colors">
+                <p className="label text-[#33302A] mb-3 group-hover:text-[#4A1420] transition-colors">
                   {card.venueLabel}
                 </p>
                 <p className="font-times text-[21px] md:text-[23px] text-[#33302A]/80 leading-snug">

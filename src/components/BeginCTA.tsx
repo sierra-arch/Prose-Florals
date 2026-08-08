@@ -21,7 +21,7 @@ export default function BeginCTA({ image = IMG.beachBridesmaids }: { image?: str
           href={INQUIRY}
           target="_blank"
           rel="noopener noreferrer"
-          className="label text-[#F4F1E8] bg-[#3B4127] rounded-full px-12 py-4 inline-block hover:bg-[#2A2E1B] transition-colors"
+          className="label text-[#F4F1E8] bg-[#4A1420] rounded-full px-12 py-4 inline-block hover:bg-[#330D16] transition-colors"
         >
           Inquire
         </a>

@@ -31,7 +31,7 @@ export default function ContactPage() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
-            <a href={INQUIRY} target="_blank" rel="noopener noreferrer" className="label text-[#F4F1E8] bg-[#3B4127] px-11 py-4 text-center hover:bg-[#2A2E1B] transition-colors">
+            <a href={INQUIRY} target="_blank" rel="noopener noreferrer" className="label text-[#F4F1E8] bg-[#4A1420] px-11 py-4 text-center hover:bg-[#330D16] transition-colors">
               Start Your Inquiry
             </a>
             <a href={GUIDE} target="_blank" rel="noopener noreferrer" className="label text-[#33302A] border border-[#33302A]/40 px-11 py-4 text-center hover:bg-[#33302A]/5 transition-colors">
@@ -42,7 +42,7 @@ export default function ContactPage() {
           <div className="space-y-4 border-t border-[#D8D2C2] pt-8">
             <div>
               <p className="label text-[#33302A]/50 mb-1">Email</p>
-              <a href="mailto:contact@proseflorals.com" className="font-times text-[18px] text-[#33302A] hover:text-[#3B4127] transition-colors">
+              <a href="mailto:contact@proseflorals.com" className="font-times text-[18px] text-[#33302A] hover:text-[#4A1420] transition-colors">
                 contact@proseflorals.com
               </a>
             </div>

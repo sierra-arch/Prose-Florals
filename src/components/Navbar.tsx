@@ -45,7 +45,7 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="label text-[#33302A] hover:text-[#3B4127] transition-colors"
+                className="label text-[#33302A] hover:text-[#4A1420] transition-colors"
               >
                 {link.label}
               </Link>
@@ -67,7 +67,7 @@ export default function Navbar() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="label text-[#33302A] hover:text-[#3B4127] transition-colors"
+                className="label text-[#33302A] hover:text-[#4A1420] transition-colors"
               >
                 {link.label}
               </Link>
@@ -76,7 +76,7 @@ export default function Navbar() {
               href={INQUIRY}
               target="_blank"
               rel="noopener noreferrer"
-              className="font-times-italic italic text-[#33302A] text-[17px] hover:text-[#3B4127] transition-colors"
+              className="font-times-italic italic text-[#33302A] text-[17px] hover:text-[#4A1420] transition-colors"
             >
               Inquire
             </a>
@@ -106,7 +106,7 @@ export default function Navbar() {
       {/* Full-screen overlay menu — monogram, stacked links, small photo
           teaser, and social icons, matching the live site's takeover nav. */}
       {open && (
-        <div className="fixed inset-0 z-[60] bg-[#3B4127] flex flex-col items-center justify-center gap-6 animate-[fadeUp_0.4s_ease] overflow-y-auto py-16">
+        <div className="fixed inset-0 z-[60] bg-[#4A1420] flex flex-col items-center justify-center gap-6 animate-[fadeUp_0.4s_ease] overflow-y-auto py-16">
           <button
             onClick={() => setOpen(false)}
             className="absolute top-7 right-8 text-[#F4F1E8] text-3xl font-light leading-none"

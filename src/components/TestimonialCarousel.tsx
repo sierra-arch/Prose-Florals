@@ -40,7 +40,7 @@ export default function TestimonialCarousel({
                   key={idx}
                   onClick={() => setI(idx)}
                   className={`label transition-colors ${
-                    idx === i ? "text-[#3B4127]" : "text-[#33302A]/35 hover:text-[#33302A]/60"
+                    idx === i ? "text-[#4A1420]" : "text-[#33302A]/35 hover:text-[#33302A]/60"
                   }`}
                 >
                   {item.author.split(",")[0]}

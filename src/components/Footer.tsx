@@ -38,7 +38,7 @@ export default function Footer() {
         <div className="mx-auto max-w-5xl relative text-center mb-14 md:mb-16">
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="hidden md:flex flex-col items-center gap-2 absolute top-1/2 -translate-y-1/2 right-0 text-[#33302A]/55 hover:text-[#3B4127] transition-colors"
+            className="hidden md:flex flex-col items-center gap-2 absolute top-1/2 -translate-y-1/2 right-0 text-[#33302A]/55 hover:text-[#4A1420] transition-colors"
             aria-label="Back to top"
           >
             <svg width="18" height="40" viewBox="0 0 26 60" fill="none">
@@ -62,7 +62,7 @@ export default function Footer() {
             <ul className="space-y-2.5">
               {getAround.map((l) => (
                 <li key={l.label}>
-                  <Link href={l.href} className="font-sans-pf font-medium text-[13.5px] text-[#33302A]/70 hover:text-[#3B4127] transition-colors">
+                  <Link href={l.href} className="font-sans-pf font-medium text-[13.5px] text-[#33302A]/70 hover:text-[#4A1420] transition-colors">
                     {l.label}
                   </Link>
                 </li>
@@ -77,13 +77,13 @@ export default function Footer() {
               {links.map((l) =>
                 l.ext ? (
                   <li key={l.label}>
-                    <a href={l.href} target="_blank" rel="noopener noreferrer" className="font-sans-pf font-medium text-[13.5px] text-[#33302A]/70 hover:text-[#3B4127] transition-colors">
+                    <a href={l.href} target="_blank" rel="noopener noreferrer" className="font-sans-pf font-medium text-[13.5px] text-[#33302A]/70 hover:text-[#4A1420] transition-colors">
                       {l.label}
                     </a>
                   </li>
                 ) : (
                   <li key={l.label}>
-                    <Link href={l.href} className="font-sans-pf font-medium text-[13.5px] text-[#33302A]/70 hover:text-[#3B4127] transition-colors">
+                    <Link href={l.href} className="font-sans-pf font-medium text-[13.5px] text-[#33302A]/70 hover:text-[#4A1420] transition-colors">
                       {l.label}
                     </Link>
                   </li>
@@ -100,18 +100,18 @@ export default function Footer() {
             </p>
             <p className="font-sans-pf text-[13px] text-[#33302A]/70 mb-5">
               E.{" "}
-              <a href="mailto:contact@proseflorals.com" className="hover:text-[#3B4127] transition-colors">
+              <a href="mailto:contact@proseflorals.com" className="hover:text-[#4A1420] transition-colors">
                 contact@proseflorals.com
               </a>
             </p>
             <div className="flex items-center gap-4">
-              <a href="mailto:contact@proseflorals.com" aria-label="Email" className="text-[#33302A]/70 hover:text-[#3B4127] transition-colors">
+              <a href="mailto:contact@proseflorals.com" aria-label="Email" className="text-[#33302A]/70 hover:text-[#4A1420] transition-colors">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4"><rect x="2" y="4" width="20" height="16" rx="1.5"/><path d="m3 6 9 7 9-7"/></svg>
               </a>
-              <a href={INSTAGRAM} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-[#33302A]/70 hover:text-[#3B4127] transition-colors">
+              <a href={INSTAGRAM} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-[#33302A]/70 hover:text-[#4A1420] transition-colors">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
               </a>
-              <a href={PINTEREST} target="_blank" rel="noopener noreferrer" aria-label="Pinterest" className="text-[#33302A]/70 hover:text-[#3B4127] transition-colors">
+              <a href={PINTEREST} target="_blank" rel="noopener noreferrer" aria-label="Pinterest" className="text-[#33302A]/70 hover:text-[#4A1420] transition-colors">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4"><circle cx="12" cy="12" r="10"/><path d="M12 7c-2.2 0-3.6 1.4-3.6 3.2 0 .9.4 1.9 1.2 2.2.1 0 .2 0 .2-.1l.2-.8c0-.1 0-.2-.1-.3-.3-.4-.5-.9-.5-1.4 0-1.4 1-2.6 2.7-2.6 1.5 0 2.3.9 2.3 2.1 0 1.6-.7 2.9-1.7 2.9-.6 0-1-.5-.9-1.1.2-.7.5-1.5.5-2 0-.5-.3-.9-.8-.9-.6 0-1.1.7-1.1 1.6 0 .6.2 1 .2 1l-.8 3.4c-.2.9-.1 2.2 0 2.3 0 .1.1.1.2 0 .1-.1.9-1.3 1.2-2.2l.4-1.6c.2.4.9.8 1.6.8 2.1 0 3.5-1.9 3.5-4.4C16.6 8.7 14.9 7 12 7z" fill="currentColor" stroke="none"/></svg>
               </a>
             </div>
