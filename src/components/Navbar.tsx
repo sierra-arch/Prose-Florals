@@ -23,20 +23,34 @@ const allLinks = [...leftLinks, ...rightLinks, { label: "Contact", href: "/conta
 export default function Navbar() {
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [hidden, setHidden] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
+    let lastY = window.scrollY;
+    const onScroll = () => {
+      const y = window.scrollY;
+      setScrolled(y > 20);
+      const delta = y - lastY;
+      if (y < 80) {
+        setHidden(false);
+      } else if (delta > 4) {
+        setHidden(true);
+      } else if (delta < -4) {
+        setHidden(false);
+      }
+      lastY = y;
+    };
     onScroll();
-    window.addEventListener("scroll", onScroll);
+    window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-[background-color,transform] duration-300 ease-in-out ${
           scrolled ? "bg-[#F4F1E8]/95 backdrop-blur-sm border-b border-[#D8D2C2]" : "bg-transparent"
-        }`}
+        } ${hidden && !open ? "-translate-y-full" : "translate-y-0"}`}
       >
         <div className="max-w-[1600px] mx-auto px-6 md:px-14 h-[92px] flex items-center justify-between">
           {/* Left links */}
