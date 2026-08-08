@@ -56,6 +56,24 @@ export const LIVE = {
   inspirationDress: `${L}ea53f1-frances-clayton-1274-websize.jpg`, // purple embroidered dress
   inspirationCastle: `${L}2aced8-308.jpg`,
   inspirationOcean: `${L}4d0570-136.jpg`,
+
+  // Experience page
+  experienceHero: `${L}ea0f5d-img-5291.jpg`, // couple at stone arch, orange bouquet
+  romanceClose: `${L}b72330-img-1950.jpg`, // veil flowing, blush bouquet
+  tailoredProcess: `${L}a32b59-bono-newlyweds-53-websize.jpg`, // bride, deep-V bouquet, monogram
+  methodVision: `${L}2dc648-zc-250.jpg`, // tablescape, pink/orange candles
+  methodColor: `${L}f92ddc-maggie-and-billywedding-preceremony0435.jpg`, // flower macro
+  methodIngredients: `${L}9cadf1-fc-film-18-websize.jpg`, // purple dress, wrist corsage
+  experienceTestimonialPhoto: `${L}83b455-laura-alix-bridal-party-bouquets.jpg`, // Laura + Ben
+  howItWorksBg: `${L}bfd5da-lecollectif-141.jpg`, // blurred parallax bg
+  journeyInquiry: `${L}002c5d-bride-bouquet-bridal-wedding-boston-florist-prose-florals.jpg`,
+  journeyProposal: `${L}39bcaf-050722-kim-cj-wedding-152.jpg`,
+  journeyPlanning: `${L}a8a1f0-maggie-and-billywedding-preceremony0468.jpg`,
+  journeyDelivery: `${L}b97090-0l4a7693.jpg`,
+  bigQuoteBg: `${L}6583eb-frances-clayton-1609-websize.jpg`, // Laurel & Ty, pergola
+  faqMarigolds: `${L}91d269-zc-217.jpg`,
+  faqCastle: `${L}2aced8-308.jpg`,
+  experienceClosingCta: `${L}46695e-fc-film-13-websize.jpg`, // bridesmaids, floral pattern
 };
 
 export const IMG = {
