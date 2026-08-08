@@ -75,6 +75,17 @@ html {
   scroll-behavior: smooth;
 }
 
+/* Sitewide calm-editorial color grading — the photo library spans several
+   shoots at very different saturation/contrast, which reads as visual noise
+   when they sit next to each other. A shared filter pulls them toward one
+   soft, warm-neutral body of work without touching ~200 source files.
+   Targets Next's optimized image URLs (always contain "%2Fimages%2F" — the
+   encoded /images/ prefix); brand marks live under the same prefix but are
+   simple line art, so the filter has negligible effect on them. */
+img[src*="%2Fimages%2F"] {
+  filter: saturate(0.86) contrast(0.96) brightness(1.02);
+}
+
 html, body {
   max-width: 100%;
   overflow-x: hidden;

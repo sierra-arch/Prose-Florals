@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { INQUIRY, GUIDE, INSTAGRAM, PINTEREST, PORTFOLIO } from "@/lib/images";
+import { INQUIRY, GUIDE, INSTAGRAM, PINTEREST, FOOTER_STRIP } from "@/lib/images";
 import BotanicalStamp from "@/components/BotanicalStamp";
 import ScallopDivider from "@/components/ScallopDivider";
 
@@ -28,7 +28,7 @@ const links = [
   { label: "Legal", href: "/contact" },
 ];
 
-const stripImgs = PORTFOLIO.slice(15, 21);
+const stripImgs = FOOTER_STRIP;
 
 export default function Footer() {
   return (
@@ -160,10 +160,11 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Instagram photo strip */}
-      <div className="grid grid-cols-3 md:grid-cols-6">
+      {/* Instagram photo strip — curated to one calm tone, with a hairline
+          gap so it reads as six deliberate frames, not a dense unbroken grid. */}
+      <div className="grid grid-cols-3 md:grid-cols-6 gap-1 bg-[#D8D2C2]">
         {stripImgs.map((src, i) => (
-          <a key={i} href={INSTAGRAM} target="_blank" rel="noopener noreferrer" className="relative aspect-square overflow-hidden group">
+          <a key={i} href={INSTAGRAM} target="_blank" rel="noopener noreferrer" className="relative aspect-square overflow-hidden group bg-[#F4F1E8]">
             <Image src={src} alt="Prose Florals wedding work" fill sizes="16vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
           </a>
         ))}

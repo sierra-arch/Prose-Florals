@@ -51,38 +51,63 @@ export const IMG = {
   frameFitz: `${P}cafc67-fitzgerald-frame-white.svg`,
 };
 
-// A large pool for portfolio grids
-export const PORTFOLIO: string[] = [
-  `${P}f613b7-castillohollidayphoto2bfilm-gabby26ianwedding-editor27schoice-006-2048x1358.jpg`,
+// Curated, tonally-grouped clusters for the Portfolio "More Weddings" grid —
+// replaces one dense 30-photo wall with paced groupings that each read as
+// their own consistent mood (a deliberate B&W novelty shot and a couple of
+// outlier-saturated frames were dropped rather than forced into a group).
+export const PORTFOLIO_GROUPS: { label: string; images: string[] }[] = [
+  {
+    label: "Soft & Romantic",
+    images: [
+      `${P}691903-frances_clayton-502_websize.jpg`,
+      `${P}5ac7b3-frances_clayton-873_websize.jpg`,
+      `${P}1f6276-frances_clayton-474_websize.jpg`,
+      `${P}0fedf1-bride-and-groom-bouquets-boston-florist-prose-florals.jpg`,
+      `${P}002c5d-bride-bouquet-bridal-wedding-boston-florist-prose-florals.jpg`,
+    ],
+  },
+  {
+    label: "The Getting Ready",
+    images: [
+      `${P}32c000-frances_clayton-34_websize.jpg`,
+      `${P}2e514f-frances_clayton-27_websize.jpg`,
+      `${P}60da25-frances_clayton-35_websize.jpg`,
+      `${P}9cadf1-fc_film-18_websize.jpg`,
+      `${P}8de8d8-frances_clayton-398_websize.jpg`,
+    ],
+  },
+  {
+    label: "Bold & Vibrant",
+    images: [
+      `${P}765ef7-frances_clayton-1583_websize.jpg`,
+      `${P}ea53f1-frances_clayton-1274_websize.jpg`,
+      `${P}83b455-laura_alix_bridal_party_bouquets.jpg`,
+      `${P}065560-maggie_and_billywedding_firstlook0172.jpg`,
+      `${P}32d18b-beach-wedding-reception-bright-bold-warm-bouquet-boston-prose-florals.jpg`,
+    ],
+  },
+  {
+    label: "Golden Hour",
+    images: [
+      `${P}df88eb-bono_ceremony-192_websize.jpg`,
+      `${P}ecd8d1-bono_cocktail_hour-5_websize.jpg`,
+      `${P}5b8615-maggie_and_billywedding_maggie_and_billy_0801.jpg`,
+      `${P}f80821-maggie_and_billywedding_maggie_and_billy_0795.jpg`,
+      `${P}cc4a55-bono_family_and_friends-81_websize.jpg`,
+    ],
+  },
+];
+
+// Small, tonally-consistent set for the footer Instagram strip — deliberately
+// pulled from the "Soft & Romantic" family so the strip reads as one calm
+// closing note rather than another dense, mixed-tone grid.
+export const FOOTER_STRIP: string[] = [
   `${P}e44af1-frances_clayton-465_websize.jpg`,
-  `${P}765ef7-frances_clayton-1583_websize.jpg`,
-  `${P}ea53f1-frances_clayton-1274_websize.jpg`,
-  `${P}960c60-frances_clayton-23_websize.jpg`,
-  `${P}32c000-frances_clayton-34_websize.jpg`,
-  `${P}2e514f-frances_clayton-27_websize.jpg`,
-  `${P}414529-frances_clayton-22_websize.jpg`,
-  `${P}60da25-frances_clayton-35_websize.jpg`,
-  `${P}9cadf1-fc_film-18_websize.jpg`,
-  `${P}889059-fc_film-13_websize.jpg`,
-  `${P}8de8d8-frances_clayton-398_websize.jpg`,
   `${P}691903-frances_clayton-502_websize.jpg`,
-  `${P}5ac7b3-frances_clayton-873_websize.jpg`,
   `${P}1f6276-frances_clayton-474_websize.jpg`,
   `${P}0fedf1-bride-and-groom-bouquets-boston-florist-prose-florals.jpg`,
-  `${P}b91312-deep-moody-forest-bridal-bouquet-boston-florist-prose-florals-.jpg`,
-  `${P}d5403d-bride-white-forest-moody-boston-florist-prose-florals.jpg`,
   `${P}002c5d-bride-bouquet-bridal-wedding-boston-florist-prose-florals.jpg`,
-  `${P}32d18b-beach-wedding-reception-bright-bold-warm-bouquet-boston-prose-florals.jpg`,
-  `${P}d70409-beach-wedding-bridesmaids-bright-bold-romantic-boston-prose-florals.jpg`,
-  `${P}83b455-laura_alix_bridal_party_bouquets.jpg`,
   `${P}a32b59-bono_newlyweds-53_websize.jpg`,
-  `${P}df88eb-bono_ceremony-192_websize.jpg`,
-  `${P}ecd8d1-bono_cocktail_hour-5_websize.jpg`,
-  `${P}cc4a55-bono_family_and_friends-81_websize.jpg`,
-  `${P}e54fbb-frances_clayton-2017_websize.jpg`,
-  `${P}5b8615-maggie_and_billywedding_maggie_and_billy_0801.jpg`,
-  `${P}065560-maggie_and_billywedding_firstlook0172.jpg`,
-  `${P}f80821-maggie_and_billywedding_maggie_and_billy_0795.jpg`,
 ];
 
 // Shared external links (already in the original repo)

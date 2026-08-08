@@ -85,5 +85,9 @@ export const GALLERY_COVERS: Record<string, string> = {
   "maggie-billy": `${G}/maggie-billy/mb_04.jpg`,
 };
 
-// Portfolio hero carousel images
-export const PORTFOLIO_HERO: string[] = range("portfolio-hero", "ph", 10);
+// Portfolio hero carousel images — curated to 6 of the original 10. The
+// dropped frames (very dark moody interior, two highly-saturated bold shots)
+// read as jarring cuts against the calmer, soft-neutral majority as the
+// carousel auto-advances; this keeps the mood consistent slide to slide.
+const heroAll = range("portfolio-hero", "ph", 10);
+export const PORTFOLIO_HERO: string[] = [heroAll[0], heroAll[3], heroAll[5], heroAll[6], heroAll[8], heroAll[9]];

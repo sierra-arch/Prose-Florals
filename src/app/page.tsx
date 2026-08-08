@@ -198,22 +198,22 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ─── EXPLORE CTA (image mosaic) ─── */}
-      <section className="relative">
-        <div className="grid grid-cols-2 md:grid-cols-4">
-          {[IMG.brideMoody, IMG.coupleWalk, IMG.brideBrick, IMG.reception].map((src, i) => (
-            <div key={i} className="relative aspect-[3/4]">
-              <Image src={src} alt="Prose Florals wedding" fill sizes="25vw" className="object-cover" />
-            </div>
-          ))}
+      {/* ─── EXPLORE CTA — two calm, tonally-matched photos flanking a solid
+          text panel, rather than text layered over a busy 4-photo mosaic ─── */}
+      <section className="grid md:grid-cols-3">
+        <div className="relative aspect-[3/4] md:aspect-auto md:min-h-[560px]">
+          <Image src={IMG.bridePortrait} alt="Prose Florals wedding" fill sizes="33vw" className="object-cover" />
         </div>
-        <div className="absolute inset-0 bg-[#2A2E1B]/45 flex flex-col items-center justify-center text-center px-6">
-          <h2 className="ed-display text-white leading-[1]" style={{ fontSize: "clamp(34px, 6vw, 92px)" }}>EXPLORE</h2>
-          <p className="font-times-italic italic text-white leading-[1.05]" style={{ fontSize: "clamp(30px, 5.5vw, 82px)" }}>Prose Florals</p>
-          <h2 className="ed-display text-white leading-[1]" style={{ fontSize: "clamp(34px, 6vw, 92px)" }}>WEDDINGS</h2>
+        <div className="bg-[#2A2E1B] flex flex-col items-center justify-center text-center px-6 py-16 md:py-0">
+          <h2 className="ed-display text-white leading-[1]" style={{ fontSize: "clamp(34px, 4.4vw, 64px)" }}>EXPLORE</h2>
+          <p className="font-times-italic italic text-white leading-[1.05]" style={{ fontSize: "clamp(30px, 4vw, 56px)" }}>Prose Florals</p>
+          <h2 className="ed-display text-white leading-[1]" style={{ fontSize: "clamp(34px, 4.4vw, 64px)" }}>WEDDINGS</h2>
           <Link href="/portfolio" className="mt-9 eyebrow text-white border border-white/60 px-9 py-3.5 hover:bg-white hover:text-[#33302A] transition-all duration-300">
             View the Portfolio
           </Link>
+        </div>
+        <div className="relative aspect-[3/4] md:aspect-auto md:min-h-[560px]">
+          <Image src={IMG.brideBouquet} alt="Prose Florals wedding" fill sizes="33vw" className="object-cover" />
         </div>
       </section>
 

@@ -4,7 +4,7 @@ import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import BeginCTA from "@/components/BeginCTA";
 import HeroCarousel from "@/components/HeroCarousel";
-import { PORTFOLIO } from "@/lib/images";
+import { PORTFOLIO_GROUPS } from "@/lib/images";
 import { GALLERIES, GALLERY_COVERS, PORTFOLIO_HERO } from "@/lib/galleries";
 
 export const metadata: Metadata = {
@@ -13,12 +13,8 @@ export const metadata: Metadata = {
     "A collection of thoughtfully designed celebrations by Prose Florals — from garden ceremonies to gallery receptions across the Boston area.",
 };
 
-// Masonry rhythm for the "more weddings" grid.
-const spans = [
-  "row-span-2", "", "", "row-span-2", "", "",
-  "", "row-span-2", "", "", "row-span-2", "",
-  "row-span-2", "", "", "", "row-span-2", "",
-];
+// Masonry rhythm within each grouping (5 photos per group).
+const spans = ["row-span-2", "", "", "", "row-span-2"];
 
 export default function PortfolioPage() {
   return (
@@ -70,26 +66,36 @@ export default function PortfolioPage() {
         </div>
       </section>
 
-      {/* More weddings — masonry of the wider photo pool */}
+      {/* More weddings — paced into tonally-consistent groupings rather than
+          one dense wall, each with its own breathing room and mood label. */}
       <section className="container-wide section-y">
         <div className="text-center mb-14 md:mb-20">
           <p className="label text-[#33302A]/60">More Weddings</p>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 auto-rows-[220px] md:auto-rows-[320px] gap-5 md:gap-7">
-          {PORTFOLIO.slice(0, 18).map((src, i) => (
-            <Reveal
-              key={i}
-              delay={(i % 3) * 80}
-              className={`relative overflow-hidden group ${spans[i % spans.length]}`}
-            >
-              <Image
-                src={src}
-                alt="Prose Florals wedding floral design"
-                fill
-                sizes="(max-width: 768px) 50vw, 33vw"
-                className="object-cover transition-transform duration-[900ms] group-hover:scale-105"
-              />
-            </Reveal>
+        <div className="flex flex-col gap-20 md:gap-28">
+          {PORTFOLIO_GROUPS.map((group) => (
+            <div key={group.label}>
+              <p className="font-times-italic italic text-[#33302A]/60 text-lg md:text-xl text-center mb-8 md:mb-10">
+                {group.label}
+              </p>
+              <div className="grid grid-cols-2 md:grid-cols-3 auto-rows-[220px] md:auto-rows-[320px] gap-5 md:gap-7">
+                {group.images.map((src, i) => (
+                  <Reveal
+                    key={src}
+                    delay={(i % 3) * 80}
+                    className={`relative overflow-hidden group ${spans[i % spans.length]}`}
+                  >
+                    <Image
+                      src={src}
+                      alt="Prose Florals wedding floral design"
+                      fill
+                      sizes="(max-width: 768px) 50vw, 33vw"
+                      className="object-cover transition-transform duration-[900ms] group-hover:scale-105"
+                    />
+                  </Reveal>
+                ))}
+              </div>
+            </div>
           ))}
         </div>
       </section>
