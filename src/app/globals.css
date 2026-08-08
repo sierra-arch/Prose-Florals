@@ -59,10 +59,16 @@
   --font-sans: "Public Sans", "Inter", system-ui, sans-serif;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+/* Scoped to Tailwind's base layer (not left bare) — unlayered CSS always beats
+   layered CSS in the cascade, so a bare `* { margin/padding: 0 }` here would
+   silently defeat every Tailwind spacing utility (mx-auto, mb-*, px-*,
+   space-y-*, ...) sitewide, regardless of specificity or source order. */
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 html {

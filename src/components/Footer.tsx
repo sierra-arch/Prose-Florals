@@ -3,6 +3,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { INQUIRY, GUIDE, INSTAGRAM, PINTEREST, PORTFOLIO } from "@/lib/images";
+import BotanicalStamp from "@/components/BotanicalStamp";
+import ScallopDivider from "@/components/ScallopDivider";
 
 const getAround = [
   { label: "Home", href: "/" },
@@ -31,6 +33,10 @@ const stripImgs = PORTFOLIO.slice(15, 21);
 export default function Footer() {
   return (
     <footer className="bg-[#F4F1E8]">
+      {/* Scalloped seam — olive Inquire CTA above bulges into the bone footer,
+          rather than a hard rule. Low-risk pilot spot for the motif. */}
+      <ScallopDivider bumpColor="#3B4127" gapColor="#F4F1E8" bumpSize={16} />
+
       {/* Top: brand line + 4 columns, centered with generous margins */}
       <div className="container-pf pt-20 md:pt-28 pb-14">
         {/* Centered wordmark + tagline + back-to-top */}
@@ -57,11 +63,11 @@ export default function Footer() {
         <div className="mx-auto max-w-5xl grid grid-cols-2 md:grid-cols-4 gap-y-12 gap-x-8 md:gap-x-10">
           {/* Get Around */}
           <div>
-            <h3 className="label text-[#33302A] mb-5">Get Around</h3>
+            <h3 className="label text-[#33302A] text-[0.72rem] tracking-[0.22em] mb-5">Get Around</h3>
             <ul className="space-y-2.5">
               {getAround.map((l) => (
                 <li key={l.label}>
-                  <Link href={l.href} className="font-sans-pf text-[13px] text-[#33302A]/70 hover:text-[#3B4127] transition-colors">
+                  <Link href={l.href} className="font-sans-pf font-medium text-[13.5px] text-[#33302A]/70 hover:text-[#3B4127] transition-colors">
                     {l.label}
                   </Link>
                 </li>
@@ -71,18 +77,18 @@ export default function Footer() {
 
           {/* Links */}
           <div>
-            <h3 className="label text-[#33302A] mb-5">Links</h3>
+            <h3 className="label text-[#33302A] text-[0.72rem] tracking-[0.22em] mb-5">Links</h3>
             <ul className="space-y-2.5">
               {links.map((l) =>
                 l.ext ? (
                   <li key={l.label}>
-                    <a href={l.href} target="_blank" rel="noopener noreferrer" className="font-sans-pf text-[13px] text-[#33302A]/70 hover:text-[#3B4127] transition-colors">
+                    <a href={l.href} target="_blank" rel="noopener noreferrer" className="font-sans-pf font-medium text-[13.5px] text-[#33302A]/70 hover:text-[#3B4127] transition-colors">
                       {l.label}
                     </a>
                   </li>
                 ) : (
                   <li key={l.label}>
-                    <Link href={l.href} className="font-sans-pf text-[13px] text-[#33302A]/70 hover:text-[#3B4127] transition-colors">
+                    <Link href={l.href} className="font-sans-pf font-medium text-[13.5px] text-[#33302A]/70 hover:text-[#3B4127] transition-colors">
                       {l.label}
                     </Link>
                   </li>
@@ -93,7 +99,7 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="label text-[#33302A] mb-5">Contact</h3>
+            <h3 className="label text-[#33302A] text-[0.72rem] tracking-[0.22em] mb-5">Contact</h3>
             <p className="font-sans-pf text-[13px] text-[#33302A]/70 leading-relaxed mb-4">
               We are based in Boston, MA, and serve the surrounding areas.
             </p>
@@ -118,14 +124,19 @@ export default function Footer() {
 
           {/* Our Mission */}
           <div>
-            <h3 className="label text-[#33302A] mb-5">Our Mission</h3>
+            <h3 className="label text-[#33302A] text-[0.72rem] tracking-[0.22em] mb-5">Our Mission</h3>
             <p className="font-sans-pf text-[13px] text-[#33302A]/70 leading-relaxed mb-5">
               To create dynamic floral designs that highlight our happy couple&apos;s style and story.
             </p>
-            <p className="font-times-italic italic text-[#33302A]/70 text-[15px] leading-none mb-1">xo,</p>
-            <p className="font-galanthia text-[#33302A] text-[42px] leading-none -ml-1">
-              Prose Florals
-            </p>
+            <div className="flex items-end gap-3">
+              <div>
+                <p className="font-times-italic italic text-[#33302A]/70 text-[15px] leading-none mb-1">xo,</p>
+                <p className="font-galanthia text-[#33302A] text-[42px] leading-none -ml-1">
+                  Prose Florals
+                </p>
+              </div>
+              <BotanicalStamp className="w-10 h-10 text-[#33302A]/35 shrink-0 mb-0.5" />
+            </div>
           </div>
         </div>
 

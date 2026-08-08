@@ -2,6 +2,8 @@ import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import PhotoCollage from "@/components/PhotoCollage";
+import BotanicalStamp from "@/components/BotanicalStamp";
+import ScallopDivider from "@/components/ScallopDivider";
 import { IMG, INQUIRY } from "@/lib/images";
 import { GALLERIES, GALLERY_COVERS } from "@/lib/galleries";
 
@@ -94,7 +96,9 @@ export default function Home() {
       </section>
 
       {/* ─── SERVICES — thin-rule editorial list (Terre Verde style) ─── */}
-      <section className="section-y container-pf">
+      {/* Tighter top padding: closes the dead gap that used to sit between
+          the "What We Do" split panel and this section's heading. */}
+      <section className="pt-10 pb-16 md:pt-16 md:pb-28 container-pf">
         <div className="mb-12 md:mb-16 flex items-end justify-between">
           <h2 className="ed-display text-[#33302A]" style={{ fontSize: "clamp(30px, 4vw, 56px)" }}>
             <span className="font-times-italic italic font-light">welcome to our</span> OFFERINGS
@@ -140,6 +144,11 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Scalloped seam — dark olive band bulges into the bone page below,
+          replacing the hard rule. Second (and last) use of the motif on
+          this page, per the spec's restraint note. */}
+      <ScallopDivider bumpColor="#2A2E1B" gapColor="#F4F1E8" bumpSize={22} />
+
       {/* ─── FEATURED WEDDINGS ─── */}
       <section className="section-y container-wide">
         <div className="mb-12 md:mb-16 text-center">
@@ -177,13 +186,9 @@ export default function Home() {
 
       {/* ─── TESTIMONIAL (quiet, centered) ─── */}
       <section className="section-y px-6 bg-[#EAE5D6] relative grain overflow-hidden">
-        {/* soft doodle accents */}
-        <svg className="doodle-star absolute top-[22%] left-[14%] w-6 h-6 hidden md:block" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M12 2c.6 5 4 8.4 9 9-5 .6-8.4 4-9 9-.6-5-4-8.4-9-9 5-.6 8.4-4 9-9z" fill="currentColor"/>
-        </svg>
-        <svg className="doodle-star absolute bottom-[24%] right-[16%] w-5 h-5 hidden md:block" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M12 2c.6 5 4 8.4 9 9-5 .6-8.4 4-9 9-.6-5-4-8.4-9-9 5-.6 8.4-4 9-9z" fill="currentColor"/>
-        </svg>
+        {/* Botanical stamp — replaces the sparkle doodles here, and anchors
+            the wide empty margin beside the centered quote. */}
+        <BotanicalStamp className="hidden lg:block absolute top-1/2 right-[6%] -translate-y-1/2 w-32 h-32 text-[#3B4127]/[0.12]" />
         <div className="max-w-3xl mx-auto text-center relative">
           <p className="ed-display text-[#3B4127]/25 leading-none select-none" style={{ fontSize: "clamp(60px, 9vw, 130px)" }}>&ldquo;</p>
           <p className="font-times text-[#33302A] leading-[1.5] -mt-6 md:-mt-10" style={{ fontSize: "clamp(22px, 3vw, 36px)" }}>
@@ -213,7 +218,7 @@ export default function Home() {
       </section>
 
       {/* ─── INQUIRE CTA ─── */}
-      <section className="section-y-lg px-6 text-center bg-[#3B4127]">
+      <section className="section-y-lg px-6 text-center bg-[#3B4127] relative grain">
         <p className="eyebrow text-[#C9B7AE] mb-6">Begin Your Journey</p>
         <h2 className="ed-display text-white mb-5" style={{ fontSize: "clamp(36px, 5.5vw, 82px)" }}>
           SHALL WE <span className="font-times-italic italic font-light">begin?</span>
