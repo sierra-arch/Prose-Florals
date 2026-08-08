@@ -39,15 +39,16 @@ const services = [
 export default function Home() {
   return (
     <main className="bg-[#F4F1E8] overflow-x-clip">
-      {/* ─── HERO — matches the real site exactly: just the photo. The
-          wordmark already lives in the nav, so nothing is overlaid here
-          beyond a small corner caption. ─── */}
-      <section className="relative w-full h-[92vh] min-h-[640px]">
-        <Image src={IMG.heroTwoBrides} alt="Two brides with vibrant bouquets" fill priority sizes="100vw" className="object-cover" />
-        <div className="absolute bottom-8 right-8 md:bottom-10 md:right-12 text-right">
-          <p className="text-white text-[15px] md:text-[17px] leading-snug" style={{ fontFamily: "var(--font-sans)" }}>
-            Boston Area Full Service Wedding<br />Florist for the romantics.
-          </p>
+      {/* ─── HERO — sits below the fixed header (not behind it), inset
+          with the same side padding as the nav, matching the live site. ─── */}
+      <section className="relative w-full pt-[92px] px-6 md:px-14">
+        <div className="relative w-full h-[82vh] min-h-[560px] max-w-[1600px] mx-auto">
+          <Image src={IMG.heroTwoBrides} alt="Two brides with vibrant bouquets" fill priority sizes="100vw" className="object-cover" />
+          <div className="absolute bottom-8 right-8 md:bottom-10 md:right-12 text-right">
+            <p className="text-white text-[15px] md:text-[17px] leading-snug" style={{ fontFamily: "var(--font-sans)" }}>
+              Boston Area Full Service Wedding<br />Florist for the romantics.
+            </p>
+          </div>
         </div>
       </section>
 
