@@ -2,8 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import PhotoCollage from "@/components/PhotoCollage";
-import BotanicalStamp from "@/components/BotanicalStamp";
 import ScallopDivider from "@/components/ScallopDivider";
+import WaxSeal from "@/components/WaxSeal";
+import RibbonDivider from "@/components/RibbonDivider";
 import { IMG, INQUIRY } from "@/lib/images";
 import { GALLERIES, GALLERY_COVERS } from "@/lib/galleries";
 
@@ -87,8 +88,9 @@ export default function Home() {
             </Link>
           </Reveal>
 
-          {/* Right: tall feature image */}
-          <Reveal delay={120} className="relative min-h-[420px] md:min-h-0 plate overflow-hidden">
+          {/* Right: tall feature image — deckled torn bottom edge instead of
+              a hard rectangular crop, one of the site's few such moments. */}
+          <Reveal delay={120} className="relative min-h-[420px] md:min-h-0 plate overflow-hidden torn-bottom">
             <Image src={IMG.bouquetBold} alt="A bold, colorful Prose Florals arrangement" fill sizes="50vw" className="object-cover" />
             <span className="absolute bottom-4 right-4 folio text-white/85">fig. 01</span>
           </Reveal>
@@ -122,25 +124,38 @@ export default function Home() {
         </div>
       </section>
 
+      <RibbonDivider className="w-full h-6 md:h-7 my-2" color="#4A1420" />
+
       {/* ─── MOODY OLIVE TEAM BAND ─── */}
       <section className="relative grid md:grid-cols-2 grain">
         <div className="relative aspect-[4/5] md:aspect-auto md:min-h-[600px]">
           <Image src={IMG.bridePortrait} alt="Sierra Bettis, founder of Prose Florals" fill sizes="50vw" className="object-cover" />
         </div>
-        <div className="bg-[#2A2E1B] flex flex-col justify-center px-8 md:px-20 py-20 md:py-32 relative">
-          <span className="vertical-rl eyebrow text-[#F4F1E8]/35 absolute right-7 top-14 hidden md:block">
+        <div className="bg-[#2A2E1B] flex flex-col justify-center px-8 md:px-20 py-20 md:py-32 relative overflow-hidden">
+          {/* Antique botanical plate, watermarked into the panel — the
+              illustrated-art layer the direction called for, used once. */}
+          <Image
+            src={IMG.botanicalPlate}
+            alt=""
+            fill
+            sizes="50vw"
+            className="object-cover opacity-[0.09] mix-blend-luminosity pointer-events-none select-none"
+          />
+          <span className="vertical-rl eyebrow text-[#F4F1E8]/35 absolute right-7 top-14 hidden md:block z-10">
             Sincerely, Prose
           </span>
-          <p className="eyebrow text-[#C9B7AE] mb-6">Behind the Blooms</p>
-          <h2 className="ed-display text-[#F4F1E8] mb-7" style={{ fontSize: "clamp(38px, 5vw, 74px)" }}>
-            SIERRA &amp; <span className="font-times-italic italic font-light">Kattie</span>
-          </h2>
-          <p className="font-times text-[18px] text-[#F4F1E8]/78 leading-[1.85] max-w-md mb-9">
-            A passionate Boston florist duo bringing a timeless, editorial style and classic, romantic aesthetic to modern love stories — with professional, timely communication every step of the way.
-          </p>
-          <Link href="/about" className="eyebrow text-[#F4F1E8] border-b border-[#F4F1E8]/45 pb-1 self-start hover:border-[#C9B7AE] hover:text-[#C9B7AE] transition-colors">
-            Meet the Prose Team
-          </Link>
+          <div className="relative z-10 flex flex-col items-start">
+            <p className="eyebrow text-[#C9B7AE] mb-6">Behind the Blooms</p>
+            <h2 className="ed-display text-[#F4F1E8] mb-7" style={{ fontSize: "clamp(38px, 5vw, 74px)" }}>
+              SIERRA &amp; <span className="font-times-italic italic font-light">Kattie</span>
+            </h2>
+            <p className="font-times text-[18px] text-[#F4F1E8]/78 leading-[1.85] max-w-md mb-9">
+              A passionate Boston florist duo bringing a timeless, editorial style and classic, romantic aesthetic to modern love stories — with professional, timely communication every step of the way.
+            </p>
+            <Link href="/about" className="eyebrow text-[#F4F1E8] border-b border-[#F4F1E8]/45 pb-1 self-start hover:border-[#C9B7AE] hover:text-[#C9B7AE] transition-colors">
+              Meet the Prose Team
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -184,17 +199,31 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ─── TESTIMONIAL (quiet, centered) ─── */}
-      <section className="section-y px-6 bg-[#EAE5D6] relative grain overflow-hidden">
-        {/* Botanical stamp — replaces the sparkle doodles here, and anchors
-            the wide empty margin beside the centered quote. */}
-        <BotanicalStamp className="hidden lg:block absolute top-1/2 right-[6%] -translate-y-1/2 w-32 h-32 text-[#3B4127]/[0.12]" />
+      {/* ─── TESTIMONIAL — the site's deep-register moment: near-black,
+          gold foil, manuscript italic, a wax seal instead of the sparkle
+          doodles. One full section of dramatic contrast, not blended into
+          the rest of the tonal system. ─── */}
+      <section className="section-y px-6 bg-[#17130F] relative overflow-hidden">
+        <WaxSeal color="#4A1420" className="hidden lg:block absolute top-1/2 right-[8%] -translate-y-1/2 w-28 h-28 opacity-90" />
         <div className="max-w-3xl mx-auto text-center relative">
-          <p className="ed-display text-[#3B4127]/25 leading-none select-none" style={{ fontSize: "clamp(60px, 9vw, 130px)" }}>&ldquo;</p>
-          <p className="font-times text-[#33302A] leading-[1.5] -mt-6 md:-mt-10" style={{ fontSize: "clamp(22px, 3vw, 36px)" }}>
-            From start to finish I had the most wonderful experience with Prose Florals. They were <em className="font-times-italic">exactly</em> what we had envisioned, maybe <em className="font-times-italic">even</em> better!
+          <p className="foil-text ed-display leading-none select-none" style={{ fontSize: "clamp(60px, 9vw, 130px)" }}>&ldquo;</p>
+          <p className="font-manuscript-italic text-[#F4F1E8] leading-[1.5] -mt-6 md:-mt-10" style={{ fontSize: "clamp(24px, 3.2vw, 38px)" }}>
+            From start to finish I had the most wonderful experience with Prose Florals. They were <em>exactly</em> what we had envisioned, maybe <em>even</em> better!
           </p>
-          <p className="font-times-italic italic text-[#33302A]/70 text-lg mt-8">— Meaghan &amp; Abel, La Brassa</p>
+          <div className="foil-line w-16 mx-auto mt-8 mb-5" />
+          <p className="font-times-italic italic text-[#F4F1E8]/60 text-lg">— Meaghan &amp; Abel, La Brassa</p>
+        </div>
+      </section>
+
+      {/* ─── FLAT-LAY INTERLUDE — a composed still-life beat (ribbon, wax
+          seal, dried botanicals, a deckled card) rather than only
+          in-the-moment wedding photography. One per major page. ─── */}
+      <section className="relative h-[70vh] md:h-[86vh] overflow-hidden">
+        <Image src={IMG.flatLay} alt="" fill sizes="100vw" className="object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#17130F]/55 via-transparent to-transparent" />
+        <div className="absolute bottom-10 md:bottom-14 inset-x-0 text-center px-6">
+          <p className="font-galanthia text-[#F4F1E8] text-[32px] md:text-[40px] leading-none mb-2">every detail, considered</p>
+          <p className="eyebrow text-[#F4F1E8]/75">The Prose Atelier</p>
         </div>
       </section>
 

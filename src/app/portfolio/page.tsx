@@ -4,7 +4,8 @@ import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import BeginCTA from "@/components/BeginCTA";
 import HeroCarousel from "@/components/HeroCarousel";
-import { PORTFOLIO_GROUPS } from "@/lib/images";
+import WaxSeal from "@/components/WaxSeal";
+import { PORTFOLIO_GROUPS, IMG } from "@/lib/images";
 import { GALLERIES, GALLERY_COVERS, PORTFOLIO_HERO } from "@/lib/galleries";
 
 export const metadata: Metadata = {
@@ -15,6 +16,9 @@ export const metadata: Metadata = {
 
 // Masonry rhythm within each grouping (5 photos per group).
 const spans = ["row-span-2", "", "", "", "row-span-2"];
+// Scrapbook tilts for the lead group only — a deliberate highlight, not
+// applied to all 20 photos (restraint over decorating everything at once).
+const scrapbookTilts = ["tilt-ls", "", "tilt-r", "", "tilt-rs"];
 
 export default function PortfolioPage() {
   return (
@@ -23,7 +27,7 @@ export default function PortfolioPage() {
       <HeroCarousel images={PORTFOLIO_HERO} />
 
       {/* Intro */}
-      <section className="section-y-lg container-pf text-center">
+      <section className="section-y-lg container-pf text-center paper">
         <p className="label text-[#33302A]/50 mb-8">The Portfolio</p>
         <h2 className="text-[#33302A] leading-[1.05]" style={{ fontSize: "clamp(30px, 4.4vw, 62px)" }}>
           <span className="display">WE MAKE TIMELESS FLORALS</span>
@@ -45,7 +49,7 @@ export default function PortfolioPage() {
           {GALLERIES.map((g, i) => (
             <Reveal key={g.slug} delay={i * 110}>
               <Link href={`/portfolio/${g.slug}`} className="group block">
-                <div className="relative aspect-[3/4] overflow-hidden mb-6">
+                <div className={`relative aspect-[3/4] overflow-hidden mb-6 plate ${i === 0 ? "torn-bottom" : ""}`}>
                   <Image
                     src={GALLERY_COVERS[g.slug]}
                     alt={g.coverAlt}
@@ -66,37 +70,52 @@ export default function PortfolioPage() {
         </div>
       </section>
 
+      {/* Flat-lay interlude — one composed still-life beat on this major
+          page too, breaking up the run of in-the-moment wedding photography. */}
+      <section className="relative h-[60vh] md:h-[76vh] overflow-hidden">
+        <Image src={IMG.flatLay} alt="" fill sizes="100vw" className="object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#17130F]/45 via-transparent to-[#17130F]/25" />
+      </section>
+
       {/* More weddings — paced into tonally-consistent groupings rather than
-          one dense wall, each with its own breathing room and mood label. */}
+          one dense wall, each with its own breathing room and mood label.
+          The lead group gets the scrapbook tilt treatment as a highlight;
+          the rest stay calm so the device doesn't blanket all 20 photos. */}
       <section className="container-wide section-y">
         <div className="text-center mb-14 md:mb-20">
           <p className="label text-[#33302A]/60">More Weddings</p>
         </div>
         <div className="flex flex-col gap-20 md:gap-28">
-          {PORTFOLIO_GROUPS.map((group) => (
-            <div key={group.label}>
-              <p className="font-times-italic italic text-[#33302A]/60 text-lg md:text-xl text-center mb-8 md:mb-10">
-                {group.label}
-              </p>
-              <div className="grid grid-cols-2 md:grid-cols-3 auto-rows-[220px] md:auto-rows-[320px] gap-5 md:gap-7">
-                {group.images.map((src, i) => (
-                  <Reveal
-                    key={src}
-                    delay={(i % 3) * 80}
-                    className={`relative overflow-hidden group ${spans[i % spans.length]}`}
-                  >
-                    <Image
-                      src={src}
-                      alt="Prose Florals wedding floral design"
-                      fill
-                      sizes="(max-width: 768px) 50vw, 33vw"
-                      className="object-cover transition-transform duration-[900ms] group-hover:scale-105"
-                    />
-                  </Reveal>
-                ))}
+          {PORTFOLIO_GROUPS.map((group, gi) => {
+            const isLead = gi === 0;
+            return (
+              <div key={group.label}>
+                <div className="flex items-center justify-center gap-3 mb-8 md:mb-10">
+                  {isLead && <WaxSeal color="#4A1420" className="w-8 h-8 opacity-80" />}
+                  <p className="font-times-italic italic text-[#33302A]/60 text-lg md:text-xl text-center">
+                    {group.label}
+                  </p>
+                </div>
+                <div className="grid grid-cols-2 md:grid-cols-3 auto-rows-[220px] md:auto-rows-[320px] gap-5 md:gap-7">
+                  {group.images.map((src, i) => (
+                    <Reveal
+                      key={src}
+                      delay={(i % 3) * 80}
+                      className={`relative overflow-hidden group plate ${spans[i % spans.length]} ${isLead ? scrapbookTilts[i % scrapbookTilts.length] : ""}`}
+                    >
+                      <Image
+                        src={src}
+                        alt="Prose Florals wedding floral design"
+                        fill
+                        sizes="(max-width: 768px) 50vw, 33vw"
+                        className="object-cover transition-transform duration-[900ms] group-hover:scale-105"
+                      />
+                    </Reveal>
+                  ))}
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </section>
 

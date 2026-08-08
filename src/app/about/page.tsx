@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Reveal from "@/components/Reveal";
 import BeginCTA from "@/components/BeginCTA";
-import { IMG } from "@/lib/images";
+import WaxSeal from "@/components/WaxSeal";
+import RibbonDivider from "@/components/RibbonDivider";
+import { IMG, FRESH } from "@/lib/images";
 
 export const metadata: Metadata = {
   title: "About | Prose Florals — Boston Wedding Florist",
@@ -19,17 +21,18 @@ export default function AboutPage() {
         <h1 className="title-hero text-[#33302A]">ABOUT PROSE FLORALS</h1>
       </section>
 
-      {/* ─── Staggered editorial photo collage ─── */}
+      {/* ─── Scrapbook-style collage — angled, torn, varied sizes, rather
+          than a uniform three-up grid. Leads with the most recent wedding. ─── */}
       <section className="container-wide pb-4 md:pb-8">
         <div className="grid grid-cols-2 md:grid-cols-3 gap-5 md:gap-8 items-start">
-          <Reveal className="relative aspect-[3/4] md:mt-16">
-            <Image src={IMG.brideParty} alt="Prose Florals wedding work" fill sizes="33vw" className="object-cover" />
+          <Reveal className="relative aspect-[3/4] md:mt-16 plate tilt-ls">
+            <Image src={FRESH.goods1} alt="Prose Florals wedding work" fill sizes="33vw" className="object-cover" />
           </Reveal>
-          <Reveal className="relative aspect-[4/5] md:-mt-4" delay={120}>
+          <Reveal className="relative aspect-[4/5] md:-mt-4 plate tilt-r torn-bottom" delay={120}>
             <Image src={IMG.coupleEmbrace} alt="Prose Florals florist embracing bride" fill sizes="33vw" className="object-cover" />
           </Reveal>
-          <Reveal className="relative aspect-[3/4] md:mt-24" delay={240}>
-            <Image src={IMG.bridePortrait} alt="Prose Florals bride portrait" fill sizes="33vw" className="object-cover" />
+          <Reveal className="relative aspect-[3/4] md:mt-24 plate tilt-rs" delay={240}>
+            <Image src={FRESH.goods4} alt="Prose Florals bride portrait" fill sizes="33vw" className="object-cover" />
           </Reveal>
         </div>
       </section>
@@ -109,13 +112,13 @@ export default function AboutPage() {
             <p className="font-galanthia text-[#33302A] text-[40px] leading-none mt-8">Much love, Sierra</p>
           </Reveal>
           <Reveal delay={140} className="grid grid-cols-2 gap-3">
-            <div className="relative aspect-[3/4] col-span-1">
-              <Image src={IMG.coupleForest} alt="" fill sizes="25vw" className="object-cover" />
+            <div className="relative aspect-[3/4] col-span-1 plate tilt-ls">
+              <Image src={FRESH.wilczynski1} alt="" fill sizes="25vw" className="object-cover" />
             </div>
-            <div className="relative aspect-[3/4] col-span-1">
+            <div className="relative aspect-[3/4] col-span-1 plate tilt-rs">
               <Image src={IMG.bridePortrait} alt="Sierra Bettis" fill sizes="25vw" className="object-cover" />
             </div>
-            <div className="relative aspect-[16/9] col-span-2">
+            <div className="relative aspect-[16/9] col-span-2 plate">
               <Image src={IMG.brideParty} alt="Bridal party with Prose Florals bouquets" fill sizes="50vw" className="object-cover" />
             </div>
           </Reveal>
@@ -126,10 +129,10 @@ export default function AboutPage() {
       <section className="section-y container-pf">
         <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-14 md:gap-20 items-start">
           <Reveal className="order-2 md:order-1 grid grid-cols-2 gap-3">
-            <div className="relative aspect-[3/4]">
-              <Image src={IMG.coupleEmbrace} alt="" fill sizes="25vw" className="object-cover" />
+            <div className="relative aspect-[3/4] plate tilt-l">
+              <Image src={FRESH.wilczynski2} alt="" fill sizes="25vw" className="object-cover" />
             </div>
-            <div className="relative aspect-[3/4]">
+            <div className="relative aspect-[3/4] plate tilt-rs">
               <Image src={IMG.kattie} alt="Kattie" fill sizes="25vw" className="object-cover" />
             </div>
           </Reveal>
@@ -143,14 +146,19 @@ export default function AboutPage() {
                 In 2022, my perspective on the wedding industry changed entirely when I met Sierra, the flower fairy herself. I discovered that my superpower in events lies in my administrative and coordinating skills behind the scenes. Now, I&apos;m thrilled to be a part of the ultimate event: weddings!
               </p>
             </div>
-            <p className="font-galanthia text-[#33302A] text-[40px] leading-none mt-8">xo, Kattie</p>
+            <div className="flex items-end gap-3 mt-8">
+              <p className="font-galanthia text-[#33302A] text-[40px] leading-none">xo, Kattie</p>
+              <WaxSeal color="#4A1420" className="w-9 h-9 opacity-70 mb-0.5" />
+            </div>
           </Reveal>
         </div>
       </section>
 
-      {/* ─── Inspiration list ─── */}
-      <section className="section-y px-6 border-y border-[#D8D2C2]">
-        <div className="max-w-4xl mx-auto text-center">
+      <RibbonDivider className="w-full h-6 md:h-7 my-2" color="#4A1420" />
+
+      {/* ─── Inspiration list — paper texture instead of flat bone color ─── */}
+      <section className="section-y px-6 border-y border-[#D8D2C2] paper">
+        <div className="max-w-4xl mx-auto text-center relative">
           <p className="label text-[#33302A]/50 mb-5">The Inspiration</p>
           <p className="font-times-italic italic text-[#33302A] leading-relaxed" style={{ fontSize: "clamp(20px, 2.6vw, 30px)" }}>
             Still Moments &middot; Architecture &middot; Romance &middot; Tiny Growing Things &middot; The Ocean &middot; Jane Eyre &middot; Kittens &middot; Silky Veils
@@ -158,11 +166,12 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ─── Quote ─── */}
+      {/* ─── Quote — manuscript italic for the one ornate-type gesture on
+          this page ─── */}
       <section className="section-y-lg container-pf">
         <div className="max-w-3xl mx-auto text-center">
-          <p className="font-times text-[#33302A] leading-relaxed" style={{ fontSize: "clamp(22px, 3vw, 34px)" }}>
-            &ldquo;Prose Florals is a superb florist, who took deep and thoughtful care to understand our vision <em className="font-times-italic">even when we couldn&apos;t articulate it ourselves!</em> We were blown away by the quality of the bouquets and arrangements and received so many compliments. They were truly exquisite!&rdquo;
+          <p className="font-manuscript-italic text-[#33302A] leading-relaxed" style={{ fontSize: "clamp(23px, 3.2vw, 36px)" }}>
+            &ldquo;Prose Florals is a superb florist, who took deep and thoughtful care to understand our vision <em>even when we couldn&apos;t articulate it ourselves!</em> We were blown away by the quality of the bouquets and arrangements and received so many compliments. They were truly exquisite!&rdquo;
           </p>
           <p className="font-times-italic italic text-[#33302A]/70 text-lg mt-6">— Miriam &amp; Elliot, The Graduate</p>
         </div>

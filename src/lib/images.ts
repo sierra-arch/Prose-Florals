@@ -49,6 +49,39 @@ export const IMG = {
   // Frames / decorative
   frameMark: `${P}5d1bb5-fp_mark_frame.svg`,
   frameFitz: `${P}cafc67-fitzgerald-frame-white.svg`,
+
+  // Illustrated / composed pieces (AI-generated decorative art, not documentary
+  // wedding photography) — used sparingly per the archival-atelier direction.
+  botanicalPlate: `${P}illustrations/botanical-plate.jpg`,
+  flatLay: `${P}illustrations/flat-lay.jpg`,
+};
+
+// Freshly-tapped photography — 87 of the library's 118 photos had never been
+// referenced anywhere on the site. These power the scrapbook/collage
+// extensions below. "TheGoods" (Sept 28, 2024) and "Wilczynski/Mees"
+// (Sept 7, 2024) are the most recently dated weddings by filename, so they
+// lead; the rest is a broad, varied scrapbook pull from the remaining pool.
+export const FRESH = {
+  goods1: `${P}e1d12e-2024_09_28_thegoods-225.jpg`,
+  goods2: `${P}682d99-2024_09_28_thegoods-462.jpg`,
+  goods3: `${P}52a1ba-2024_09_28_thegoods-169.jpg`,
+  goods4: `${P}f7ee46-2024_09_28_thegoods-224.jpg`,
+  goods5: `${P}636bde-2024_09_28_thegoods-76.jpg`,
+  goods6: `${P}b9907c-2024_09_28_thegoods-387.jpg`,
+  wilczynski1: `${P}b01519-20240907_wilczynski_mees_012709.jpg`,
+  wilczynski2: `${P}036ebb-20240907_wilczynski_mees_013290.jpg`,
+  scrap1: `${P}2b6911-img_1948.jpg`,
+  scrap2: `${P}1dcbb4-abigailschaefferwedding-220.jpg`,
+  scrap3: `${P}52d3fd-bettiswedding-324.jpg`,
+  scrap4: `${P}7bf80d-bettiswedding-363.jpg`,
+  scrap5: `${P}3d3630-img_1961_copy.jpg`,
+  scrap6: `${P}19a867-425811293_18414625309027946_6623878183257840776_n.jpg`,
+  scrap7: `${P}82a04d-img_2051.jpg`,
+  scrap8: `${P}6218ad-23-10-05_maggiore_0433.jpg`,
+  scrap9: `${P}424570-lecollectif-141.jpg`,
+  scrap10: `${P}63aebb-delgado--17.jpg`,
+  scrap11: `${P}28e3a2-kalila_and_david-28.jpg`,
+  scrap12: `${P}466036-kalila_and_amp_david-493.jpg`,
 };
 
 // Curated, tonally-grouped clusters for the Portfolio "More Weddings" grid —
@@ -56,6 +89,10 @@ export const IMG = {
 // their own consistent mood (a deliberate B&W novelty shot and a couple of
 // outlier-saturated frames were dropped rather than forced into a group).
 export const PORTFOLIO_GROUPS: { label: string; images: string[] }[] = [
+  {
+    label: "Most Recent — The Goods",
+    images: [FRESH.goods1, FRESH.goods2, FRESH.goods3, FRESH.goods4, FRESH.goods5],
+  },
   {
     label: "Soft & Romantic",
     images: [

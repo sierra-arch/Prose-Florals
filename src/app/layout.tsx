@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Public_Sans } from "next/font/google";
+import { Public_Sans, Fraunces } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -8,6 +8,18 @@ const publicSans = Public_Sans({
   variable: "--font-public-sans",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600"],
+});
+
+// Ornate "found manuscript" display face — used sparingly, for select
+// oversized moments only (see .font-manuscript in globals.css). Fraunces'
+// high-contrast italic and wonky/soft optical-size axes give it real
+// character without sacrificing legibility at large sizes.
+const fraunces = Fraunces({
+  variable: "--font-fraunces",
+  subsets: ["latin"],
+  weight: "variable",
+  style: ["italic", "normal"],
+  axes: ["opsz", "SOFT", "WONK"],
 });
 
 export const metadata: Metadata = {
@@ -27,7 +39,7 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body className={`${publicSans.variable} antialiased`}>
+      <body className={`${publicSans.variable} ${fraunces.variable} antialiased`}>
         <Navbar />
         {children}
         <Footer />
