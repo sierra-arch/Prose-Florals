@@ -103,28 +103,6 @@ export default function Home() {
         </p>
       </section>
 
-      {/* ─── WHAT WE DO — text panel, one clean photo, generous whitespace ─── */}
-      <section className="section-y container-wide">
-        <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-stretch">
-          <Reveal className="flex flex-col justify-center bg-[#EAE5D6] px-8 md:px-16 lg:px-20 py-14 md:py-24">
-            <p className="eyebrow text-[#3B4127] mb-8">What We Do:</p>
-            <h2 className="ed-display text-[#33302A] mb-8" style={{ fontSize: "clamp(34px, 4.6vw, 66px)" }}>
-              Flowers for weddings, events &amp; installations
-            </h2>
-            <p className="font-times text-[18px] md:text-[19px] text-[#33302A]/72 leading-[1.85] max-w-md">
-              Every couple has their own romance, and we believe that should be reflected in their florals. We create dynamic floral designs that highlight our couple&apos;s style &amp; story — combining your vision, modern design, and a little dramatic flare.
-            </p>
-            <Link href="/about" className="eyebrow text-[#33302A] border-b border-[#33302A] pb-1 self-start mt-10 hover:text-[#3B4127] hover:border-[#3B4127] transition-colors">
-              Read Our Story
-            </Link>
-          </Reveal>
-
-          <Reveal delay={120} className="relative min-h-[420px] md:min-h-0 plate overflow-hidden">
-            <Image src={IMG.bouquetBold} alt="A bold, colorful Prose Florals arrangement" fill sizes="50vw" className="object-cover" />
-          </Reveal>
-        </div>
-      </section>
-
       {/* ─── OFFERINGS — thin-rule editorial list ─── */}
       <section className="pt-10 pb-12 md:pt-14 md:pb-16 container-pf">
         <div className="mb-6 md:mb-8 flex items-end justify-between">
