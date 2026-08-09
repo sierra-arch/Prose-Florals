@@ -7,6 +7,26 @@ import RotatingPair, { type PhotoPair } from "@/components/RotatingPair";
 import { IMG, LIVE, INQUIRY } from "@/lib/images";
 import { GALLERIES, GALLERY_COVERS } from "@/lib/galleries";
 
+// Homepage "Featured Weddings" — swaps Maggie & Billy out for Zoë + Chapman.
+// Zoë + Chapman doesn't have a full gallery detail page yet (no slug), so
+// that card renders without a link, same as the Portfolio page's pattern.
+const homeFeatured = [
+  ...GALLERIES.filter((g) => g.slug !== "maggie-billy").map((g) => ({
+    slug: g.slug as string | undefined,
+    venueLabel: g.venueLabel,
+    tagline: g.tagline,
+    photo: GALLERY_COVERS[g.slug],
+    alt: g.coverAlt,
+  })),
+  {
+    slug: undefined as string | undefined,
+    venueLabel: "THE REGATTA PLACE",
+    tagline: "Zoë + Chapman - Bright, Sculptural Summer Wedding with Mounds of Flavor.",
+    photo: LIVE.zoeChapman,
+    alt: "Zoë and Chapman's wedding florals by Prose Florals",
+  },
+];
+
 // Real couple + floral-detail pairs, pulled directly from the live
 // homepage's own rotating set (scraped from proseflorals.com, matched
 // against the user's screenshots) rather than approximated from the
@@ -161,13 +181,13 @@ export default function Home() {
           </h2>
         </div>
         <div className="grid md:grid-cols-3 gap-x-8 gap-y-14 md:gap-x-10">
-          {GALLERIES.map((g, i) => (
-            <Reveal key={g.slug} delay={i * 110}>
-              <Link href={`/portfolio/${g.slug}`} className="group block">
+          {homeFeatured.map((g, i) => {
+            const inner = (
+              <>
                 <div className={`relative aspect-[3/4] overflow-hidden plate mb-6 ${i === 1 ? "md:mt-14" : ""}`}>
                   <Image
-                    src={GALLERY_COVERS[g.slug]}
-                    alt={g.coverAlt}
+                    src={g.photo}
+                    alt={g.alt}
                     fill
                     sizes="(max-width: 768px) 100vw, 33vw"
                     className="object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.05]"
@@ -176,9 +196,20 @@ export default function Home() {
                 </div>
                 <p className="eyebrow text-[#33302A] mb-2 group-hover:text-[#3B4127] transition-colors">{g.venueLabel}</p>
                 <p className="font-times text-[20px] md:text-[22px] text-[#33302A]/80 leading-snug">{g.tagline}</p>
-              </Link>
-            </Reveal>
-          ))}
+              </>
+            );
+            return (
+              <Reveal key={g.venueLabel} delay={i * 110}>
+                {g.slug ? (
+                  <Link href={`/portfolio/${g.slug}`} className="group block">
+                    {inner}
+                  </Link>
+                ) : (
+                  <div className="group block">{inner}</div>
+                )}
+              </Reveal>
+            );
+          })}
         </div>
         <div className="text-center mt-16">
           <Link href="/portfolio" className="eyebrow text-[#33302A] border-b border-[#33302A] pb-1.5 hover:text-[#3B4127] hover:border-[#3B4127] transition-colors">
