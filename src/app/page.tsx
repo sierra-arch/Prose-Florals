@@ -109,11 +109,11 @@ export default function Home() {
       {/* ─── Numbered 01/02/03 navigation teaser ─── */}
       <section className="grid md:grid-cols-3">
         {[
-          { n: "01", pre: "Explore", cap: "SERVICES", href: "/services", img: IMG.centerpiece },
-          { n: "02", pre: "The", cap: "PORTFOLIO", href: "/portfolio", img: IMG.bouquetLush },
-          { n: "03", pre: "About the", cap: "FLORIST", href: "/about", img: IMG.coupleForest },
+          { n: "01", pre: "Explore", cap: "SERVICES", href: "/services", img: IMG.install1 },
+          { n: "02", pre: "About the", cap: "FLORIST", href: "/about", img: LIVE.teamArrange },
+          { n: "03", pre: "The", cap: "PORTFOLIO", href: "/portfolio", img: IMG.bridePortrait },
         ].map((panel) => (
-          <Link key={panel.n} href={panel.href} className="group relative aspect-[3/4] md:aspect-auto md:h-[64vh] overflow-hidden block">
+          <Link key={panel.n} href={panel.href} className="group relative aspect-[3/4] md:aspect-auto md:h-screen overflow-hidden block">
             <Image src={panel.img} alt={panel.cap} fill sizes="33vw" className="object-cover transition-transform duration-[1200ms] group-hover:scale-105" />
             <div className="absolute inset-0 bg-[#17130F]/30 group-hover:bg-[#17130F]/40 transition-colors" />
             <span className="absolute bottom-5 left-5 folio text-white/85">{panel.n}</span>
