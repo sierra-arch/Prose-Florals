@@ -152,28 +152,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ─── BEHIND THE BLOOMS — Sierra introduced individually on the
-          homepage (Kattie gets equal billing on the About page), with the
-          monogram straddling the photo/color seam, matching the live site. ─── */}
-      <section className="relative grid md:grid-cols-2">
-        <div className="relative aspect-[4/5] md:aspect-auto md:min-h-[600px]">
-          <Image src={IMG.bridePortrait} alt="Sierra Bettis, founder of Prose Florals" fill sizes="50vw" className="object-cover" />
-        </div>
-        <Monogram className="hidden md:block absolute top-10 left-1/2 -translate-x-1/2 w-12 h-14 text-[#F4F1E8]/80 z-10" />
-        <div className="bg-[#2A2E1B] flex flex-col justify-center px-8 md:px-20 py-20 md:py-32 relative">
-          <p className="eyebrow text-[#C9B7AE] absolute top-8 right-8 md:right-12">Behind the Blooms</p>
-          <h2 className="ed-display text-[#F4F1E8] mb-7" style={{ fontSize: "clamp(38px, 5vw, 74px)" }}>
-            SIERRA BETTIS
-          </h2>
-          <p className="font-times text-[18px] text-[#F4F1E8]/78 leading-[1.85] max-w-md mb-9">
-            As a passionate wedding florist with a decade of experience, Sierra brings her signature timeless, editorial style and classic, romantic aesthetic to modern love stories.
-          </p>
-          <Link href="/about" className="eyebrow text-[#F4F1E8] border-b border-[#F4F1E8]/45 pb-1 self-start hover:border-[#C9B7AE] hover:text-[#C9B7AE] transition-colors">
-            Learn More about the Prose Team
-          </Link>
-        </div>
-      </section>
-
       {/* ─── FEATURED WEDDINGS ─── */}
       <section className="section-y container-wide">
         <div className="mb-12 md:mb-16 text-center">
@@ -205,6 +183,28 @@ export default function Home() {
         <div className="text-center mt-16">
           <Link href="/portfolio" className="eyebrow text-[#33302A] border-b border-[#33302A] pb-1.5 hover:text-[#3B4127] hover:border-[#3B4127] transition-colors">
             View the Full Portfolio
+          </Link>
+        </div>
+      </section>
+
+      {/* ─── BEHIND THE BLOOMS — Sierra introduced individually on the
+          homepage (Kattie gets equal billing on the About page), with the
+          monogram straddling the photo/color seam, matching the live site. ─── */}
+      <section className="relative grid md:grid-cols-2">
+        <div className="relative aspect-[4/5] md:aspect-auto md:min-h-[600px]">
+          <Image src={IMG.bridePortrait} alt="Sierra Bettis, founder of Prose Florals" fill sizes="50vw" className="object-cover" />
+        </div>
+        <Monogram className="hidden md:block absolute top-10 left-1/2 -translate-x-1/2 w-12 h-14 text-[#F4F1E8]/80 z-10" />
+        <div className="bg-[#2A2E1B] flex flex-col justify-center px-8 md:px-20 py-20 md:py-32 relative">
+          <p className="eyebrow text-[#C9B7AE] absolute top-8 right-8 md:right-12">Behind the Blooms</p>
+          <h2 className="ed-display text-[#F4F1E8] mb-7" style={{ fontSize: "clamp(38px, 5vw, 74px)" }}>
+            SIERRA BETTIS
+          </h2>
+          <p className="font-times text-[18px] text-[#F4F1E8]/78 leading-[1.85] max-w-md mb-9">
+            As a passionate wedding florist with a decade of experience, Sierra brings her signature timeless, editorial style and classic, romantic aesthetic to modern love stories.
+          </p>
+          <Link href="/about" className="eyebrow text-[#F4F1E8] border-b border-[#F4F1E8]/45 pb-1 self-start hover:border-[#C9B7AE] hover:text-[#C9B7AE] transition-colors">
+            Learn More about the Prose Team
           </Link>
         </div>
       </section>
