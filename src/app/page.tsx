@@ -17,13 +17,10 @@ const intentionPairs: PhotoPair[] = [
   { main: LIVE.maggieBillyMain, detail: LIVE.maggieBillyDetail, alt: "Maggie and Billy's wedding" },
   { main: LIVE.zoeChapman, detail: LIVE.faqMarigolds, alt: "Zoë and Chapman's wedding" },
   { main: IMG.coupleKiss, detail: LIVE.favoriteCat, alt: "Gabby and Ian's wedding" },
-  { main: IMG.brideMoody, detail: IMG.coupleForest, alt: "A moody bridal portrait shoot" },
-  { main: IMG.bridePortrait, detail: IMG.brideBrick, alt: "Frances and Clayton's wedding" },
   { main: LIVE.hydrangeaArchMain, detail: LIVE.hydrangeaArchDetail, alt: "A hydrangea-arch wedding" },
   { main: LIVE.industrialToastMain, detail: LIVE.industrialToastDetail, alt: "An industrial-venue wedding" },
   { main: LIVE.charlesRiverMain, detail: LIVE.charlesRiverDetail, alt: "Kalila and David's wedding" },
   { main: LIVE.zoeChapmanMain2, detail: LIVE.zoeChapmanDetail2, alt: "Zoë and Chapman's wedding" },
-  { main: LIVE.windowSeatMain, detail: LIVE.windowSeatDetail, alt: "A window-seat bridal portrait" },
 ];
 
 const homeTestimonials = [
@@ -71,7 +68,7 @@ export default function Home() {
             <h2 className="ed-display text-[#33302A] leading-[1.02] mb-8" style={{ fontSize: "clamp(38px, 4.6vw, 66px)" }}>
               FLOWERS <span className="font-times-italic italic font-light">for</span> YOUR STORY
             </h2>
-            <p className="eyebrow text-[#33302A] mb-8" style={{ letterSpacing: "0.12em" }}>
+            <p className="eyebrow text-[#33302A] mb-8" style={{ letterSpacing: "0.1em", fontSize: "14px" }}>
               We create dynamic floral designs that highlight our couple&apos;s style &amp; story.
             </p>
             <p className="font-times text-[17px] text-[#33302A]/75 leading-[1.85] mb-6">
