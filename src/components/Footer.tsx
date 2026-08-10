@@ -125,13 +125,12 @@ export default function Footer() {
               <p className="font-galanthia text-[#33302A] text-[56px] leading-none -ml-1">
                 Prose Florals
               </p>
+              <p className="font-sans-pf text-[11px] text-[#33302A]/40 mt-4 tracking-wide">
+                Prose Florals LLC, {new Date().getFullYear()}. All rights reserved.
+              </p>
             </div>
           </div>
         </div>
-
-        <p className="font-sans-pf text-[11px] text-[#33302A]/40 mt-14 md:mt-16 text-center tracking-wide">
-          Prose Florals LLC, {new Date().getFullYear()}. All rights reserved.
-        </p>
       </div>
 
       {/* Marquee strip */}
