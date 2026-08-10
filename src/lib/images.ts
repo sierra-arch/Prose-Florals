@@ -117,6 +117,11 @@ export const LIVE = {
   sarahDetail: `${L}943064-1-664.jpg`,
   ellenMain: `${L}e8aeaf-eawedding-3508.jpg`,
   ellenDetail: `${L}d1bdf7-eawedding-2828.jpg`,
+  rachelAlexPanel: `${L}3a0663-rachelalex-217.jpg`,
+
+  // Homepage Services/Florist/Portfolio nav panels — user-picked.
+  navFlorist: `${P}7921b0-img_0109.jpg`,
+  navPortfolio: `${L}bfa0d2-zc-525.jpg`,
   bonoMain: `${L}402443-bono-newlyweds-43-websize.jpg`,
   bonoDetail: `${L}a32b59-bono-newlyweds-53-websize.jpg`,
   windowSeatMain: `${L}14c985-img-1972.jpg`,
