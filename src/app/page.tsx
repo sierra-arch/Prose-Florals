@@ -109,15 +109,15 @@ export default function Home() {
       <section className="pt-10 pb-12 md:pt-14 md:pb-16 container-pf">
         <div className="mb-6 md:mb-8 flex items-end justify-between">
           <h2 className="ed-display text-[#33302A]" style={{ fontSize: "clamp(30px, 4vw, 56px)" }}>
-            <span className="font-times-italic italic font-light">welcome to our</span> OFFERINGS
+            <span className="font-times-italic italic font-light">Our</span> OFFERINGS
           </h2>
-          <p className="folio hidden md:block">§ Services</p>
+          <p className="folio hidden md:block">Services</p>
         </div>
         <div>
           {services.map((s, i) => (
             <Reveal key={s.t} delay={i * 70}>
               <Link href={s.href} className="rule-row group flex items-center justify-between gap-6 py-3 md:py-4">
-                <span className="flex items-baseline gap-5 md:gap-8">
+                <span className="flex items-baseline gap-5 md:gap-8 pl-4 md:pl-6">
                   <span className="folio text-[#33302A]/40">{String(i + 1).padStart(2, "0")}</span>
                   <span className="font-times text-[#33302A] group-hover:text-[#3B4127] transition-colors" style={{ fontSize: "clamp(22px, 3vw, 40px)" }}>
                     {s.t}
