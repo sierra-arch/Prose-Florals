@@ -274,8 +274,8 @@ export const FOOTER_STRIP: string[] = [
   `${L}9a8a79-zc-398.jpg`,
   `${L}7344fa-rachelalex-350.jpg`,
   `${P}5b8615-maggie_and_billywedding_maggie_and_billy_0801.jpg`,
-  `${P}galleries/portfolio-hero/ph_06.jpg`,
   `${P}galleries/portfolio-hero/ph_09.jpg`,
+  `${P}galleries/portfolio-hero/ph_06.jpg`,
 ];
 
 // Shared external links (already in the original repo)
