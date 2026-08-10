@@ -147,10 +147,10 @@ export default function Footer() {
 
       {/* Instagram photo strip — curated to one calm tone, with a hairline
           gap so it reads as six deliberate frames, not a dense unbroken grid. */}
-      <div className="grid grid-cols-3 md:grid-cols-6 gap-1 bg-[#D8D2C2]">
+      <div className="grid grid-cols-3 md:grid-cols-5 gap-1 bg-[#D8D2C2]">
         {stripImgs.map((src, i) => (
-          <a key={i} href={INSTAGRAM} target="_blank" rel="noopener noreferrer" className="relative aspect-square overflow-hidden group bg-[#F4F1E8]">
-            <Image src={src} alt="Prose Florals wedding work" fill sizes="16vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
+          <a key={i} href={INSTAGRAM} target="_blank" rel="noopener noreferrer" className="relative aspect-[3/4] overflow-hidden group bg-[#F4F1E8]">
+            <Image src={src} alt="Prose Florals wedding work" fill sizes="20vw" className="object-cover transition-transform duration-700 group-hover:scale-105" />
           </a>
         ))}
       </div>

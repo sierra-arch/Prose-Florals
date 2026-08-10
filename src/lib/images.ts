@@ -271,12 +271,11 @@ export const PORTFOLIO_GROUPS: { label: string; images: string[] }[] = [
 // pulled from the "Soft & Romantic" family so the strip reads as one calm
 // closing note rather than another dense, mixed-tone grid.
 export const FOOTER_STRIP: string[] = [
-  `${P}e44af1-frances_clayton-465_websize.jpg`,
-  `${P}691903-frances_clayton-502_websize.jpg`,
-  `${P}1f6276-frances_clayton-474_websize.jpg`,
-  `${P}0fedf1-bride-and-groom-bouquets-boston-florist-prose-florals.jpg`,
-  `${P}002c5d-bride-bouquet-bridal-wedding-boston-florist-prose-florals.jpg`,
-  `${P}a32b59-bono_newlyweds-53_websize.jpg`,
+  `${L}9a8a79-zc-398.jpg`,
+  `${P}galleries/taylor-ethan/te_16.jpg`,
+  `${L}466036-kalila-and-amp-david-493.jpg`,
+  `${L}7344fa-rachelalex-350.jpg`,
+  `${P}galleries/maggie-billy/mb_04.jpg`,
 ];
 
 // Shared external links (already in the original repo)
