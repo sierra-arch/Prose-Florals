@@ -108,6 +108,15 @@ export const LIVE = {
   emilyChrisMain: `${P}galleries/emily-chris/ec_12.jpg`,
   emilyChrisDetail: `${P}galleries/emily-chris/ec_20.jpg`,
   taylorEthanMain: `${P}galleries/taylor-ethan/te_16.jpg`,
+
+  // New weddings (Rachel + Alex, Sarah, Ellen) — user-picked from the
+  // "New Weddings" picker, resized down from full-res originals.
+  rachelAlexMain: `${L}ffc3d5-rachelalex-349.jpg`,
+  rachelAlexDetail: `${L}a9131c-rachelalex-372.jpg`,
+  sarahMain: `${L}969642-1-1234.jpg`,
+  sarahDetail: `${L}943064-1-664.jpg`,
+  ellenMain: `${L}e8aeaf-eawedding-3508.jpg`,
+  ellenDetail: `${L}d1bdf7-eawedding-2828.jpg`,
   bonoMain: `${L}402443-bono-newlyweds-43-websize.jpg`,
   bonoDetail: `${L}a32b59-bono-newlyweds-53-websize.jpg`,
   windowSeatMain: `${L}14c985-img-1972.jpg`,

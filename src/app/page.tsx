@@ -44,6 +44,9 @@ const intentionPairs: PhotoPair[] = [
   { main: LIVE.bonoMain, detail: LIVE.bonoDetail, alt: "A Bono wedding" },
   { main: LIVE.abigailSchaeffer, detail: LIVE.ourStyleBouquet, alt: "Abigail and Schaeffer's wedding" },
   { main: IMG.reception, detail: IMG.meadowInstall, alt: "Frances and Clayton's wedding" },
+  { main: LIVE.rachelAlexMain, detail: LIVE.rachelAlexDetail, alt: "Rachel and Alex's wedding" },
+  { main: LIVE.sarahMain, detail: LIVE.sarahDetail, alt: "Sarah's wedding" },
+  { main: LIVE.ellenMain, detail: LIVE.ellenDetail, alt: "Ellen's wedding" },
 ];
 
 const homeTestimonials = [
