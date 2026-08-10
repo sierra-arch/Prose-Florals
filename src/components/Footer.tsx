@@ -12,17 +12,15 @@ const getAround = [
   { label: "Portfolio", href: "/portfolio" },
   { label: "Compliments", href: "/reviews" },
   { label: "Inquire", href: "/contact" },
-  { label: "Rental Library", href: "/services" },
 ];
 
 const links = [
   { label: "Boston Floral Events", href: "/services" },
   { label: "DIY Florals with Ease", href: "/services" },
   { label: "Download Investment Guide", href: GUIDE, ext: true },
-  { label: "Photographer Highlights", href: "/portfolio" },
   { label: "Write us a Review!", href: "/reviews" },
-  { label: "DIY Client Login", href: INQUIRY, ext: true },
   { label: "Reserve Your Date", href: INQUIRY, ext: true },
+  { label: "Rental Library", href: "/services" },
   { label: "Legal", href: "/contact" },
 ];
 
@@ -58,7 +56,7 @@ export default function Footer() {
           {/* Get Around */}
           <div>
             <h3 className="label text-[#33302A] text-[0.72rem] tracking-[0.22em] mb-5">Get Around</h3>
-            <ul className="space-y-2.5">
+            <ul className="space-y-1.5">
               {getAround.map((l) => (
                 <li key={l.label}>
                   <Link href={l.href} className="font-sans-pf font-medium text-[13.5px] text-[#33302A]/70 hover:text-[#3B4127] transition-colors">
@@ -72,7 +70,7 @@ export default function Footer() {
           {/* Links */}
           <div>
             <h3 className="label text-[#33302A] text-[0.72rem] tracking-[0.22em] mb-5">Links</h3>
-            <ul className="space-y-2.5">
+            <ul className="space-y-1.5">
               {links.map((l) =>
                 l.ext ? (
                   <li key={l.label}>
