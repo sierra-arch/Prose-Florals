@@ -3,7 +3,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { INQUIRY, GUIDE, INSTAGRAM, PINTEREST, FOOTER_STRIP } from "@/lib/images";
-import BotanicalStamp from "@/components/BotanicalStamp";
 
 const getAround = [
   { label: "Home", href: "/" },
@@ -123,14 +122,11 @@ export default function Footer() {
             <p className="font-sans-pf text-[13px] text-[#33302A]/70 leading-relaxed mb-5">
               To create dynamic floral designs that highlight our happy couple&apos;s style and story.
             </p>
-            <div className="flex items-end gap-3">
-              <div>
-                <p className="font-times-italic italic text-[#33302A]/70 text-[15px] leading-none mb-1">xo,</p>
-                <p className="font-galanthia text-[#33302A] text-[42px] leading-none -ml-1">
-                  Prose Florals
-                </p>
-              </div>
-              <BotanicalStamp className="w-10 h-10 text-[#33302A]/35 shrink-0 mb-0.5" />
+            <div className="mt-4">
+              <p className="font-times-italic italic text-[#33302A]/70 text-[15px] leading-none mb-1">xo,</p>
+              <p className="font-galanthia text-[#33302A] text-[56px] leading-none -ml-1">
+                Prose Florals
+              </p>
             </div>
           </div>
         </div>
