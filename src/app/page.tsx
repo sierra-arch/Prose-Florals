@@ -98,7 +98,7 @@ export default function Home() {
       </section>
 
       {/* ─── OFFERINGS — thin-rule editorial list ─── */}
-      <section className="pt-10 pb-12 md:pt-14 md:pb-16 container-pf">
+      <section className="pt-10 pb-24 md:pt-14 md:pb-32 container-pf">
         <div className="mb-6 md:mb-8 flex items-end justify-between">
           <h2 className="ed-display text-[#33302A]" style={{ fontSize: "clamp(30px, 4vw, 56px)" }}>
             <span className="font-times-italic italic font-light">Our</span> OFFERINGS
