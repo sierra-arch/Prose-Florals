@@ -120,9 +120,14 @@ export const LIVE = {
   rachelAlexPanel: `${L}3a0663-rachelalex-217.jpg`,
 
   // Homepage Services/Florist/Portfolio nav panels — user-picked.
-  navServices: `${L}7344fa-rachelalex-350.jpg`,
+  navServices: `${L}09a72f-rachelalex-487.jpg`,
   navFlorist: `${P}2e514f-frances_clayton-27_websize.jpg`,
   navPortfolio: `${P}galleries/portfolio-hero/ph_01.jpg`,
+
+  // Frances + Clayton — sent directly by the user (not from the picker).
+  francesClaytonHug: `${L}ff7bba-frances-clayton-hug.jpg`,
+  francesClaytonBridesmaids: `${L}d7a1aa-frances-clayton-bridesmaids.jpg`,
+  francesClaytonToast: `${L}92f275-frances-clayton-toast.jpg`,
   bonoMain: `${L}402443-bono-newlyweds-43-websize.jpg`,
   bonoDetail: `${L}a32b59-bono-newlyweds-53-websize.jpg`,
   windowSeatMain: `${L}14c985-img-1972.jpg`,
