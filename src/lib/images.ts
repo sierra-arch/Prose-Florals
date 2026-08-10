@@ -120,7 +120,7 @@ export const LIVE = {
   rachelAlexPanel: `${L}3a0663-rachelalex-217.jpg`,
 
   // Homepage Services/Florist/Portfolio nav panels — user-picked.
-  navServices: `${L}e54fbb-frances-clayton-2017-websize.jpg`,
+  navServices: `${L}09a72f-rachelalex-487.jpg`,
   navFlorist: `${P}b01519-20240907_wilczynski_mees_012709.jpg`,
   navPortfolio: `${P}galleries/portfolio-hero/ph_01.jpg`,
   bonoMain: `${L}402443-bono-newlyweds-43-websize.jpg`,
