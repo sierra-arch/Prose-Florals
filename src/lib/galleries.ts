@@ -18,6 +18,7 @@ export type Gallery = {
 };
 
 const G = "/images/galleries";
+const L = "/images/live/";
 
 const range = (dir: string, prefix: string, n: number) =>
   Array.from({ length: n }, (_, i) => `${G}/${dir}/${prefix}_${String(i + 1).padStart(2, "0")}.jpg`);
@@ -76,6 +77,51 @@ export const GALLERIES: Gallery[] = [
     ],
     photos: range("maggie-billy", "mb", 17),
   },
+  {
+    slug: "zoe-chapman",
+    couple: "ZOË & CHAPMAN",
+    subtitle: "A VIBRANT WATERFRONT WEDDING IN NEWPORT, RI",
+    venueLabel: "THE REGATTA PLACE",
+    tagline: "Zoë + Chapman – Bright, Sculptural Summer Wedding with Mounds of Flavor.",
+    coverAlt: "Zoë and Chapman embracing at their waterfront wedding in Newport, RI",
+    about: [
+      "Zoë and Chapman have artists souls and the biggest hearts! Their expertise and intentionality is deeply felt in every detail of their waterfront wedding in Newport, RI. Choosing to stay within the families of pinks, oranges, and greens— they created a palette as joyful as the couple themselves. Every bloom was hand-selected by Zoë and Chapman to create these incredibly vibrant, “whimsically sculptural” arrangements. It was an honor to bring their vision to life!",
+      "This wedding was extra special for me (Sierra) as Chapman and Zoë are family! Enjoy these florals that highlight the warmth and happiness of this very special wedding day.",
+    ],
+    vendors: [
+      { role: "Photography", name: "Alice Plati Photography" },
+      { role: "Venue", name: "The Regatta Place" },
+      { role: "Coordination", name: "The Ladybird Event Co" },
+      { role: "Vinyl Set", name: "D. Peezy" },
+      { role: "Live Music", name: "Marcus the Drummer Quintet" },
+      { role: "Makeup", name: "Visage 1 Studios" },
+      { role: "Hair", name: "Braided New York" },
+      { role: "Wedding Gown", name: "Paulette Cleghorn & Yumi Katsura" },
+      { role: "Cake", name: "Sin PVD" },
+      { role: "Jello Shots", name: "Solid Wiggle" },
+      { role: "Ice Cream", name: "Big Feeling PVD" },
+    ],
+    photos: [
+      `${L}6f13ce-zc-153.jpg`,
+      `${L}d4629e-zc-495.jpg`,
+      `${L}019d79-zc-265.jpg`,
+      `${L}2dc648-zc-250.jpg`,
+      `${L}da07b0-zc-335.jpg`,
+      `${L}1e0bf8-zc-270.jpg`,
+      `${L}775c07-zc-232.jpg`,
+      `${L}a2dea9-zc-166.jpg`,
+      `${L}91d269-zc-217.jpg`,
+      `${L}5c4ecc-zc-271.jpg`,
+      `${L}c030dc-zc-634.jpg`,
+      `${L}bfa0d2-zc-525.jpg`,
+      `${L}3026b1-zc-246.jpg`,
+      `${L}e7eab9-zc-277.jpg`,
+      `${L}6e89fa-zc-230.jpg`,
+      `${L}1b7500-zc-13.jpg`,
+      `${L}f5c009-zc-377.jpg`,
+      `${L}28a2e6-zc-173.jpg`,
+    ],
+  },
 ];
 
 export const getGallery = (slug: string) => GALLERIES.find((g) => g.slug === slug);
@@ -85,6 +131,7 @@ export const GALLERY_COVERS: Record<string, string> = {
   "taylor-ethan": `${G}/taylor-ethan/te_04.jpg`,
   "emily-chris": `${G}/emily-chris/ec_02.jpg`,
   "maggie-billy": `${G}/maggie-billy/mb_04.jpg`,
+  "zoe-chapman": `${L}6f13ce-zc-153.jpg`,
 };
 
 // Portfolio hero carousel images — curated to 6 of the original 10. The
@@ -101,7 +148,7 @@ export const PORTFOLIO_HERO: string[] = [heroAll[0], heroAll[3], heroAll[5], her
 export type PortfolioCard = { venueLabel: string; tagline: string; photo: string; slug?: string };
 
 export const FEATURED_WEDDINGS: PortfolioCard[] = [
-  { venueLabel: "THE REGATTA PLACE", tagline: "Zoë + Chapman - Bright, Sculptural Summer Wedding with Mounds of Flavor.", photo: LIVE.zoeChapman },
+  { venueLabel: "THE REGATTA PLACE", tagline: "Zoë + Chapman - Bright, Sculptural Summer Wedding with Mounds of Flavor.", photo: LIVE.zoeChapman, slug: "zoe-chapman" },
   { venueLabel: "COMMANDER'S MANSION", tagline: "Frances + Clayton - Muted Rainbow Hues paired with Historic Architecture.", photo: LIVE.francesClayton },
   { venueLabel: "CHASE YOUNG GALLERY", tagline: "Taylor + Ethan - Soft & Romantic Understated Elegance", photo: `${G}/taylor-ethan/te_04.jpg`, slug: "taylor-ethan" },
   { venueLabel: "THE DENNIS INN", tagline: "Emily + Chris - Soft, Dreamy Pastels and Floral Patterns.", photo: `${G}/emily-chris/ec_02.jpg`, slug: "emily-chris" },

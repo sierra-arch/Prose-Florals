@@ -10,22 +10,13 @@ import { GALLERIES, GALLERY_COVERS } from "@/lib/galleries";
 // Homepage "Featured Weddings" — swaps Maggie & Billy out for Zoë + Chapman.
 // Zoë + Chapman doesn't have a full gallery detail page yet (no slug), so
 // that card renders without a link, same as the Portfolio page's pattern.
-const homeFeatured = [
-  ...GALLERIES.filter((g) => g.slug !== "maggie-billy").map((g) => ({
-    slug: g.slug as string | undefined,
-    venueLabel: g.venueLabel,
-    tagline: g.tagline,
-    photo: GALLERY_COVERS[g.slug],
-    alt: g.coverAlt,
-  })),
-  {
-    slug: undefined as string | undefined,
-    venueLabel: "THE REGATTA PLACE",
-    tagline: "Zoë + Chapman - Bright, Sculptural Summer Wedding with Mounds of Flavor.",
-    photo: LIVE.zoeChapman,
-    alt: "Zoë and Chapman's wedding florals by Prose Florals",
-  },
-];
+const homeFeatured = GALLERIES.filter((g) => g.slug !== "maggie-billy").map((g) => ({
+  slug: g.slug as string | undefined,
+  venueLabel: g.venueLabel,
+  tagline: g.tagline,
+  photo: GALLERY_COVERS[g.slug],
+  alt: g.coverAlt,
+}));
 
 // Real couple + floral-detail pairs, pulled directly from the live
 // homepage's own rotating set (scraped from proseflorals.com, matched
