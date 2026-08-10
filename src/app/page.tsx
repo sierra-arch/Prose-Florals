@@ -37,8 +37,8 @@ const intentionPairs: PhotoPair[] = [
   { main: LIVE.maggieBillyMain, detail: LIVE.maggieBillyDetail, alt: "Maggie and Billy's wedding" },
   { main: LIVE.zoeChapman, detail: LIVE.faqMarigolds, alt: "Zoë and Chapman's wedding" },
   { main: IMG.coupleKiss, detail: LIVE.favoriteCat, alt: "Gabby and Ian's wedding" },
-  { main: LIVE.hydrangeaArchMain, detail: LIVE.hydrangeaArchDetail, alt: "A hydrangea-arch wedding" },
-  { main: LIVE.industrialToastMain, detail: LIVE.industrialToastDetail, alt: "An industrial-venue wedding" },
+  { main: LIVE.hydrangeaArchMain, detail: LIVE.industrialToastDetail, alt: "A hydrangea-arch wedding" },
+  { main: LIVE.industrialToastMain, detail: LIVE.hydrangeaArchDetail, alt: "An industrial-venue wedding" },
   { main: LIVE.charlesRiverMain, detail: LIVE.charlesRiverDetail, alt: "Kalila and David's wedding" },
   { main: LIVE.zoeChapmanMain2, detail: LIVE.zoeChapmanDetail2, alt: "Zoë and Chapman's wedding" },
   { main: LIVE.emilyChrisMain, detail: LIVE.emilyChrisDetail, alt: "Emily and Chris's wedding" },
@@ -87,8 +87,7 @@ export default function Home() {
       <section className="section-y-lg container-wide pr-6 md:pr-14 lg:pr-24">
         <div className="grid md:grid-cols-2 gap-x-20 lg:gap-x-28 gap-y-10 items-start">
           <RotatingPair pairs={intentionPairs} />
-          <div className="relative max-w-lg">
-            <Monogram className="hidden md:block absolute -top-4 right-0 w-14 h-16 text-[#33302A]/70" />
+          <div className="relative max-w-lg md:pt-16">
             <h2 className="ed-display text-[#33302A] leading-[1.02] mb-8" style={{ fontSize: "clamp(38px, 4.6vw, 66px)" }}>
               FLOWERS <span className="font-times-italic italic font-light">for</span> YOUR STORY
             </h2>
