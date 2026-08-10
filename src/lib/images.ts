@@ -141,6 +141,7 @@ export const IMG = {
 
   // Hero / couples
   heroTwoBrides: `${P}5ac7b3-frances_clayton-873_websize.jpg`,   // colorful two-brides garden (homepage hero)
+  behindTheBlooms: `${P}7ce446-bettiswedding-184.jpg`,   // user-picked, full library #59
   coupleSunset: `${P}0fedf1-bride-and-groom-bouquets-boston-florist-prose-florals.jpg`,
   coupleForest: `${P}b91312-deep-moody-forest-bridal-bouquet-boston-florist-prose-florals-.jpg`,
   coupleKiss: `${P}4bdb2e-castillo_holliday_photo_film_gabby_and_ian_wedding_previews_08_26_23-30.jpg`,
