@@ -36,7 +36,7 @@ const homeFeatured = [
 const intentionPairs: PhotoPair[] = [
   { main: LIVE.maggieBillyMain, detail: LIVE.maggieBillyDetail, alt: "Maggie and Billy's wedding" },
   { main: LIVE.zoeChapman, detail: LIVE.faqMarigolds, alt: "Zoë and Chapman's wedding" },
-  { main: LIVE.hydrangeaArchMain, detail: LIVE.industrialToastDetail, alt: "A hydrangea-arch wedding" },
+  { main: LIVE.taylorEthanMain, detail: LIVE.industrialToastDetail, alt: "Taylor and Ethan's wedding" },
   { main: LIVE.industrialToastMain, detail: LIVE.hydrangeaArchDetail, alt: "An industrial-venue wedding" },
   { main: LIVE.charlesRiverMain, detail: LIVE.charlesRiverDetail, alt: "Kalila and David's wedding" },
   { main: LIVE.zoeChapmanMain2, detail: LIVE.zoeChapmanDetail2, alt: "Zoë and Chapman's wedding" },

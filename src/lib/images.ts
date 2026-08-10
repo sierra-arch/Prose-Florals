@@ -107,6 +107,7 @@ export const LIVE = {
   // User-picked from the full photo library, via the grouped photo picker.
   emilyChrisMain: `${P}galleries/emily-chris/ec_12.jpg`,
   emilyChrisDetail: `${P}galleries/emily-chris/ec_20.jpg`,
+  taylorEthanMain: `${P}galleries/taylor-ethan/te_16.jpg`,
   bonoMain: `${L}402443-bono-newlyweds-43-websize.jpg`,
   bonoDetail: `${L}a32b59-bono-newlyweds-53-websize.jpg`,
   windowSeatMain: `${L}14c985-img-1972.jpg`,
