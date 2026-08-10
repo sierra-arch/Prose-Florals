@@ -52,7 +52,7 @@ export default function Footer() {
         {/* thin divider rule between brand + columns */}
         <div className="mx-auto max-w-5xl h-px bg-[#D8D2C2] mb-12 md:mb-16" />
 
-        <div className="mx-auto max-w-5xl grid grid-cols-2 md:grid-cols-4 gap-y-12 gap-x-8 md:gap-x-10">
+        <div className="mx-auto max-w-5xl grid grid-cols-2 md:grid-cols-4 gap-y-12 gap-x-8 md:gap-x-4">
           {/* Get Around */}
           <div>
             <h3 className="label text-[#33302A] text-[0.72rem] tracking-[0.22em] mb-5">Get Around</h3>
