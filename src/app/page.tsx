@@ -125,16 +125,16 @@ export default function Home() {
       {/* ─── Numbered 01/02/03 navigation teaser ─── */}
       <section className="grid md:grid-cols-3">
         {[
-          { n: "01", pre: "Explore", cap: "SERVICES", href: "/services", img: LIVE.rachelAlexPanel },
-          { n: "02", pre: "About the", cap: "FLORIST", href: "/about", img: LIVE.navFlorist },
-          { n: "03", pre: "The", cap: "PORTFOLIO", href: "/portfolio", img: LIVE.navPortfolio },
+          { n: "01", pre: "Explore", cap: "SERVICES", href: "/services", img: LIVE.rachelAlexMain },
+          { n: "02", pre: "The", cap: "PORTFOLIO", href: "/portfolio", img: LIVE.navPortfolio },
+          { n: "03", pre: "About the", cap: "FLORIST", href: "/about", img: LIVE.navFlorist },
         ].map((panel) => (
           <Link key={panel.n} href={panel.href} className="group relative aspect-[3/4] md:aspect-auto md:h-[72vh] overflow-hidden block">
             <Image src={panel.img} alt={panel.cap} fill sizes="33vw" className="object-cover transition-transform duration-[1200ms] group-hover:scale-105" />
-            <div className="absolute inset-0 bg-[#17130F]/30 group-hover:bg-[#17130F]/40 transition-colors" />
-            <span className="absolute bottom-5 left-5 folio text-white/85">{panel.n}</span>
+            <div className="absolute inset-0 bg-[#17130F]/0 group-hover:bg-[#17130F]/40 transition-colors duration-500" />
+            <span className="absolute bottom-5 left-5 folio text-white/0 group-hover:text-white/85 transition-colors duration-500">{panel.n}</span>
             <div className="absolute inset-0 flex items-center justify-center text-center px-4">
-              <h3 className="text-white leading-[1.05]" style={{ fontSize: "clamp(26px, 3.2vw, 42px)" }}>
+              <h3 className="text-white leading-[1.05] opacity-0 group-hover:opacity-100 transition-opacity duration-500" style={{ fontSize: "clamp(26px, 3.2vw, 42px)" }}>
                 <span className="font-times-italic italic font-light block">{panel.pre}</span>
                 <span className="ed-display block">{panel.cap}</span>
               </h3>
