@@ -272,10 +272,10 @@ export const PORTFOLIO_GROUPS: { label: string; images: string[] }[] = [
 // closing note rather than another dense, mixed-tone grid.
 export const FOOTER_STRIP: string[] = [
   `${L}9a8a79-zc-398.jpg`,
-  `${P}galleries/taylor-ethan/te_16.jpg`,
-  `${L}466036-kalila-and-amp-david-493.jpg`,
   `${L}7344fa-rachelalex-350.jpg`,
-  `${P}galleries/maggie-billy/mb_04.jpg`,
+  `${P}5b8615-maggie_and_billywedding_maggie_and_billy_0801.jpg`,
+  `${P}galleries/portfolio-hero/ph_06.jpg`,
+  `${P}galleries/portfolio-hero/ph_09.jpg`,
 ];
 
 // Shared external links (already in the original repo)
