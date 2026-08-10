@@ -120,7 +120,7 @@ export default function Footer() {
             <p className="font-sans-pf text-[13px] text-[#33302A]/70 leading-relaxed mb-5">
               To create dynamic floral designs that highlight our happy couple&apos;s style and story.
             </p>
-            <div className="mt-4">
+            <div className="mt-10">
               <p className="font-times-italic italic text-[#33302A]/70 text-[15px] leading-none mb-1">xo,</p>
               <p className="font-galanthia text-[#33302A] text-[56px] leading-none -ml-1">
                 Prose Florals
