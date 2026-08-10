@@ -121,7 +121,7 @@ export const LIVE = {
 
   // Homepage Services/Florist/Portfolio nav panels — user-picked.
   navServices: `${L}2f90df-eawedding-5351.jpg`,
-  navFlorist: `${P}b01519-20240907_wilczynski_mees_012709.jpg`,
+  navFlorist: `${P}2e514f-frances_clayton-27_websize.jpg`,
   navPortfolio: `${P}galleries/portfolio-hero/ph_01.jpg`,
   bonoMain: `${L}402443-bono-newlyweds-43-websize.jpg`,
   bonoDetail: `${L}a32b59-bono-newlyweds-53-websize.jpg`,
