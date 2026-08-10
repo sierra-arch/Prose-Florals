@@ -79,7 +79,7 @@ export default function Home() {
           from the live site. ─── */}
       <section className="section-y-lg container-wide pr-6 md:pr-14 lg:pr-24">
         <div className="grid md:grid-cols-2 gap-x-20 lg:gap-x-28 gap-y-10 items-start">
-          <RotatingPair pairs={intentionPairs} />
+          <RotatingPair pairs={intentionPairs} interval={2250} />
           <div className="relative max-w-lg md:pt-16">
             <h2 className="ed-display text-[#33302A] leading-[1.02] mb-8" style={{ fontSize: "clamp(38px, 4.6vw, 66px)" }}>
               FLOWERS <span className="font-times-italic italic font-light">for</span> YOUR STORY
