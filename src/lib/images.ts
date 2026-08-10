@@ -103,6 +103,12 @@ export const LIVE = {
   charlesRiverDetail: `${L}253f93-kalila-and-amp-david-430.jpg`,
   zoeChapmanMain2: `${L}d4629e-zc-495.jpg`,
   zoeChapmanDetail2: `${L}2dc648-zc-250.jpg`,
+
+  // User-picked from the full photo library, via the grouped photo picker.
+  emilyChrisMain: `${P}galleries/emily-chris/ec_12.jpg`,
+  emilyChrisDetail: `${P}galleries/emily-chris/ec_20.jpg`,
+  bonoMain: `${L}402443-bono-newlyweds-43-websize.jpg`,
+  bonoDetail: `${L}a32b59-bono-newlyweds-53-websize.jpg`,
   windowSeatMain: `${L}14c985-img-1972.jpg`,
   windowSeatDetail: `${L}080afe-img-1954.jpg`,
 };
