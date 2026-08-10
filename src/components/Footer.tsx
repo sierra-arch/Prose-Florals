@@ -30,7 +30,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#F4F1E8] border-t border-[#D8D2C2]">
       {/* Top: 4 columns, centered with generous margins */}
-      <div className="container-pf pt-20 md:pt-28 pb-14">
+      <div className="container-pf pt-10 md:pt-14 pb-14">
         <div className="mx-auto max-w-5xl grid grid-cols-2 md:grid-cols-4 gap-y-12 gap-x-8 md:gap-x-4">
           {/* Get Around */}
           <div>
