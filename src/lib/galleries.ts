@@ -128,10 +128,10 @@ export const getGallery = (slug: string) => GALLERIES.find((g) => g.slug === slu
 
 // Cover thumbnails for the portfolio index (first photo of each gallery)
 export const GALLERY_COVERS: Record<string, string> = {
-  "taylor-ethan": `${G}/taylor-ethan/te_04.jpg`,
-  "emily-chris": `${G}/emily-chris/ec_02.jpg`,
+  "taylor-ethan": `${G}/taylor-ethan/te_16.jpg`,
+  "emily-chris": `${G}/emily-chris/ec_12.jpg`,
   "maggie-billy": `${G}/maggie-billy/mb_04.jpg`,
-  "zoe-chapman": `${L}6f13ce-zc-153.jpg`,
+  "zoe-chapman": `${L}1b7500-zc-13.jpg`,
 };
 
 // Portfolio hero carousel images — curated to 6 of the original 10. The
@@ -148,10 +148,10 @@ export const PORTFOLIO_HERO: string[] = [heroAll[0], heroAll[3], heroAll[5], her
 export type PortfolioCard = { venueLabel: string; tagline: string; photo: string; slug?: string };
 
 export const FEATURED_WEDDINGS: PortfolioCard[] = [
-  { venueLabel: "THE REGATTA PLACE", tagline: "Zoë + Chapman - Bright, Sculptural Summer Wedding with Mounds of Flavor.", photo: LIVE.zoeChapman, slug: "zoe-chapman" },
+  { venueLabel: "THE REGATTA PLACE", tagline: "Zoë + Chapman - Bright, Sculptural Summer Wedding with Mounds of Flavor.", photo: `${L}1b7500-zc-13.jpg`, slug: "zoe-chapman" },
   { venueLabel: "COMMANDER'S MANSION", tagline: "Frances + Clayton - Muted Rainbow Hues paired with Historic Architecture.", photo: LIVE.francesClayton },
-  { venueLabel: "CHASE YOUNG GALLERY", tagline: "Taylor + Ethan - Soft & Romantic Understated Elegance", photo: `${G}/taylor-ethan/te_04.jpg`, slug: "taylor-ethan" },
-  { venueLabel: "THE DENNIS INN", tagline: "Emily + Chris - Soft, Dreamy Pastels and Floral Patterns.", photo: `${G}/emily-chris/ec_02.jpg`, slug: "emily-chris" },
+  { venueLabel: "CHASE YOUNG GALLERY", tagline: "Taylor + Ethan - Soft & Romantic Understated Elegance", photo: `${G}/taylor-ethan/te_16.jpg`, slug: "taylor-ethan" },
+  { venueLabel: "THE DENNIS INN", tagline: "Emily + Chris - Soft, Dreamy Pastels and Floral Patterns.", photo: `${G}/emily-chris/ec_12.jpg`, slug: "emily-chris" },
   { venueLabel: "ROCKPORT ART ASSOCIATION", tagline: "Maggie + Billy - A Vibrant Palette for a Coastal Wedding.", photo: `${G}/maggie-billy/mb_04.jpg`, slug: "maggie-billy" },
   { venueLabel: "THE ESTATE AT MORAINE FARM", tagline: "Anneke + Matt - Warm Summer Wedding with Bright Wildflowers.", photo: LIVE.annekeMatt },
   { venueLabel: "THE CONNEMARA HOUSE", tagline: "Abigail + Schaeffer - Cottage Garden Charm with a Soft, Romantic palette.", photo: LIVE.abigailSchaeffer },
