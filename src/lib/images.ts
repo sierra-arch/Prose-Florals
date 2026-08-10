@@ -272,8 +272,8 @@ export const PORTFOLIO_GROUPS: { label: string; images: string[] }[] = [
 // closing note rather than another dense, mixed-tone grid.
 export const FOOTER_STRIP: string[] = [
   `${L}9a8a79-zc-398.jpg`,
-  `${P}galleries/portfolio-hero/ph_06.jpg`,
   `${L}7344fa-rachelalex-350.jpg`,
+  `${P}galleries/portfolio-hero/ph_06.jpg`,
   `${P}galleries/portfolio-hero/ph_09.jpg`,
   `${L}b4bf48-rachelalex-476.jpg`,
 ];
