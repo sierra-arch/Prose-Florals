@@ -56,7 +56,7 @@ export default function Footer() {
           {/* Get Around */}
           <div>
             <h3 className="label text-[#33302A] text-[0.72rem] tracking-[0.22em] mb-5">Get Around</h3>
-            <ul className="space-y-1.5">
+            <ul className="space-y-0.5">
               {getAround.map((l) => (
                 <li key={l.label}>
                   <Link href={l.href} className="font-sans-pf font-medium text-[13.5px] text-[#33302A]/70 hover:text-[#3B4127] transition-colors">
@@ -70,7 +70,7 @@ export default function Footer() {
           {/* Links */}
           <div>
             <h3 className="label text-[#33302A] text-[0.72rem] tracking-[0.22em] mb-5">Links</h3>
-            <ul className="space-y-1.5">
+            <ul className="space-y-0.5">
               {links.map((l) =>
                 l.ext ? (
                   <li key={l.label}>
