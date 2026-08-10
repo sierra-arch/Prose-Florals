@@ -167,7 +167,7 @@ export default function Footer() {
         ))}
       </div>
 
-      <div className="bg-[#3B4127] py-6">
+      <div className="bg-[#3B4127] py-3">
         <p className="container-pf font-sans-pf text-[11px] text-white/70 text-right tracking-wide">
           Prose Florals LLC, {new Date().getFullYear()}. All rights reserved.
         </p>
