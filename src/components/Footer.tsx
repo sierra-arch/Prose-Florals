@@ -167,9 +167,11 @@ export default function Footer() {
         ))}
       </div>
 
-      <p className="font-sans-pf text-[11px] text-[#33302A]/40 py-6 text-center tracking-wide">
-        Prose Florals LLC, {new Date().getFullYear()}. All rights reserved.
-      </p>
+      <div className="bg-[#3B4127] py-6">
+        <p className="container-pf font-sans-pf text-[11px] text-white/70 text-right tracking-wide">
+          Prose Florals LLC, {new Date().getFullYear()}. All rights reserved.
+        </p>
+      </div>
 
       <style jsx>{`
         @keyframes marquee {
