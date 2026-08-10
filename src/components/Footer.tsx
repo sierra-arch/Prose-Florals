@@ -29,29 +29,8 @@ const stripImgs = FOOTER_STRIP;
 export default function Footer() {
   return (
     <footer className="bg-[#F4F1E8] border-t border-[#D8D2C2]">
-      {/* Top: brand line + 4 columns, centered with generous margins */}
+      {/* Top: 4 columns, centered with generous margins */}
       <div className="container-pf pt-20 md:pt-28 pb-14">
-        {/* Centered wordmark + tagline + back-to-top */}
-        <div className="mx-auto max-w-5xl relative text-center mb-14 md:mb-16">
-          <button
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="hidden md:flex flex-col items-center gap-2 absolute top-1/2 -translate-y-1/2 right-0 text-[#33302A]/55 hover:text-[#3B4127] transition-colors"
-            aria-label="Back to top"
-          >
-            <svg width="18" height="40" viewBox="0 0 26 60" fill="none">
-              <path d="M13 60V2M13 2L2 13M13 2L24 13" stroke="currentColor" strokeWidth="1.2" />
-            </svg>
-            <span className="label text-[10px] tracking-[0.2em]">Top</span>
-          </button>
-          <p className="ed-display text-[#33302A]" style={{ fontSize: "clamp(36px, 5vw, 68px)" }}>PROSE FLORALS</p>
-          <p className="font-times-italic italic text-[#33302A]/60 mt-2" style={{ fontSize: "clamp(15px, 1.6vw, 19px)" }}>
-            for the romantics — Boston, MA
-          </p>
-        </div>
-
-        {/* thin divider rule between brand + columns */}
-        <div className="mx-auto max-w-5xl h-px bg-[#D8D2C2] mb-12 md:mb-16" />
-
         <div className="mx-auto max-w-5xl grid grid-cols-2 md:grid-cols-4 gap-y-12 gap-x-8 md:gap-x-4">
           {/* Get Around */}
           <div>
