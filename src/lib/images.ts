@@ -122,7 +122,7 @@ export const LIVE = {
   // Homepage Services/Florist/Portfolio nav panels — user-picked.
   navServices: `${L}09a72f-rachelalex-487.jpg`,
   navFlorist: `${P}2e514f-frances_clayton-27_websize.jpg`,
-  navPortfolio: `${L}bfa0d2-zc-525.jpg`,
+  navPortfolio: `${P}galleries/taylor-ethan/te_04.jpg`,
 
   // Frances + Clayton — sent directly by the user (not from the picker).
   francesClaytonHug: `${L}ff7bba-frances-clayton-hug.jpg`,
