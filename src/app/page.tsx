@@ -125,7 +125,7 @@ export default function Home() {
       {/* ─── Numbered 01/02/03 navigation teaser ─── */}
       <section className="grid md:grid-cols-3">
         {[
-          { n: "01", pre: "Explore", cap: "SERVICES", href: "/services", img: LIVE.rachelAlexMain },
+          { n: "01", pre: "Explore", cap: "SERVICES", href: "/services", img: LIVE.navServices },
           { n: "02", pre: "The", cap: "PORTFOLIO", href: "/portfolio", img: LIVE.navPortfolio },
           { n: "03", pre: "About the", cap: "FLORIST", href: "/about", img: LIVE.navFlorist },
         ].map((panel) => (
