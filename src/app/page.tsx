@@ -219,7 +219,7 @@ export default function Home() {
           monogram straddling the photo/color seam, matching the live site. ─── */}
       <section className="relative grid md:grid-cols-2">
         <div className="relative aspect-[4/5] md:aspect-auto md:min-h-[600px]">
-          <Image src={IMG.behindTheBlooms} alt="Sierra Bettis, founder of Prose Florals" fill sizes="50vw" className="object-cover" />
+          <Image src={IMG.behindTheBlooms} alt="Sierra Bettis, founder of Prose Florals" fill sizes="50vw" className="object-cover object-top" />
         </div>
         <Monogram className="hidden md:block absolute top-10 left-1/2 -translate-x-1/2 w-12 h-14 text-[#F4F1E8]/80 z-10" />
         <div className="bg-[#2A2E1B] flex flex-col justify-center px-8 md:px-20 py-20 md:py-32 relative">
