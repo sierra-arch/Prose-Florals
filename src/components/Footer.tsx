@@ -135,9 +135,21 @@ export default function Footer() {
         <div className="flex whitespace-nowrap animate-[marquee_28s_linear_infinite]">
           {Array.from({ length: 2 }).map((_, k) => (
             <div key={k} className="flex items-center shrink-0">
-              {["Follow Along on Instagram", "Download the Free Guide", "Reserve Your Date"].map((t, i) => (
-                <span key={i} className="label text-[#33302A]/80 mx-8 text-[15px] tracking-[0.22em]">
-                  {t} <span className="mx-4 text-[#33302A]/30">/</span>
+              {[
+                { t: "Follow Along on Instagram", href: INSTAGRAM },
+                { t: "Download the Free Guide", href: GUIDE },
+                { t: "Reserve Your Date", href: INQUIRY },
+              ].map((item, i) => (
+                <span key={i} className="flex items-center mx-4">
+                  <a
+                    href={item.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="label text-[#33302A]/80 hover:text-[#3B4127] transition-colors text-[15px] tracking-[0.22em]"
+                  >
+                    {item.t}
+                  </a>
+                  <span className="mx-4 text-[#33302A]/30">/</span>
                 </span>
               ))}
             </div>
