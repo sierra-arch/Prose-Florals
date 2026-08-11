@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Monogram from "@/components/Monogram";
-import { INQUIRY, INSTAGRAM, PINTEREST, IMG } from "@/lib/images";
+import { INQUIRY, INSTAGRAM, PINTEREST, GUIDE, IMG } from "@/lib/images";
 
 const leftLinks = [
   { label: "Home", href: "/" },
@@ -18,7 +18,17 @@ const rightLinks = [
   { label: "Reviews", href: "/reviews" },
 ];
 
-const allLinks = [...leftLinks, ...rightLinks, { label: "Contact", href: "/contact" }];
+// Menu-overlay link list — matches the live site's takeover nav exactly
+// (no "Home", adds "Free Guide", "Reviews" relabeled "Compliments").
+const menuLinks = [
+  { label: "About", href: "/about" },
+  { label: "Services", href: "/services" },
+  { label: "Portfolio", href: "/portfolio" },
+  { label: "Experience", href: "/experience" },
+  { label: "Compliments", href: "/reviews" },
+  { label: "Free Guide", href: GUIDE, ext: true },
+  { label: "Inquire", href: INQUIRY, ext: true },
+];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -117,49 +127,64 @@ export default function Navbar() {
         </div>
       </header>
 
-      {/* Full-screen overlay menu — monogram, stacked links, small photo
-          teaser, and social icons, matching the live site's takeover nav. */}
+      {/* Full-screen overlay menu — monogram + photo teaser on the left,
+          stacked link list on the right, matching the live site's takeover
+          nav layout exactly. */}
       {open && (
-        <div className="fixed inset-0 z-[60] bg-[#3B4127] flex flex-col items-center justify-center gap-6 animate-[fadeUp_0.4s_ease] overflow-y-auto py-16">
+        <div className="fixed inset-0 z-[60] bg-[#3B4127] animate-[fadeUp_0.4s_ease] overflow-y-auto">
           <button
             onClick={() => setOpen(false)}
-            className="absolute top-7 right-8 text-[#F4F1E8] text-3xl font-light leading-none"
+            className="absolute top-7 right-8 text-[#F4F1E8] text-3xl font-light leading-none z-10"
             aria-label="Close menu"
           >
             &times;
           </button>
-          <Monogram className="w-10 h-12 text-[#C9B7AE] mb-1" />
-          <p className="label text-[#C9B7AE] mb-2">Prose Florals</p>
-          {allLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              onClick={() => setOpen(false)}
-              className="font-magnolia text-[#F4F1E8] text-3xl md:text-4xl tracking-[0.06em] hover:text-[#C9B7AE] transition-colors"
-            >
-              {link.label}
-            </Link>
-          ))}
-          <a
-            href={INQUIRY}
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={() => setOpen(false)}
-            className="font-times-italic italic text-[#C9B7AE] mt-3 text-xl"
-          >
-            Inquire
-          </a>
+          <div className="min-h-full grid md:grid-cols-[minmax(0,340px)_1fr] gap-10 md:gap-16 items-center px-8 md:px-16 py-24">
+            {/* Left: monogram + photo teaser */}
+            <div className="flex flex-col items-center md:items-start">
+              <Monogram className="w-24 h-28 md:w-32 md:h-36 text-[#F4F1E8]/85 mb-8 md:mb-10" />
+              <div className="relative w-full max-w-[280px] aspect-[4/5] overflow-hidden">
+                <Image src={IMG.bouquetLush} alt="" fill sizes="280px" className="object-cover" />
+              </div>
+              <p className="label text-[#F4F1E8] mt-5 text-center md:text-left w-full">Boston Area Events</p>
+              <div className="flex items-center gap-5 mt-3">
+                <a href={INSTAGRAM} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-[#F4F1E8]/80 hover:text-[#F4F1E8] transition-colors">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+                </a>
+                <a href={PINTEREST} target="_blank" rel="noopener noreferrer" aria-label="Pinterest" className="text-[#F4F1E8]/80 hover:text-[#F4F1E8] transition-colors">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4"><circle cx="12" cy="12" r="10"/><path d="M12 7c-2.2 0-3.6 1.4-3.6 3.2 0 .9.4 1.9 1.2 2.2.1 0 .2 0 .2-.1l.2-.8c0-.1 0-.2-.1-.3-.3-.4-.5-.9-.5-1.4 0-1.4 1-2.6 2.7-2.6 1.5 0 2.3.9 2.3 2.1 0 1.6-.7 2.9-1.7 2.9-.6 0-1-.5-.9-1.1.2-.7.5-1.5.5-2 0-.5-.3-.9-.8-.9-.6 0-1.1.7-1.1 1.6 0 .6.2 1 .2 1l-.8 3.4c-.2.9-.1 2.2 0 2.3 0 .1.1.1.2 0 .1-.1.9-1.3 1.2-2.2l.4-1.6c.2.4.9.8 1.6.8 2.1 0 3.5-1.9 3.5-4.4C16.6 8.7 14.9 7 12 7z" fill="currentColor" stroke="none"/></svg>
+                </a>
+              </div>
+            </div>
 
-          <div className="relative w-20 h-20 mt-4 overflow-hidden opacity-80">
-            <Image src={IMG.bouquetLush} alt="" fill sizes="80px" className="object-cover" />
-          </div>
-          <div className="flex items-center gap-6 mt-1">
-            <a href={INSTAGRAM} target="_blank" rel="noopener noreferrer" className="label text-[#F4F1E8]/80 hover:text-[#F4F1E8] transition-colors">
-              Instagram
-            </a>
-            <a href={PINTEREST} target="_blank" rel="noopener noreferrer" className="label text-[#F4F1E8]/80 hover:text-[#F4F1E8] transition-colors">
-              Pinterest
-            </a>
+            {/* Right: stacked link list */}
+            <nav className="flex flex-col items-center md:items-start gap-1 md:gap-2">
+              {menuLinks.map((link) =>
+                link.ext ? (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setOpen(false)}
+                    className="font-magnolia text-[#F4F1E8] leading-[1.15] tracking-[0.02em] hover:text-[#C9B7AE] transition-colors"
+                    style={{ fontSize: "clamp(32px, 5vw, 56px)" }}
+                  >
+                    {link.label.toUpperCase()}
+                  </a>
+                ) : (
+                  <Link
+                    key={link.label}
+                    href={link.href}
+                    onClick={() => setOpen(false)}
+                    className="font-magnolia text-[#F4F1E8] leading-[1.15] tracking-[0.02em] hover:text-[#C9B7AE] transition-colors"
+                    style={{ fontSize: "clamp(32px, 5vw, 56px)" }}
+                  >
+                    {link.label.toUpperCase()}
+                  </Link>
+                )
+              )}
+            </nav>
           </div>
         </div>
       )}

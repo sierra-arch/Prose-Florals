@@ -22,7 +22,7 @@ export default function ReviewsPage() {
     <main className="bg-[#F4F1E8]">
       {/* LOVE NOTES intro */}
       <section className="title-zone container-pf text-center">
-        <h1 className="font-magnolia text-[#33302A] leading-[0.9]" style={{ fontSize: "clamp(64px, 15vw, 200px)" }}>
+        <h1 className="font-magnolia text-[#33302A] leading-[0.9] whitespace-nowrap" style={{ fontSize: "clamp(36px, 8vw, 110px)" }}>
           LOVE NOTES
         </h1>
         <p className="label text-[#33302A]/70 mt-8">From Our Lovely Past Clients</p>

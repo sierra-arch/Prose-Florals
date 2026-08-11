@@ -38,8 +38,8 @@ export default function ParallaxRows({ row1, row2 }: { row1: string[]; row2: str
   return (
     <div ref={ref} className="absolute inset-0">
       <div
-        className="absolute top-0 left-0 h-1/2 flex will-change-transform"
-        style={{ width: "130%", transform: `translateX(${progress * -8}vw)` }}
+        className="absolute top-0 h-1/2 flex will-change-transform"
+        style={{ width: "150%", left: "-25%", transform: `translateX(${progress * -8}vw)` }}
       >
         {row1.map((src, i) => (
           <div key={i} className="relative shrink-0 h-full" style={{ width: `${100 / row1.length}%` }}>
@@ -48,8 +48,8 @@ export default function ParallaxRows({ row1, row2 }: { row1: string[]; row2: str
         ))}
       </div>
       <div
-        className="absolute bottom-0 left-0 h-1/2 flex will-change-transform"
-        style={{ width: "130%", transform: `translateX(${progress * 8}vw)` }}
+        className="absolute bottom-0 h-1/2 flex will-change-transform"
+        style={{ width: "150%", left: "-25%", transform: `translateX(${progress * 8}vw)` }}
       >
         {row2.map((src, i) => (
           <div key={i} className="relative shrink-0 h-full" style={{ width: `${100 / row2.length}%` }}>
