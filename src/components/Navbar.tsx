@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Monogram from "@/components/Monogram";
-import { INQUIRY, INSTAGRAM, PINTEREST, GUIDE, IMG } from "@/lib/images";
+import { INQUIRY, INSTAGRAM, PINTEREST, GUIDE, LIVE } from "@/lib/images";
 
 const leftLinks = [
   { label: "Home", href: "/" },
@@ -144,7 +144,7 @@ export default function Navbar() {
             <div className="flex flex-col items-center md:items-start">
               <Monogram className="w-24 h-28 md:w-32 md:h-36 text-[#F4F1E8]/85 mb-8 md:mb-10" />
               <div className="relative w-full max-w-[280px] aspect-[4/5] overflow-hidden">
-                <Image src={IMG.bouquetLush} alt="" fill sizes="280px" className="object-cover" />
+                <Image src={LIVE.menuPhoto} alt="" fill sizes="280px" className="object-cover" />
               </div>
               <p className="label text-[#F4F1E8] mt-5 text-center md:text-left w-full">Boston Area Events</p>
               <div className="flex items-center gap-5 mt-3">

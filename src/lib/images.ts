@@ -128,6 +128,7 @@ export const LIVE = {
   francesClaytonHug: `${L}ff7bba-frances-clayton-hug.jpg`,
   francesClaytonBridesmaids: `${L}d7a1aa-frances-clayton-bridesmaids.jpg`,
   francesClaytonToast: `${L}92f275-frances-clayton-toast.jpg`,
+  menuPhoto: `${L}3da813-rachelalex-743.jpg`,
   bonoMain: `${L}402443-bono-newlyweds-43-websize.jpg`,
   bonoDetail: `${L}a32b59-bono-newlyweds-53-websize.jpg`,
   windowSeatMain: `${L}14c985-img-1972.jpg`,

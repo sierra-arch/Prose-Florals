@@ -22,17 +22,6 @@ export default function AboutPage() {
 
       <section className="container-wide pt-10 pb-4 md:pb-8">
         <div className="grid grid-cols-2 md:grid-cols-3 gap-5 md:gap-8 items-start">
-          <Reveal className="relative aspect-[3/4] md:mt-10 plate">
-            <Image src={LIVE.aboutHeroLeft} alt="Colorful bridal party celebrating" fill sizes="33vw" className="object-cover" />
-          </Reveal>
-          <Reveal className="relative aspect-[3/4] plate" delay={120}>
-            <Image src={LIVE.aboutHeroMiddle} alt="Prose Florals delivering wrapped bouquets" fill sizes="33vw" className="object-cover" />
-          </Reveal>
-          <Reveal className="relative aspect-[3/4] md:mt-16 plate" delay={240}>
-            <Image src={LIVE.aboutHeroRight} alt="Sierra arranging florals" fill sizes="33vw" className="object-cover" />
-          </Reveal>
-        </div>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-5 md:gap-8 items-start mt-5 md:mt-8">
           <Reveal className="relative aspect-[4/5] plate">
             <Image src={LIVE.collageA} alt="Prose Florals wedding moment" fill sizes="33vw" className="object-cover" />
           </Reveal>
