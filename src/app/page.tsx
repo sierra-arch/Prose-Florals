@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import Monogram from "@/components/Monogram";
-import TestimonialCarousel from "@/components/TestimonialCarousel";
+import HomeTestimonials from "@/components/HomeTestimonials";
 import RotatingPair, { type PhotoPair } from "@/components/RotatingPair";
 import ParallaxRows from "@/components/ParallaxRows";
 import { IMG, LIVE, INQUIRY } from "@/lib/images";
@@ -43,10 +43,34 @@ const intentionPairs: PhotoPair[] = [
 
 const homeTestimonials = [
   {
-    quote: "From start to finish I had the most wonderful experience with Prose Florals. They were exactly what we had envisioned, maybe even better!",
-    author: "Meaghan & Abel",
-    venue: "La Brassa",
-    photo: IMG.coupleWalk,
+    quote: "Before Prose Florals I could've cared less about my flowers but thanks to Sierra and her team my flowers were and still are one of my most favorite things about my special day.",
+    author: "Dominique & Frank",
+    venue: "Ocean Cliff",
+    photo: LIVE.testimonialBg1,
+  },
+  {
+    quote: "I had a wonderful experience with Prose Florals! Really unparalleled. Creative and flexible, she really takes the time to understand your vision.",
+    author: "Adi & Shuhan",
+    venue: "Artists for Humanity",
+    photo: LIVE.testimonialBg2,
+  },
+  {
+    quote: "Working with Prose Florals was nothing short of a dream! Their floral artistry is downright stunning — each arrangement felt like a work of magic.",
+    author: "Dominique Holliday, founder of Castillo Holliday Photo and Film",
+    venue: "Loring Greenough House",
+    photo: IMG.coupleKiss,
+  },
+  {
+    quote: "I would give Prose Florals 10 stars if I could! From our first meeting all the way up to our wedding day I was so happy I chose them as my florist.",
+    author: "Teressa & Kevin",
+    venue: "Indian Pond Country Club",
+    photo: IMG.coupleSunset,
+  },
+  {
+    quote: "They understood our vision immediately, and put together an amazing proposal based on our budget and needs. You can tell that she has a genuine passion for her work, and that she LOVES what she does.",
+    author: "Laurel & Ty",
+    venue: "The Pierce House",
+    photo: LIVE.bigQuoteBg,
   },
 ];
 
@@ -237,6 +261,10 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ─── TESTIMONIAL — circular photo + arrows, matching the live site's
+          homepage carousel (tabs are reserved for the Experience page). ─── */}
+      <HomeTestimonials items={homeTestimonials} />
+
       {/* ─── OUR APPROACH — pure text statement, no photos. Confirmed by
           the live site: this is a quiet typographic beat, not another
           collage moment. ─── */}
@@ -250,10 +278,6 @@ export default function Home() {
           Our approach is to present stunning pieces by combining our client&apos;s vision boards, modern design aspects, and a little dramatic flare.
         </p>
       </section>
-
-      {/* ─── TESTIMONIAL — circular photo + arrows, matching the live site's
-          homepage carousel (tabs are reserved for the Experience page). ─── */}
-      <TestimonialCarousel items={homeTestimonials} showTabs={false} />
 
       {/* ─── EXPLORE CTA — washed PALE photo collage behind display type,
           matching the live site's light, bleached-out treatment (not a
@@ -278,7 +302,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-[#F4F1E8]/35" />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
           <h2 className="font-times-italic italic text-[#33302A] leading-[1]" style={{ fontSize: "clamp(48px, 9.5vw, 148px)" }}>EXPLORE</h2>
-          <p className="ed-display text-[#33302A] leading-[1.05]" style={{ fontSize: "clamp(42px, 8.5vw, 130px)", fontWeight: 700 }}>Prose Florals</p>
+          <p className="ed-display text-[#33302A] leading-[1.05]" style={{ fontSize: "clamp(42px, 8.5vw, 130px)", fontWeight: 700 }}>PROSE FLORALS</p>
           <h2 className="font-times-italic italic text-[#33302A] leading-[1]" style={{ fontSize: "clamp(48px, 9.5vw, 148px)" }}>WEDDINGS</h2>
         </div>
       </section>
