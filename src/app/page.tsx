@@ -257,7 +257,7 @@ export default function Home() {
       {/* ─── EXPLORE CTA — washed PALE photo collage behind display type,
           matching the live site's light, bleached-out treatment (not a
           dark moody wash). ─── */}
-      <section className="relative grid grid-cols-3 md:grid-cols-5 grid-rows-2 gap-2 md:gap-3 p-2 md:p-3 h-[80vh] md:h-[92vh] overflow-hidden bg-[#F4F1E8]">
+      <section className="relative grid grid-cols-3 md:grid-cols-5 grid-rows-2 gap-0 h-[80vh] md:h-[92vh] overflow-hidden bg-[#F4F1E8]">
         {[
           IMG.brideMoody,
           IMG.bouquetLush,
