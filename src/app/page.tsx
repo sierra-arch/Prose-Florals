@@ -4,6 +4,7 @@ import Reveal from "@/components/Reveal";
 import Monogram from "@/components/Monogram";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
 import RotatingPair, { type PhotoPair } from "@/components/RotatingPair";
+import ParallaxRows from "@/components/ParallaxRows";
 import { IMG, LIVE, INQUIRY } from "@/lib/images";
 import { GALLERIES, GALLERY_COVERS } from "@/lib/galleries";
 
@@ -257,23 +258,23 @@ export default function Home() {
       {/* ─── EXPLORE CTA — washed PALE photo collage behind display type,
           matching the live site's light, bleached-out treatment (not a
           dark moody wash). ─── */}
-      <section className="relative grid grid-cols-3 md:grid-cols-5 grid-rows-2 gap-0 h-[80vh] md:h-[92vh] overflow-hidden bg-[#F4F1E8]">
-        {[
-          LIVE.zoeChapman,
-          "/images/galleries/taylor-ethan/te_16.jpg",
-          "/images/galleries/emily-chris/ec_12.jpg",
-          "/images/galleries/maggie-billy/mb_04.jpg",
-          LIVE.kalilaDavid,
-          LIVE.rachelAlexMain,
-          LIVE.bonoMain,
-          LIVE.abigailSchaeffer,
-          LIVE.sarahMain,
-          LIVE.ellenMain,
-        ].map((src, i) => (
-          <div key={i} className="relative opacity-70">
-            <Image src={src} alt="" fill sizes="20vw" className="object-cover" />
-          </div>
-        ))}
+      <section className="relative h-[80vh] md:h-[92vh] overflow-hidden bg-[#F4F1E8]">
+        <ParallaxRows
+          row1={[
+            LIVE.zoeChapman,
+            "/images/galleries/taylor-ethan/te_16.jpg",
+            "/images/galleries/emily-chris/ec_12.jpg",
+            "/images/galleries/maggie-billy/mb_04.jpg",
+            LIVE.kalilaDavid,
+          ]}
+          row2={[
+            LIVE.rachelAlexMain,
+            LIVE.bonoMain,
+            LIVE.abigailSchaeffer,
+            LIVE.sarahMain,
+            LIVE.ellenMain,
+          ]}
+        />
         <div className="absolute inset-0 bg-[#F4F1E8]/35" />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
           <h2 className="ed-display text-[#33302A] leading-[1]" style={{ fontSize: "clamp(48px, 9.5vw, 148px)", fontWeight: 700 }}>EXPLORE</h2>
