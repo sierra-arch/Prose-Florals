@@ -254,16 +254,6 @@ export default function Home() {
           homepage carousel (tabs are reserved for the Experience page). ─── */}
       <TestimonialCarousel items={homeTestimonials} showTabs={false} />
 
-      {/* ─── FLAT-LAY INTERLUDE — one composed still-life photo, one line
-          of type. A quiet pause, not another info block. ─── */}
-      <section className="relative h-[60vh] md:h-[74vh] overflow-hidden">
-        <Image src={IMG.flatLay} alt="" fill sizes="100vw" className="object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#17130F]/45 via-transparent to-transparent" />
-        <div className="absolute bottom-10 md:bottom-14 inset-x-0 text-center px-6">
-          <p className="font-galanthia text-[#F4F1E8] text-[32px] md:text-[40px] leading-none">every detail, considered</p>
-        </div>
-      </section>
-
       {/* ─── EXPLORE CTA — washed PALE photo collage behind display type,
           matching the live site's light, bleached-out treatment (not a
           dark moody wash). ─── */}
