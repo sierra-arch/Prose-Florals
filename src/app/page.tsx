@@ -257,13 +257,24 @@ export default function Home() {
       {/* ─── EXPLORE CTA — washed PALE photo collage behind display type,
           matching the live site's light, bleached-out treatment (not a
           dark moody wash). ─── */}
-      <section className="relative grid grid-cols-3 md:grid-cols-6 gap-2 md:gap-3 p-2 md:p-3 h-[60vh] md:h-[72vh] overflow-hidden bg-[#F4F1E8]">
-        {[IMG.brideMoody, IMG.bouquetLush, IMG.coupleWalk, IMG.centerpiece, IMG.brideBrick, IMG.reception].map((src, i) => (
-          <div key={i} className="relative opacity-50">
-            <Image src={src} alt="" fill sizes="16vw" className="object-cover" />
+      <section className="relative grid grid-cols-3 md:grid-cols-5 grid-rows-2 gap-2 md:gap-3 p-2 md:p-3 h-[80vh] md:h-[92vh] overflow-hidden bg-[#F4F1E8]">
+        {[
+          IMG.brideMoody,
+          IMG.bouquetLush,
+          IMG.coupleWalk,
+          IMG.centerpiece,
+          IMG.brideBrick,
+          IMG.reception,
+          IMG.bouquetBold,
+          IMG.coupleEmbrace,
+          IMG.meadowInstall,
+          IMG.bridePortrait,
+        ].map((src, i) => (
+          <div key={i} className="relative opacity-70">
+            <Image src={src} alt="" fill sizes="20vw" className="object-cover" />
           </div>
         ))}
-        <div className="absolute inset-0 bg-[#F4F1E8]/55" />
+        <div className="absolute inset-0 bg-[#F4F1E8]/35" />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
           <h2 className="ed-display text-[#33302A] leading-[1]" style={{ fontSize: "clamp(34px, 6vw, 92px)" }}>EXPLORE</h2>
           <p className="font-times-italic italic text-[#33302A] leading-[1.05]" style={{ fontSize: "clamp(30px, 5.5vw, 82px)" }}>Prose Florals</p>
