@@ -259,16 +259,16 @@ export default function Home() {
           dark moody wash). ─── */}
       <section className="relative grid grid-cols-3 md:grid-cols-5 grid-rows-2 gap-0 h-[80vh] md:h-[92vh] overflow-hidden bg-[#F4F1E8]">
         {[
-          IMG.brideMoody,
-          IMG.bouquetLush,
-          IMG.coupleWalk,
-          IMG.centerpiece,
-          IMG.brideBrick,
-          IMG.reception,
-          IMG.bouquetBold,
-          IMG.coupleEmbrace,
-          IMG.meadowInstall,
-          IMG.bridePortrait,
+          LIVE.zoeChapman,
+          "/images/galleries/taylor-ethan/te_16.jpg",
+          "/images/galleries/emily-chris/ec_12.jpg",
+          "/images/galleries/maggie-billy/mb_04.jpg",
+          LIVE.kalilaDavid,
+          LIVE.rachelAlexMain,
+          LIVE.bonoMain,
+          LIVE.abigailSchaeffer,
+          LIVE.sarahMain,
+          LIVE.ellenMain,
         ].map((src, i) => (
           <div key={i} className="relative opacity-70">
             <Image src={src} alt="" fill sizes="20vw" className="object-cover" />
@@ -276,9 +276,9 @@ export default function Home() {
         ))}
         <div className="absolute inset-0 bg-[#F4F1E8]/35" />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
-          <h2 className="ed-display text-[#33302A] leading-[1]" style={{ fontSize: "clamp(34px, 6vw, 92px)" }}>EXPLORE</h2>
-          <p className="font-times-italic italic text-[#33302A] leading-[1.05]" style={{ fontSize: "clamp(30px, 5.5vw, 82px)" }}>Prose Florals</p>
-          <h2 className="ed-display text-[#33302A] leading-[1]" style={{ fontSize: "clamp(34px, 6vw, 92px)" }}>WEDDINGS</h2>
+          <h2 className="ed-display text-[#33302A] leading-[1]" style={{ fontSize: "clamp(34px, 6vw, 92px)", fontWeight: 700 }}>EXPLORE</h2>
+          <p className="font-times-italic italic text-[#33302A] leading-[1.05]" style={{ fontSize: "clamp(30px, 5.5vw, 82px)", fontWeight: 700 }}>Prose Florals</p>
+          <h2 className="ed-display text-[#33302A] leading-[1]" style={{ fontSize: "clamp(34px, 6vw, 92px)", fontWeight: 700 }}>WEDDINGS</h2>
           <Link href="/portfolio" className="mt-9 eyebrow text-[#33302A] border border-[#33302A]/60 px-9 py-3.5 hover:bg-[#33302A] hover:text-white transition-all duration-300">
             View the Portfolio
           </Link>
