@@ -261,10 +261,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ─── TESTIMONIAL — circular photo + arrows, matching the live site's
-          homepage carousel (tabs are reserved for the Experience page). ─── */}
-      <HomeTestimonials items={homeTestimonials} />
-
       {/* ─── OUR APPROACH — pure text statement, no photos. Confirmed by
           the live site: this is a quiet typographic beat, not another
           collage moment. ─── */}
@@ -306,6 +302,10 @@ export default function Home() {
           <h2 className="font-times-italic italic text-[#33302A] leading-[1]" style={{ fontSize: "clamp(48px, 9.5vw, 148px)" }}>WEDDINGS</h2>
         </div>
       </section>
+
+      {/* ─── TESTIMONIAL — circular photo + arrows, matching the live site's
+          homepage carousel (tabs are reserved for the Experience page). ─── */}
+      <HomeTestimonials items={homeTestimonials} />
 
       {/* ─── INQUIRE CTA — flat, confident olive block ─── */}
       <section className="section-y-lg px-6 text-center bg-[#3B4127]">
