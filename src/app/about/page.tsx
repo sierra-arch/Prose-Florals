@@ -20,20 +20,6 @@ export default function AboutPage() {
         </h1>
       </section>
 
-      <section className="container-wide pt-10 pb-4 md:pb-8">
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-5 md:gap-8 items-start">
-          <Reveal className="relative aspect-[4/5] plate">
-            <Image src={LIVE.collageA} alt="Prose Florals wedding moment" fill sizes="33vw" className="object-cover" />
-          </Reveal>
-          <Reveal delay={100} className="relative aspect-square plate md:mt-6">
-            <Image src={LIVE.collageC} alt="A bright wildflower bouquet" fill sizes="33vw" className="object-cover" />
-          </Reveal>
-          <Reveal delay={200} className="relative aspect-[4/5] plate">
-            <Image src={LIVE.sierraBridesHug} alt="Bridesmaids in mauve gowns" fill sizes="33vw" className="object-cover" />
-          </Reveal>
-        </div>
-      </section>
-
       <section className="section-y container-pf">
         <div className="max-w-2xl mx-auto text-center">
           <p className="font-sans-pf text-[19px] md:text-[21px] text-[#33302A]/75 leading-[1.7]">
