@@ -3,7 +3,6 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Monogram from "@/components/Monogram";
 import { INQUIRY, INSTAGRAM, PINTEREST, GUIDE, LIVE } from "@/lib/images";
 
 const leftLinks = [
@@ -131,7 +130,7 @@ export default function Navbar() {
           stacked link list on the right, matching the live site's takeover
           nav layout exactly. */}
       {open && (
-        <div className="fixed inset-0 z-[60] bg-[#3B4127] animate-[fadeUp_0.4s_ease] overflow-y-auto">
+        <div className="fixed inset-y-0 right-0 z-[60] w-full md:w-[58%] bg-[#3B4127] animate-[fadeUp_0.4s_ease] overflow-y-auto">
           <button
             onClick={() => setOpen(false)}
             className="absolute top-7 right-8 text-[#F4F1E8] text-3xl font-light leading-none z-10"
@@ -140,9 +139,8 @@ export default function Navbar() {
             &times;
           </button>
           <div className="min-h-full grid md:grid-cols-[minmax(0,340px)_1fr] gap-10 md:gap-16 items-center px-8 md:px-16 py-24">
-            {/* Left: monogram + photo teaser */}
+            {/* Left: photo teaser */}
             <div className="flex flex-col items-center md:items-start">
-              <Monogram className="w-24 h-28 md:w-32 md:h-36 text-[#F4F1E8]/85 mb-8 md:mb-10" />
               <div className="relative w-full max-w-[280px] aspect-[4/5] overflow-hidden">
                 <Image src={LIVE.menuPhoto} alt="" fill sizes="280px" className="object-cover" />
               </div>
