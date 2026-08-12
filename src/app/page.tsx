@@ -297,9 +297,9 @@ export default function Home() {
         />
         <div className="absolute inset-0 bg-[#F4F1E8]/35" />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
-          <h2 className="font-times-italic italic text-[#33302A] leading-[1] whitespace-nowrap" style={{ fontSize: "clamp(56px, 13vw, 200px)" }}>EXPLORE</h2>
-          <p className="ed-display text-[#33302A] leading-[1.05] whitespace-nowrap" style={{ fontSize: "clamp(48px, 11.5vw, 175px)", fontWeight: 700 }}>PROSE FLORALS</p>
-          <h2 className="font-times-italic italic text-[#33302A] leading-[1] whitespace-nowrap" style={{ fontSize: "clamp(56px, 13vw, 200px)" }}>WEDDINGS</h2>
+          <h2 className="font-times-italic italic text-[#33302A] leading-[1]" style={{ fontSize: "clamp(48px, 9.5vw, 148px)" }}>EXPLORE</h2>
+          <p className="ed-display text-[#33302A] leading-[1.05]" style={{ fontSize: "clamp(42px, 8.5vw, 130px)", fontWeight: 700 }}>PROSE FLORALS</p>
+          <h2 className="font-times-italic italic text-[#33302A] leading-[1]" style={{ fontSize: "clamp(48px, 9.5vw, 148px)" }}>WEDDINGS</h2>
         </div>
       </section>
 
