@@ -102,7 +102,7 @@ export default function Home() {
           the top of the text column. Wide, even gap between photo and
           text — matching the live site's more generous spacing. Real copy
           from the live site. ─── */}
-      <section className="section-y-lg container-wide pr-6 md:pr-14 lg:pr-24">
+      <section className="section-y-lg container-wide">
         <div className="grid md:grid-cols-2 gap-x-20 lg:gap-x-28 gap-y-10 items-start">
           <RotatingPair pairs={intentionPairs} interval={2250} />
           <div className="relative max-w-lg md:pt-16">
