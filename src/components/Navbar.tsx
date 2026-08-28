@@ -6,7 +6,6 @@ import Image from "next/image";
 import { INQUIRY, INSTAGRAM, PINTEREST, GUIDE, LIVE } from "@/lib/images";
 
 const leftLinks = [
-  { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Portfolio", href: "/portfolio" },
   { label: "Services", href: "/services" },
