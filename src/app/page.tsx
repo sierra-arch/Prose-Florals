@@ -87,7 +87,7 @@ export default function Home() {
       {/* ─── HERO — sits below the fixed header (not behind it), inset
           with the same side padding as the nav, matching the live site. ─── */}
       <section className="relative w-full pt-[92px] px-6 md:px-14">
-        <div className="relative w-full h-[82vh] min-h-[560px] max-w-[1600px] mx-auto">
+        <div className="relative w-full h-[96vh] min-h-[680px] max-w-[1600px] mx-auto">
           <Image src={IMG.heroTwoBrides} alt="Two brides with vibrant bouquets" fill priority sizes="100vw" className="object-cover" />
           <div className="absolute bottom-8 right-8 md:bottom-10 md:right-12 text-right">
             <p className="text-white text-[15px] md:text-[17px] leading-snug" style={{ fontFamily: "var(--font-sans)" }}>
