@@ -31,7 +31,7 @@ export default function Footer() {
     <footer className="bg-[#F4F1E8] border-t border-[#D8D2C2]">
       {/* Top: 4 columns, centered with generous margins */}
       <div className="container-pf pt-10 md:pt-14 pb-14">
-        <div className="mx-auto max-w-5xl grid grid-cols-2 md:grid-cols-4 gap-y-12 gap-x-8 md:gap-x-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-y-12 gap-x-8 md:gap-x-4">
           {/* Get Around */}
           <div>
             <h3 className="label text-[#33302A] text-[0.72rem] tracking-[0.22em] mb-5">Get Around</h3>
@@ -146,8 +146,8 @@ export default function Footer() {
         ))}
       </div>
 
-      <div className="bg-[#3B4127] py-1.5">
-        <p className="container-pf font-sans-pf text-[11px] text-white/70 text-right tracking-wide">
+      <div className="bg-[#3B4127] py-1.5 w-full px-8 md:px-[4.5rem] xl:px-24">
+        <p className="font-sans-pf text-[11px] text-white/70 text-right tracking-wide">
           Prose Florals LLC, {new Date().getFullYear()}. All rights reserved.
         </p>
       </div>
