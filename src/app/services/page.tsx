@@ -140,7 +140,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Weddings band (taupe) */}
-      <section className="grid md:grid-cols-2">
+      <section className="grid md:grid-cols-2 max-w-[1600px] mx-auto">
         <div className="bg-[#C9B7AE] flex flex-col justify-center px-8 md:px-20 py-24 md:py-32">
           <h2 className="display text-[#F4F1E8] mb-8" style={{ fontSize: "clamp(40px, 5vw, 72px)" }}>WEDDINGS</h2>
           <p className="font-sans-pf text-[16px] text-[#F4F1E8]/90 leading-relaxed max-w-md">
@@ -154,7 +154,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Corporate band (olive) */}
-      <section className="grid md:grid-cols-2">
+      <section className="grid md:grid-cols-2 max-w-[1600px] mx-auto">
         <div className="bg-[#3B4127] flex flex-col justify-center px-8 md:px-20 py-24 md:py-32 order-2 md:order-1">
           <h2 className="display text-[#F4F1E8] mb-8" style={{ fontSize: "clamp(40px, 5vw, 72px)" }}>CORPORATE</h2>
           <p className="label text-[#C9B7AE] mb-3">Partnerships &amp; Collaborations</p>

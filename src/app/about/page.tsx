@@ -50,7 +50,7 @@ export default function AboutPage() {
       </section>
 
       {/* ─── OUR STYLE (taupe) ─── */}
-      <section className="grid grid-cols-1 md:grid-cols-2">
+      <section className="grid grid-cols-1 md:grid-cols-2 max-w-[1600px] mx-auto">
         <div className="relative aspect-[4/5] md:aspect-auto">
           <Image src={LIVE.ourStyleBouquet} alt="A white and blue wedding bouquet" fill sizes="50vw" className="object-cover" />
         </div>
@@ -66,7 +66,7 @@ export default function AboutPage() {
       </section>
 
       {/* ─── OUR STORY (white + photo) ─── */}
-      <section className="grid grid-cols-1 md:grid-cols-2">
+      <section className="grid grid-cols-1 md:grid-cols-2 max-w-[1600px] mx-auto">
         <div className="bg-[#F4F1E8] flex flex-col justify-center px-8 md:px-20 py-24 md:py-36">
           <h2 className="text-[#33302A] leading-[0.95] mb-7">
             <span className="font-times-italic italic block" style={{ fontSize: "clamp(44px, 5vw, 78px)" }}>OUR</span>
@@ -82,7 +82,7 @@ export default function AboutPage() {
       </section>
 
       {/* ─── OUR METHOD (dark) ─── */}
-      <section className="grid grid-cols-1 md:grid-cols-2">
+      <section className="grid grid-cols-1 md:grid-cols-2 max-w-[1600px] mx-auto">
         <div className="relative aspect-[4/5] md:aspect-auto md:min-h-[520px] order-1">
           <Image src={IMG.meadowInstall} alt="A lush floral installation by Prose Florals" fill sizes="50vw" className="object-cover" />
         </div>

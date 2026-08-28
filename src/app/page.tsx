@@ -148,7 +148,7 @@ export default function Home() {
       </section>
 
       {/* ─── Numbered 01/02/03 navigation teaser ─── */}
-      <section className="grid md:grid-cols-3">
+      <section className="grid md:grid-cols-3 max-w-[1600px] mx-auto">
         {[
           { n: "01", pre: "Explore", cap: "SERVICES", href: "/services", img: LIVE.navServices },
           { n: "02", pre: "The", cap: "PORTFOLIO", href: "/portfolio", img: LIVE.navPortfolio },
@@ -242,7 +242,7 @@ export default function Home() {
       {/* ─── BEHIND THE BLOOMS — Sierra introduced individually on the
           homepage (Kattie gets equal billing on the About page), with the
           monogram straddling the photo/color seam, matching the live site. ─── */}
-      <section className="relative grid md:grid-cols-2">
+      <section className="relative grid md:grid-cols-2 max-w-[1600px] mx-auto">
         <div className="relative aspect-[4/5] md:aspect-auto md:min-h-[600px]">
           <Image src={IMG.behindTheBlooms} alt="Sierra Bettis, founder of Prose Florals" fill sizes="50vw" className="object-cover" />
         </div>
@@ -278,7 +278,7 @@ export default function Home() {
       {/* ─── EXPLORE CTA — washed PALE photo collage behind display type,
           matching the live site's light, bleached-out treatment (not a
           dark moody wash). ─── */}
-      <section className="relative h-[80vh] md:h-[92vh] overflow-hidden bg-[#F4F1E8]">
+      <section className="relative h-[80vh] md:h-[92vh] overflow-hidden bg-[#F4F1E8] max-w-[1600px] mx-auto">
         <ParallaxRows
           row1={[
             LIVE.zoeChapman,

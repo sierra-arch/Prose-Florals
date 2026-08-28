@@ -86,7 +86,7 @@ export default function ExperiencePage() {
   return (
     <main className="bg-[#F4F1E8]">
       {/* Hero — headline + photo split on dark olive */}
-      <section className="grid md:grid-cols-2 bg-[#3B4127]">
+      <section className="grid md:grid-cols-2 bg-[#3B4127] max-w-[1600px] mx-auto">
         <div className="flex items-center px-8 md:px-16 py-24 md:py-0">
           <h1 className="text-[#F4F1E8] leading-[0.98]" style={{ fontSize: "clamp(48px, 7.5vw, 110px)" }}>
             <span className="display">EMBRACE</span>
@@ -101,7 +101,7 @@ export default function ExperiencePage() {
       </section>
 
       {/* Continuation — intro copy + second photo, same dark band */}
-      <section className="grid md:grid-cols-2 bg-[#3B4127]">
+      <section className="grid md:grid-cols-2 bg-[#3B4127] max-w-[1600px] mx-auto">
         <div className="flex items-center px-8 md:px-16 py-20 md:py-28">
           <div>
             <p className="label text-[#F4F1E8]/60 mb-6">The Prose Florals Experience</p>
