@@ -50,8 +50,8 @@ export default function AboutPage() {
       </section>
 
       {/* ─── OUR STYLE (taupe) ─── */}
-      <section className="grid grid-cols-1 md:grid-cols-2 max-w-[1600px] mx-auto">
-        <div className="relative aspect-[4/5] md:aspect-auto">
+      <section className="grid grid-cols-1 md:grid-cols-2">
+        <div className="relative aspect-[4/5] md:aspect-[4/3]">
           <Image src={LIVE.ourStyleBouquet} alt="A white and blue wedding bouquet" fill sizes="50vw" className="object-cover" />
         </div>
         <div className="bg-[#C9B7AE] flex flex-col justify-center px-8 md:px-20 py-24 md:py-36">
@@ -66,7 +66,7 @@ export default function AboutPage() {
       </section>
 
       {/* ─── OUR STORY (white + photo) ─── */}
-      <section className="grid grid-cols-1 md:grid-cols-2 max-w-[1600px] mx-auto">
+      <section className="grid grid-cols-1 md:grid-cols-2">
         <div className="bg-[#F4F1E8] flex flex-col justify-center px-8 md:px-20 py-24 md:py-36">
           <h2 className="text-[#33302A] leading-[0.95] mb-7">
             <span className="font-times-italic italic block" style={{ fontSize: "clamp(44px, 5vw, 78px)" }}>OUR</span>
@@ -76,14 +76,14 @@ export default function AboutPage() {
             It all started with a pile of wedding magazines and a love of botanical sculpture. We&apos;re a Wedding and Events Florist based in Boston, MA. Passion burns out of everything we do here. Each bloom is carefully selected, every client appreciated, each event prioritized.
           </p>
         </div>
-        <div className="relative aspect-[4/5] md:aspect-auto md:min-h-[520px]">
+        <div className="relative aspect-[4/5] md:aspect-[4/3]">
           <Image src={LIVE.ourStoryCouple} alt="Couple embracing with their wedding bouquet" fill sizes="50vw" className="object-cover" />
         </div>
       </section>
 
       {/* ─── OUR METHOD (dark) ─── */}
-      <section className="grid grid-cols-1 md:grid-cols-2 max-w-[1600px] mx-auto">
-        <div className="relative aspect-[4/5] md:aspect-auto md:min-h-[520px] order-1">
+      <section className="grid grid-cols-1 md:grid-cols-2">
+        <div className="relative aspect-[4/5] md:aspect-[4/3] order-1">
           <Image src={IMG.meadowInstall} alt="A lush floral installation by Prose Florals" fill sizes="50vw" className="object-cover" />
         </div>
         <div className="bg-[#33302A] flex flex-col justify-center px-8 md:px-20 py-24 md:py-36 order-2">

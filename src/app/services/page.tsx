@@ -140,7 +140,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Weddings band (taupe) */}
-      <section className="grid md:grid-cols-2 max-w-[1600px] mx-auto">
+      <section className="grid md:grid-cols-2">
         <div className="bg-[#C9B7AE] flex flex-col justify-center px-8 md:px-20 py-24 md:py-32">
           <h2 className="display text-[#F4F1E8] mb-8" style={{ fontSize: "clamp(40px, 5vw, 72px)" }}>WEDDINGS</h2>
           <p className="font-sans-pf text-[16px] text-[#F4F1E8]/90 leading-relaxed max-w-md">
@@ -148,13 +148,13 @@ export default function ServicesPage() {
           </p>
           <LinkRow />
         </div>
-        <div className="relative aspect-[4/5] md:aspect-auto md:min-h-[560px]">
+        <div className="relative aspect-[4/5] md:aspect-[4/3]">
           <Image src={LIVE.weddingsBand} alt="Bridesmaids in dusty blue holding bouquets" fill sizes="50vw" className="object-cover" />
         </div>
       </section>
 
       {/* Corporate band (olive) */}
-      <section className="grid md:grid-cols-2 max-w-[1600px] mx-auto">
+      <section className="grid md:grid-cols-2">
         <div className="bg-[#3B4127] flex flex-col justify-center px-8 md:px-20 py-24 md:py-32 order-2 md:order-1">
           <h2 className="display text-[#F4F1E8] mb-8" style={{ fontSize: "clamp(40px, 5vw, 72px)" }}>CORPORATE</h2>
           <p className="label text-[#C9B7AE] mb-3">Partnerships &amp; Collaborations</p>
@@ -163,7 +163,7 @@ export default function ServicesPage() {
           </p>
           <LinkRow dark />
         </div>
-        <div className="relative aspect-[4/5] md:aspect-auto md:min-h-[560px] order-1 md:order-2">
+        <div className="relative aspect-[4/5] md:aspect-[4/3] order-1 md:order-2">
           <Image src={LIVE.corporateBand} alt="Wine and a single ranunculus on a table" fill sizes="50vw" className="object-cover" />
         </div>
       </section>

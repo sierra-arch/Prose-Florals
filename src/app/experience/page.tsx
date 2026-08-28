@@ -86,7 +86,7 @@ export default function ExperiencePage() {
   return (
     <main className="bg-[#F4F1E8]">
       {/* Hero — headline + photo split on dark olive */}
-      <section className="grid md:grid-cols-2 bg-[#3B4127] max-w-[1600px] mx-auto">
+      <section className="grid md:grid-cols-2 bg-[#3B4127]">
         <div className="flex items-center px-8 md:px-16 py-24 md:py-0">
           <h1 className="text-[#F4F1E8] leading-[0.98]" style={{ fontSize: "clamp(48px, 7.5vw, 110px)" }}>
             <span className="display">EMBRACE</span>
@@ -95,13 +95,13 @@ export default function ExperiencePage() {
             <span className="display">ROMANCE</span>
           </h1>
         </div>
-        <div className="relative aspect-[4/5] md:aspect-auto md:min-h-[640px]">
+        <div className="relative aspect-[4/5] md:aspect-[4/3]">
           <Image src={LIVE.experienceHero} alt="Bride and groom embracing at a stone archway" fill priority sizes="50vw" className="object-cover" />
         </div>
       </section>
 
       {/* Continuation — intro copy + second photo, same dark band */}
-      <section className="grid md:grid-cols-2 bg-[#3B4127] max-w-[1600px] mx-auto">
+      <section className="grid md:grid-cols-2 bg-[#3B4127]">
         <div className="flex items-center px-8 md:px-16 py-20 md:py-28">
           <div>
             <p className="label text-[#F4F1E8]/60 mb-6">The Prose Florals Experience</p>
@@ -110,7 +110,7 @@ export default function ExperiencePage() {
             </p>
           </div>
         </div>
-        <div className="relative aspect-[4/5] md:aspect-auto md:min-h-[520px]">
+        <div className="relative aspect-[4/5] md:aspect-[4/3]">
           <Image src={LIVE.romanceClose} alt="Bride and groom, veil flowing" fill sizes="50vw" className="object-cover" />
         </div>
       </section>

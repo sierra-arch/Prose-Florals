@@ -148,13 +148,13 @@ export default function Home() {
       </section>
 
       {/* ─── Numbered 01/02/03 navigation teaser ─── */}
-      <section className="grid md:grid-cols-3 max-w-[1600px] mx-auto">
+      <section className="grid md:grid-cols-3">
         {[
           { n: "01", pre: "Explore", cap: "SERVICES", href: "/services", img: LIVE.navServices },
           { n: "02", pre: "The", cap: "PORTFOLIO", href: "/portfolio", img: LIVE.navPortfolio },
           { n: "03", pre: "About the", cap: "FLORIST", href: "/about", img: LIVE.navFlorist },
         ].map((panel) => (
-          <Link key={panel.n} href={panel.href} className="group relative aspect-[3/4] md:aspect-auto md:h-[72vh] overflow-hidden block">
+          <Link key={panel.n} href={panel.href} className="group relative aspect-[3/4] overflow-hidden block">
             <Image src={panel.img} alt={panel.cap} fill sizes="33vw" className="object-cover transition-transform duration-[1200ms] group-hover:scale-105" />
             <div className="absolute inset-0 bg-[#17130F]/0 group-hover:bg-[#17130F]/40 transition-colors duration-500" />
             <span className="absolute bottom-5 left-5 folio text-white/0 group-hover:text-white/85 transition-colors duration-500">{panel.n}</span>
@@ -242,8 +242,8 @@ export default function Home() {
       {/* ─── BEHIND THE BLOOMS — Sierra introduced individually on the
           homepage (Kattie gets equal billing on the About page), with the
           monogram straddling the photo/color seam, matching the live site. ─── */}
-      <section className="relative grid md:grid-cols-2 max-w-[1600px] mx-auto">
-        <div className="relative aspect-[4/5] md:aspect-auto md:min-h-[600px]">
+      <section className="relative grid md:grid-cols-2">
+        <div className="relative aspect-[4/5] md:aspect-[4/3]">
           <Image src={IMG.behindTheBlooms} alt="Sierra Bettis, founder of Prose Florals" fill sizes="50vw" className="object-cover" />
         </div>
         <Monogram className="hidden md:block absolute top-10 left-1/2 -translate-x-1/2 w-12 h-14 text-[#F4F1E8]/80 z-10" />
@@ -278,7 +278,7 @@ export default function Home() {
       {/* ─── EXPLORE CTA — washed PALE photo collage behind display type,
           matching the live site's light, bleached-out treatment (not a
           dark moody wash). ─── */}
-      <section className="relative h-[80vh] md:h-[92vh] overflow-hidden bg-[#F4F1E8] max-w-[1600px] mx-auto">
+      <section className="relative h-[80vh] md:h-auto md:aspect-[2/1] overflow-hidden bg-[#F4F1E8]">
         <ParallaxRows
           row1={[
             LIVE.zoeChapman,
